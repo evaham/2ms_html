@@ -1,0 +1,591 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Pretendard-Custom';
+  src: url('./font/PretendardGOVVariable.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+
+
+/* .body {
+  font-family: 'Pretendard-Custom', "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+
+.sample {
+  background: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sample__name {
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #21409a;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.sample__tel {
+  display: block;
+  width: calc(.25rem * 8);
+  height: calc(.25rem * 8);
+  padding: calc(.25rem * 1);
+  background-color: #fafafa;
+  border-radius: 3.40282e38px;
+}
+.sample__tit {
+  padding: 10px;
+  text-align: center;
+  background: #ebf0f9;
+  color: #000000;
+}
+.sample__tit > span {
+  display: block;
+  font-size: 20px;
+}
+.sample__tit > span + span {
+  font-size: 18px;
+}
+.sample__banner {
+  display: flex;
+  min-height: 80px;
+  text-align: center;
+  background: #adb5bd;
+  line-height: 0;
+}
+.sample__banner span {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 20px;
+}
+.sample__banner img {
+  width: 100%;
+  height: 100%;
+}
+.sample__banner--type2 {
+  background: #ced4da;
+}
+.sample__list {
+  padding: 10px;
+}
+.sample__list li {
+  display: block;
+}
+.sample__list--type2 {
+  float: left;
+  width: 50%;
+}
+
+.bannerbox {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 29px;
+  margin-bottom: -3px;
+  border: 1px solid #ddd;
+  background: #ddd;
+  vertical-align: bottom;
+}
+.bannerbox img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.bannerbox .iconbtn {
+  position: absolute;
+  right: -30px;
+}
+
+.bgcolorbox {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: #999;
+  vertical-align: bottom;
+}
+
+.corner-div {
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.goodsbox {
+  display: block;
+  margin-top: 10px;
+}
+.goodsbox__list {
+  clear: both;
+}
+.goodsbox__list::before {
+  content: " ";
+  display: table;
+}
+.goodsbox__list::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.goodsbox__list > li {
+  position: relative;
+  width: 50%;
+  float: left;
+  margin-bottom: 55px;
+}
+.goodsbox__list--style2 > li .goodsbox__imgbox {
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+}
+.goodsbox__list--style2 > li .goodsbox__btngroup {
+  margin-left: 50px;
+}
+.goodsbox__imgbox {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 5px auto 0;
+  background: #f8f9fa;
+  line-height: 150px;
+  text-align: center;
+  vertical-align: top;
+}
+.goodsbox__imgbox img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.goodsbox__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 10;
+}
+.goodsbox__badge img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.goodsbox__info {
+  display: inline-block;
+}
+.goodsbox__btngroup {
+  width: 150px;
+  margin-top: -35px;
+  margin-left: 2px;
+  text-align: left;
+}
+.goodsbox__txt {
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+}
+.goodsbox__txt .emp::before {
+  content: "*";
+  display: inline-block;
+  width: 8px;
+  margin-left: -8px;
+  color: red;
+}
+
+.corner-notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin: 10px 3px 0;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.corner-notice > p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #CF0000;
+}
+
+.goods {
+  display: inline-block;
+  width: 100%;
+}
+.goods::before {
+  content: " ";
+  display: table;
+}
+.goods::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.goods__card {
+  @apply relative overflow-hidden flex flex-col px-0.5 py-0.75 rounded-[10px] w-full h-full bg-white border border-gray-300 shadow;
+}
+.goods__card.popup {
+  background: #FFFFFF;
+}
+.goods__imgbox {
+  @apply flex items-center justify-center bg-[#f8f9fa];
+}
+.goods__imgbox img {
+  @apply max-w-full max-h-full;
+}
+.goods__imgbox--only {
+  line-height: 0;
+  margin-top:0px;
+  /*margin: 10px auto 10px;
+  background: #fff;*/
+  @apply w-full h-auto;
+}
+.goods__imgbox--only img {
+    width: 100%;
+    max-width: unset;
+}
+.goods__info {
+  @apply mt-[-5%] bg-white/80 text-base leading-none;
+}
+.goods__name {
+  @apply relative overflow-hidden w-full mt-3 px-2 text-[1em] font-bold line-clamp-2 break-all leading-tight;
+}
+.goods__name > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.goods__etc1 {
+  @apply text-[1em] font-bold text-blue-500;
+}
+.goods__etc1:empty {
+  display: none;
+}
+.goods__delprice {
+  @apply text-[1em] text-gray-600 line-through;
+}
+.goods__delprice:empty {
+  display: none;
+}
+.goods__etc1:empty + .goods__delprice:empty + .goods__price {
+  margin-top: 13px;
+}
+
+
+/* 상품 가격 표시 */
+.goods__price {
+  @apply flex items-baseline justify-center text-[1em] font-extrabold text-[#cf0000] tracking-tight break-all;
+}
+.goods__price > span {
+  @apply text-[0.35em] font-normal text-gray-600;
+}
+
+.goods__list li .goods__price {
+  font-size: 400%;
+}
+.goods__list li .goods__price > span {
+  /* font-size: 24px; */
+}
+
+
+
+
+
+.goods__list--style2 li .goods__price {
+  font-size: 300%;
+}
+.goods__list--style2 li .goods__price > span {
+  font-size: 18px;
+}
+.goods__list--style3 li .goods__price {
+  display: inline;
+  font-size: 300%;
+  padding: 0 5px;
+}
+.goods__list--style3 li .goods__price > span {
+  font-size: 18px;
+}
+.goods__list--type2 li .goods__price {
+  font-size: 300%;
+}
+.goods__list--type2 li .goods__price > span {
+  font-size: 18px;
+}
+.goods__list--type3 li .goods__price {
+  font-size: 200%;
+}
+.goods__list--type3 li .goods__price > span {
+  font-size: 16px;
+}
+.goods__list--type4 li .goods__price {
+  font-size: 150%;
+}
+.goods__list--type4 li .goods__price > span {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.goods__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66.6666666667px;
+  height: 66.6666666667px;
+  line-height: 66.6666666667px;
+  text-align: center;
+  z-index: 10;
+}
+.goods__badge img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.goods__pre {
+  margin: 10px;
+  /*padding: 10px; -- pre에 패딩 줄여달라는 피드백있어서 지움*/
+  font-size: 14px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow: auto;
+}
+.goods__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 3px;
+}
+.goods__list li {
+  flex-grow: 1;
+  height: auto;
+  padding: 2px;
+  text-align: center;
+}
+
+.goods__list::before {
+  content: " ";
+  display: table;
+}
+.goods__list::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.goods__list--type2 li {
+  float: left;
+  width: 50%;
+  padding: 2px;
+}
+.goods__list--type2 li .goods__card {
+  padding: 7px 3px;
+}
+.goods__list--type2 li .goods__imgbox {
+  /*width: 144px;*/
+  width:100%;
+  height: 144px;
+}
+.goods__list--type2 li .goods__name {
+  width: 97%;
+  font-size: 17px;
+  min-height: calc(1.2em * 2);
+  margin-bottom:3px;
+}
+
+.goods__list--type2 li .goods__badge {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
+.goods__list--type3 li {
+  float: left;
+  width: 33.3333333333%;
+  padding: 2px;
+}
+.goods__list--type3 li .goods__card {
+  padding: 3px;
+}
+.goods__list--type3 li .goods__imgbox {
+  width: 100%;
+  height: 90px;
+}
+.goods__list--type3 li .goods__name {
+  width: 100%;
+  min-height: calc(1.2em * 2);
+  font-size: 14px;
+}
+.goods__list--type3 li .goods__badge {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.goods__list--type4 li {
+  float: left;
+  width: 25%;
+ padding: 2px;
+}
+.goods__list--type4 li .goods__card {
+  padding: 2.5px;
+}
+.goods__list--type4 li .goods__imgbox {
+  width: 100%;
+  height: 70px;
+}
+.goods__list--type4 li .goods__name {
+  width: 100%;
+  min-height: calc(1.2em * 2);
+  font-size: 13px;
+}
+.goods__list--type4 li .goods__etc1,
+.goods__list--type4 li .goods__delprice {
+  font-size: 11px;
+}
+
+.goods__list--type4 li .goods__badge {
+  width: 23.3333333333px;
+  height: 23.3333333333px;
+  line-height: 23.3333333333px;
+}
+.goods__list--style2 {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.goods__list--style2 li {
+  flex-grow: 0;
+  height: auto;
+  padding: 2px;
+}
+/*지현*/
+.goods__list--style2 li .goods__card{
+}
+.goods__list--style2 li .goods__imgbox {
+  float: left;
+  width: 42%;
+  height: 130px;
+}
+.goods__list--style2 li .goods__info {
+  float: left;
+  width: 168px;
+  margin: 0 0 0 10px;
+  text-align: left;
+}
+.goods__list--style2 li .goods__name {
+  width: auto;
+  margin: 8px 0;
+  min-height: calc(1.2em * 2);
+  font-size: 17px;
+}
+.goods__list--style2 li .goods__etc1,
+.goods__list--style2 li .goods__delprice {
+  margin: 5px 0;
+  /*font-size: 14px;*/
+}
+
+.goods__list--style2 li .goods__badge {
+  width: 43.3333333333px;
+  height: 43.3333333333px;
+}
+.goods__list--style2.even li:nth-child(even) .goods__imgbox {
+  float: right;
+}
+.goods__list--style2.even li:nth-child(even) .goods__info {
+  float: right;
+  margin: 10px 10px 0 0;
+  text-align: right;
+}
+.goods__list--style2.even li.ie8_even .goods__imgbox {
+  float: right;
+}
+.goods__list--style2.even li.ie8_even .goods__info {
+  float: right;
+  margin: 10px 10px 0 0;
+  text-align: right;
+}
+.goods__list--style3 {
+  flex-direction: column;
+}
+.goods__list--style3 li {
+  height: auto;
+  padding: 2px;
+}
+.goods__list--style3 li .goods__card {
+  display: block;
+}
+.goods__list--style3 li .goods__imgbox {
+  display: none;
+}
+.goods__list--style3 li .goods__info {
+  padding-bottom: 7px;
+  text-align: right;
+}
+.goods__list--style3 li .goods__name {
+	
+  /*
+  display: block;
+  float: left;
+  max-width: 130px;*/
+  height: 33px;
+  font-size: 15px;
+  float: none;
+  width: auto;
+  max-width: 100%;
+  margin-top: 7px;
+  /* 지현 수정
+  text-overflow: ellipsis;
+  word-wrap: break-all;
+  white-space: nowrap;
+  -webkit-line-clamp: inherit;
+  -webkit-box-orient: inherit;
+  */
+  text-align: left;
+  
+}
+.goods__list--style3 li .goods__etc1,
+.goods__list--style3 li .goods__delprice {
+  display: inline;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.goods__list--style3 li .goods__badge {
+  display: none;
+}
