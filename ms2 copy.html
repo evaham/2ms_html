@@ -16,8 +16,12 @@
   <script type="text/javascript" src="/2ms/static/js/togethers.js?v=20260508"></script>
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./additional.css">
-  <!-- <link rel="stylesheet" href="./page_weblink.css"> -->
-  <link rel="stylesheet" href="./new_output.css">
+  <link rel="stylesheet" href="./page_weblink.css">
+
+  <link id="skin01" rel="stylesheet" href="./skin01.css" disabled>
+  <link id="skin02" rel="stylesheet" href="./skin02.css" disabled>
+  <link id="skin03" rel="stylesheet" href="./skin03.css" disabled>
+  
   <style>
     :root {
       --spacing: .25rem;
@@ -1506,6 +1510,7 @@
   <script src="/2ms/static/js/effect-js.min.js"></script>
 
   <div class="sample" data-code="44" style="">
+
     <div style="position: sticky;z-index: 999;top: 0;">
       <div class="sample__name clearfix" style="background-color: #3e4446;">
         <span class="js_fontsize mart-info"
@@ -1583,7 +1588,9 @@
       </div>
       <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
-
+    <div style="position: sticky;z-index: 999;top: 0;">
+      <button id="theme-toggle" style="position:fixed; top:60px; left:0; background:#ff5f00; z-index:99999">테마 CSS 교체</button>
+    </div>
 
     <!-- 행사코너 -->
 
@@ -3595,28 +3602,6 @@
         $(".js_fontsize").css("font-size", "0.98em")
       }
 
-      // 날짜형식변경
-      if (true) {
-        var start = formatDate($(".popStartDate").text());
-        var end = formatDate($(".popExDate").text());
-        if (end && start) {
-          var dateGap = dateInterval($(".popStartDate").text(), $(".popExDate").text());
-          $(".popStartDate").text(start + " ~ ");
-          $(".popExDate").text(end + ", " + dateGap + "일간");
-        } else if (end && !start) {
-          $(".popExDate").text(end);
-        } else if (start && !end) {
-          $(".popStartDate").text(start + " ~ ");
-        }
-
-        $(".popStartDate").css("display", "inline-block");
-        $(".popExDate").css("display", "inline-block");
-
-        if (!start && !end) {
-          $(".popStartDate").css("display", "");
-          $(".popExDate").css("display", "");
-        }
-      }
 
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 'auto',
@@ -4065,6 +4050,40 @@
 
   </script>
 
+  <script>
+    (function(){
+      var skins = ['skin01','skin02','skin03'];
+      var idx = 0;
+
+      function applyTheme(i){
+        skins.forEach(function(id, j){
+          var link = document.getElementById(id);
+          if(!link) return;
+          try{
+            link.disabled = (j !== i);
+          }catch(e){
+            if(j !== i) link.setAttribute('disabled',''); else link.removeAttribute('disabled');
+          }
+        });
+        idx = i;
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        var saved = parseInt(localStorage.getItem('selectedThemeIndex'),10);
+        if(!isNaN(saved) && saved >= 0 && saved < skins.length) idx = saved;
+        applyTheme(idx);
+        var btn = document.getElementById('theme-toggle');
+        if(btn){
+          btn.addEventListener('click', function(){
+            var next = (idx + 1) % skins.length;
+            applyTheme(next);
+            localStorage.setItem('selectedThemeIndex', next);
+          });
+        }
+      });
+    })();
+  </script>
+
 
 
 
@@ -4121,286 +4140,7 @@
       <span>주문내역</span>
     </button>
   </div>
-
-
-
-
   <div id="toast" class="toast"></div>
-  <script>
-    $(function () {
-      if ((false || true) && ('false' || getCookie('encryptKey') != null)) {
-        let martKey = '8SrF';
-        let encryptKey = '' ? '' : getCookie('encryptKey');
-        if ('true')
-          getCartCount(martKey, encryptKey);
-      }
-
-
-      const rawOpenTime = '00:00' || '00:00';
-      const rawCloseTime = '' || '00:00';
-
-      const [oh, om] = rawOpenTime.split(':').map(Number);
-      const openTimeMinutes = (oh * 60) + om;
-
-      const [ch, cm] = rawCloseTime.split(':').map(Number);
-      const closeTimeMinutes = (ch * 60) + cm;
-
-      let nextDay = parseInt('4');
-      if (nextDay === 7) nextDay = 0;
-
-      const isOpen = true;
-      const isAllDay = true;
-
-      const myTimer = setInterval(() => {
-        const now = new Date();
-        const currentTimeMinutes = (now.getHours() * 60) + now.getMinutes();
-        const currentDay = now.getDay();
-
-        let reload = false;
-
-        if (isOpen) {
-          if (isAllDay) {
-            if (currentDay === nextDay && currentTimeMinutes >= openTimeMinutes) {
-              reload = true;
-            }
-          } else {
-            if (closeTimeMinutes > 0 && currentTimeMinutes >= closeTimeMinutes) {
-              reload = true;
-            }
-          }
-        } else {
-          if (currentDay === nextDay && currentTimeMinutes >= openTimeMinutes) {
-            reload = true;
-          }
-        }
-
-        if (reload) {
-          clearInterval(myTimer);
-          location.reload();
-        }
-      }, 1000);
-
-    });
-
-    function getCartCount(martKey, encryptKey) {
-      let count = 0;
-      $.ajax({
-        url: `/2ms/ajax/getCartCount.json?spCode=44&martKey=${martKey}&encryptKey=${encryptKey}`,
-        method: 'GET',
-        async: false,
-        success: function (jqXHR) {
-          count = jqXHR;
-        }, error: function (xhr, status, error) {
-          console.error("Error: " + error);
-        }
-      });
-      if (count) {
-        let html = `<span class="footmenu-num ">${count}</span>`;
-        $('.cart').prepend(html);
-      }
-    }
-
-    function goToPage(page) {
-      if ((false || false) && page == 'cart') {
-
-        // showToast('현재 온라인 주문을 지원하지 않는 매장입니다.');
-        showToast('온라인 주문기능은 준비 중입니다.');
-        return false;
-      }
-      if (true) {
-        // 고정링크
-        if (getCookie('encryptKey')) {
-          window.location.href = `/2ms/s/8SrF/${page}.do`;
-        } else {
-          showPopup();
-        }
-      } else {
-        if (true) {
-          // 비개인화링크
-          if (getCookie('encryptKey')) {
-            window.location.href = `/2ms//${page}.do`;
-          } else {
-            showPopup();
-          }
-        } else {
-          // 개인화링크
-          window.location.href = `/2ms///${page}.do`;
-        }
-      }
-    }
-
-    function showPopup() {
-      let html = `<div class="encrypt-div">
-                        <div class="background"></div>
-                        <div class="encrypt-panel">
-                            <p class="encrypt-title">고객정보</p>
-                            <div>
-                                <label class="encrypt-txt">온라인 주문 및 쿠폰기능을 사용하기 위해 휴대폰 번호를 입력해주세요</label>
-                                <p class="encrypt-mobile">
-                                    010-
-                                    <input type="text" maxlength="9" inputmode="numeric">
-                                </p>
-                                <div>
-                                    <label>
-                                        <input type="checkbox" class="encrypt-check">
-                                        <a href="#" class="mobile-popup">개인정보 수집·이용</a>
-                                        에 동의합니다.
-                                    </label>
-                                </div>
-                                <button class="encrypt-btn">이용동의 및 사용시작</button>
-                                <div class="encrypt-popup-bg" style="display: none;">
-                                    <div class="encrypt-modalbox popup">
-                                        <a class="encrypt-modalbox-close">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#666"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
-                                        </a>
-                                        <div class="encrypt-popup-div">
-                                            <h3>개인정보 수집·이용 동의서</h3>
-                                            <br>
-                                            ㈜투게더스는 『개인정보보호법』 제15조 개인정보의 수집·이용에 따라 귀하의 개인정보를 수집하고자 합니다.
-                                            <br><br>
-                                            귀하께서는 아래 개인정보의 수집 항목, 이용 목적, 이용기간을 확인하고, 이용동의서에 체크해 주시기 바랍니다.
-                                            <br>
-                                            <table class="tbl_comm">
-                                                <tr>
-                                                    <td>수집 항목</td>
-                                                    <td>이용 목적</td>
-                                                    <td>이용 기간</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>휴대폰번호</td>
-                                                    <td>동의자가 다운받은 쿠폰을 포스 프로그램에 적용시 활용</td>
-                                                    <td>쿠폰 다운 받은 해당월</td>
-                                                </tr>
-                                            </table>
-                                            <br>
-                                            <h4>1. 개인정보 수집 및 이용목적</h4>
-                                            <br>
-                                            ① POS프로그램에서 전송된 쿠폰을 다운 받아 사용시 다운받은 정보와 사용자를 확인하는 목적으로 개인정보에 해당하는 휴대폰번호를 수집합니다.
-                                            <br><br>
-                                            ② 개인정보 수집·이용에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우 매장에서 제공하는 서비스(이벤트 등)에 제약이 있을 수 있습니다.
-                                            <br><br>
-                                            ③ 상기 이용목적 이외는 개인정보를 사용하지 않습니다.
-                                            <br><br>
-                                            <h4>2. 개인정보 처리 및 보유기간</h4>
-                                            <br>
-                                            ① 수집한 개인정보의 수집목적이 모두 달성될 때까지 해당 개인정보를 보유합니다.
-                                            <br><br>
-                                            ② 수집한 개인정보는 매장에서 제공하는 이벤트(쿠폰 등) 사용 시 활용되며, 쿠폰을 다운받은 해당월까지 안전하게 보관 후 파기합니다.
-                                            <br><br>
-                                            <h4>3. 개인정보의 3자 제공</h4>
-                                            <br>
-                                            귀하의 별도 동의가 있거나 다른 법률에 특별한 규정이 존재하는 경우 이외에는 개인정보를 3자에게 제공하지 않습니다.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="encrypt-close-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>`;
-      $('body').css('overflow', 'hidden');
-      $('body').append(html);
-    }
-
-    $(document).on('focus', '.encrypt-mobile', function () {
-      $(this).addClass('focus');
-    }).on('blur', '.encrypt-mobile', function () {
-      $(this).removeClass('focus');
-    });
-
-    $(document).on('input', '.encrypt-mobile input', function () {
-      $(this).val($(this).val().replace(/[^0-9-]/gi, "").replace(/^(\d{4,5})(\d{4})$/, `$1-$2`));
-    });
-
-    $(document).on('click', '.mobile-popup', function (e) {
-      e.preventDefault();
-      $('.encrypt-popup-bg').css("display", "");
-    });
-
-    $(document).on('click', '.encrypt-modalbox-close', function () {
-      $('.encrypt-popup-bg').hide();
-    });
-
-    $(document).on('click', '.encrypt-close-btn', function () {
-      if (!$('.product-wrap:visible').length) {
-        $('body').removeAttr('style');
-      }
-      $('.encrypt-div').remove();
-    });
-
-    $(document).on('click', '.encrypt-btn', function () {
-      let mobile = $('.encrypt-mobile input').val();
-      let mobile2 = mobile.replaceAll("-", "");
-      if (isNaN(mobile2) || mobile2.length != 8) {
-        showToast("휴대폰번호 형식 오류입니다.<br>올바른 휴대폰번호를 입력해주세요.");
-      } else {
-        $('.encrypt-check').prop('checked', true);
-        $.ajax({
-          url: "/2ms/ajax/getEncryptKey.json",
-          type: 'POST',
-          data: ("mobile=" + ('010-' + mobile)),
-          success: function (response) {
-            showToast('사용자 정보가 저장되었습니다.');
-            setTimeout(() => {
-              document.cookie = "encryptKey=" + response + "; path=/; max-age=" + ((60 * 60 * 24) * 30);
-              if (true) {
-                location.reload();
-              } else {
-                location.href = `/2ms//${response}`;
-              }
-            }, 3000);
-          }, error: function (xhr, status, error) {
-            console.error("Error: " + error);
-          }
-        })
-      }
-    });
-
-    window.onpageshow = function (event) {
-      if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-        location.reload();
-      }
-    }
-
-    // 토스트 팝업
-    function showToast(message) {
-      // 기존의 토스트가 있다면 제거
-      if ($("#toast").length) {
-        $("#toast").remove();
-      }
-
-      // 새로운 토스트 생성
-      var toast = $('<div id="toast" class="toast">' + message + '</div>');
-      $(".sample").after(toast);
-
-      var toast = document.getElementById("toast");
-      toast.className = "toast show";
-      setTimeout(function () {
-        toast.className = toast.className.replace("show", "");
-      }, 3000);
-    }
-
-    function addComma(num) {
-      num = String(num);
-      return num.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
-    }
-
-    // 쿠키 생성
-    var setCookie = function (name, value, exp) {
-      var date = new Date();
-      date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
-      document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-    };
-
-    // 쿠키 조회
-    var getCookie = function (name) {
-      var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-      return value ? value[2] : null;
-    };
-  </script>
-
-
 </body>
 
 </html>
