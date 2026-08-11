@@ -164,7 +164,7 @@
 
 
 .goods__info {
-  @apply flex-1 relative grid grid-cols-2 px-0 z-10 ;
+  @apply flex-1 relative grid grid-cols-2 mt-auto px-0 z-10 ;
 }
 
 .goods__name {

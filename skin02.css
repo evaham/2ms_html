@@ -408,6 +408,7 @@
 .goods__info {
   position: relative;
   z-index: 10;
+  margin-top: auto;
   display: grid;
   flex: 1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
