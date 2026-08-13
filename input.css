@@ -143,7 +143,7 @@
   clear: both;
 }
 .goods__card {
-  @apply relative overflow-hidden flex-1 flex flex-col w-full bg-white;
+  @apply relative overflow-hidden flex-1 flex flex-col w-full h-full bg-white;
 }
 .goods__card.popup {
   background: #FFFFFF;
@@ -164,11 +164,11 @@
 
 
 .goods__info {
-  @apply flex-1 relative grid grid-cols-2 mt-auto px-0 z-10 ;
+  @apply relative grid grid-cols-2 mt-auto px-0 z-10 ;
 }
 
 .goods__name {
-  @apply -order-2 col-span-2 relative w-full px-2 my-2 text-xl leading-tight text-black line-clamp-2;
+  @apply -order-2 col-span-2 relative w-full my-2 px-2 mt-auto text-xl leading-tight text-black line-clamp-2;
   /* --stroke-width: 3px;
   --stroke-color: #fff;
   text-shadow:
@@ -215,13 +215,15 @@
 }
 
 .goods__etc1 {
-  @apply flex items-center justify-center px-2 py-1 text-lg text-zinc-800 bg-rose-300;
-}
-.goods__etc1:empty {
+  @apply flex items-center justify-center px-2 text-lg text-zinc-800 bg-rose-100;
 }
 .goods__delprice {
-  @apply flex items-center justify-center px-2 py-1 text-lg line-through text-zinc-800 bg-rose-300;
+  @apply flex items-center justify-center px-2 text-lg line-through text-zinc-800 bg-rose-100;
 }
+
+
+
+
 .goods__delprice:empty {}
 
 .goods__etc1:empty + .goods__delprice:empty + .goods__price {}
@@ -302,11 +304,14 @@
   /* font-size: 24px; */
 }
 
+/* 가로형 1단 */
+
+/* 가로형 2단 */
 .goods__list--type2 {
   @apply border-t border-zinc-300;
 }
 .goods__list--type2 li {
-  @apply  border-b border-r border-zinc-300 w-1/2;
+  @apply  border-b border-r border-zinc-300 w-1/2 min-w-1/2;
 }
 .goods__list--type2 li:nth-child(2n) {
   @apply border-r-0;
@@ -317,8 +322,6 @@
 .goods__list--type2 li:nth-last-child(odd) {
   @apply flex-1 border-b border-zinc-300;
 }
-
-
 .goods__list--type2 li .goods__card {
   @apply m-0 p-0;
 }
@@ -334,7 +337,7 @@
   @apply text-lg;
 }
 .goods__list--type2 li .goods__price {
-  @apply text-4xl;
+  @apply text-4xl py-1;
 }
 .goods__list--type2 li .goods__price > span {
   @apply text-lg;
@@ -350,14 +353,57 @@
 }
 
 
+/* 가로형 3단 */
 
-
-
-
-
-.goods__list--type3 li {
-  @apply w-1/3;
+.goods__list--type3 {
+  @apply border-t border-zinc-300;
 }
+.goods__list--type3 li {
+  @apply  border-b border-r border-zinc-300 w-1/3 min-w-1/3;
+}
+.goods__list--type3 li:nth-child(3n) {
+  @apply border-r-0;
+}
+.goods__list--type3 li:last-child {
+  @apply w-full border-b border-zinc-300;
+}
+.goods__list--type3 li:nth-last-child(odd) {
+  @apply flex-1 border-b border-zinc-300;
+}
+.goods__list--type3 li .goods__card {
+  @apply m-0 p-0;
+}
+.goods__list--type3 li .goods__info {
+}
+.goods__list--type3 li .goods__imgbox {
+  @apply flex w-auto h-36;
+}
+.goods__list--type3 li .goods__imgbox img {
+  @apply w-auto max-h-full;
+}
+.goods__list--type3 li .goods__name {
+  @apply text-base;
+}
+.goods__list--type3 li .goods__price {
+  @apply text-2xl py-0.5;
+}
+.goods__list--type3 li .goods__price > span {
+  @apply text-sm;
+}
+.goods__list--type3 li .goods__badge {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
+.goods__list--type3 li .goods__etc1,
+.goods__list--type3 li .goods__delprice {
+  @apply text-[11px] px-0.5;
+}
+
+
+
+/* 
+
 .goods__list--type3 {
   @apply border-t border-zinc-300;
 }
@@ -373,7 +419,6 @@
 .goods__list--type3 li:nth-last-child(odd) {
   @apply flex-1 border-b border-zinc-300;
 }
-
 .goods__list--type3 li .goods__card {
   @apply p-0;
 }
@@ -385,9 +430,8 @@
 .goods__list--type3 li .goods__imgbox img {
   @apply w-auto max-h-full;
 }
-
 .goods__list--type3 li .goods__name {
-  @apply text-base;
+  @apply text-sm;
 }
 .goods__list--type3 li .goods__badge {
   @apply size-7;
@@ -401,15 +445,19 @@
 .goods__list--type3 li .goods__etc1,
 .goods__list--type3 li .goods__delprice {
   @apply text-xs px-0.5;
-}
+} */
 
 
+
+
+
+/* 가로형 4단 */
 
 .goods__list--type4 {
   @apply border-t border-zinc-300;
 }
 .goods__list--type4 li {
-  @apply  border-b border-r border-zinc-300 w-1/4;
+  @apply  border-b border-r border-zinc-300 w-1/4 min-w-1/4;
 }
 .goods__list--type4 li:nth-child(4n) {
   @apply border-r-0;
@@ -420,91 +468,59 @@
 .goods__list--type4 li:nth-last-child(odd) {
   @apply flex-1 border-b border-zinc-300;
 }
-
 .goods__list--type4 li .goods__card {
-  @apply p-0;
+  @apply m-0 p-0;
 }
 .goods__list--type4 li .goods__info {
 }
 .goods__list--type4 li .goods__imgbox {
-  @apply flex w-auto h-22;
+  @apply flex w-auto h-36 px-0.5;
 }
 .goods__list--type4 li .goods__imgbox img {
   @apply w-auto max-h-full;
 }
-
 .goods__list--type4 li .goods__name {
-  @apply text-sm;
-}
-.goods__list--type4 li .goods__badge {
-  @apply size-7;
+  @apply text-sm px-0.5;
 }
 .goods__list--type4 li .goods__price {
-  @apply h-4 mt-4 text-xl;
+  @apply text-lg py-0.5;
 }
 .goods__list--type4 li .goods__price > span {
-  @apply text-sm;
+  @apply text-xs;
+}
+.goods__list--type4 li .goods__badge {
+  /* width: 48px;
+  height: 48px;
+  line-height: 48px; */
 }
 .goods__list--type4 li .goods__etc1,
 .goods__list--type4 li .goods__delprice {
-  @apply text-xs px-0.5;
+  @apply col-span-2 text-[11px] px-0.5;
 }
-
-
 
 .soldout-div {
-  @apply rounded-none
+  @apply rounded-none;
 }
+
+
+
+
+/* 세로형 style2 */
+.goods__list--style2 {
+  @apply border-t border-zinc-300;
+}
+.goods__list--style2 li {
+  @apply  border-b border-zinc-300;
+  height: 150px;
+  padding: 10px;
+}
+
+
 
 
 
 
 /* 
-.goods__list--type4 li {
-  float: left;
-  width: 25%;
- padding: 2px;
-}
-.goods__list--type4 li .goods__card {
-  padding: 2.5px;
-}
-.goods__list--type4 li .goods__imgbox {
-  width: 100%;
-  height: 70px;
-}
-.goods__list--type4 li .goods__name {
-  width: 100%;
-  min-height: calc(1.2em * 2);
-  font-size: 13px;
-}
-.goods__list--type4 li .goods__etc1,
-.goods__list--type4 li .goods__delprice {
-  font-size: 11px;
-}
-.goods__list--type4 li .goods__price {
-  font-size: 150%;
-  letter-spacing: -2px;
-}
-.goods__list--type4 li .goods__price > span {
-  font-size: 14px;
-}
-.goods__list--type4 li .goods__badge {
-  width: 23.3333333333px;
-  height: 23.3333333333px;
-  line-height: 23.3333333333px;
-}
-.goods__list--style2 {
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.goods__list--style2 li {
-  flex-grow: 0;
-  height: auto;
-  padding: 2px;
-} */
-/*지현*/
-/* .goods__list--style2 li .goods__card{
-} */
 .goods__list--style2 li .goods__imgbox {
   float: left;
   width: 42%;
@@ -525,7 +541,6 @@
 .goods__list--style2 li .goods__etc1,
 .goods__list--style2 li .goods__delprice {
   margin: 5px 0;
-  /*font-size: 14px;*/
 }
 .goods__list--style2 li .goods__price {
   font-size: 300%;
@@ -571,26 +586,13 @@
   text-align: right;
 }
 .goods__list--style3 li .goods__name {
-	
-  /*
-  display: block;
-  float: left;
-  max-width: 130px;*/
-  height: 33px;
+	height: 33px;
   font-size: 15px;
   float: none;
   width: auto;
   max-width: 100%;
   margin-top: 7px;
-  /* 지현 수정
-  text-overflow: ellipsis;
-  word-wrap: break-all;
-  white-space: nowrap;
-  -webkit-line-clamp: inherit;
-  -webkit-box-orient: inherit;
-  */
   text-align: left;
-  
 }
 
 .goods__list--style3 li .goods__price {
