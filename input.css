@@ -599,22 +599,22 @@
 
 /* 상품정보 */
 .goods__list--style2 li .goods__info {
-  @apply relative grid grid-cols-1 w-full mt-auto mb-2 px-0 bg-white;
+  @apply relative grid grid-cols-1 w-full h-full mb-2 px-0 bg-white;
 }
 .goods__list--style2 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-0.5 mt-auto text-[13px] text-left leading-tight text-zinc-900 font-normal line-clamp-2;
+  @apply order-2 relative w-full px-0.5 mb-auto text-lg text-left leading-tight text-zinc-900 font-normal line-clamp-2;
 }
 .goods__list--style2 li .goods__info .goods__price {
-  @apply order-4 px-0.5 text-xl text-rose-600 text-left tracking-tight;
+  @apply order-4 px-0.5 text-5xl text-rose-600 text-left tracking-tight;
 }
 .goods__list--style2 li .goods__info .goods__price > span {
-  @apply mt-auto text-xs text-zinc-700;
+  @apply mt-auto text-base text-zinc-700;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 px-0.5 text-[11px] text-left text-blue-500 font-normal;
+  @apply order-1 px-0.5 text-sm text-left text-blue-500 font-normal;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply order-3 px-0.5 text-[11px] text-left line-through text-zinc-400;
+  @apply order-3 px-0.5 text-sm text-left line-through text-zinc-400;
 }
 
 
