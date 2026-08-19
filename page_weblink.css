@@ -666,7 +666,11 @@ body {
 
 @media screen and (max-width: 767px) {
   /* Mobile */
-  .goods__card {
+
+
+
+  
+  /* .goods__card {
     display: flex;
     flex-direction: column;
   }
@@ -692,7 +696,7 @@ body {
   .goods__list--style2.even li.ie8_even .goods__card {
     flex-direction: row-reverse;
   }
-  .goods__imgbox {display:flex; align-items:center; justify-content:center}
+  .goods__imgbox {display:flex; align-items:center; justify-content:center} */
   /*
   .goods__list--style3 li .goods__name {
     display: block;

@@ -143,16 +143,16 @@
   clear: both;
 }
 .goods__card {
-  @apply relative overflow-hidden flex-1 flex flex-col w-full h-full bg-white;
+  /* @apply relative overflow-hidden flex-1 flex flex-col w-full h-full bg-white; */
 }
 .goods__card.popup {
-  background: #FFFFFF;
+  /* background: #FFFFFF; */
 }
 .goods__imgbox {
-  @apply relative overflow-hidden flex items-center justify-center p-2;
+  /* @apply relative overflow-hidden flex items-center justify-center p-2; */
 }
 .goods__imgbox img {
-  @apply object-contain w-full h-full;
+  /* @apply object-contain w-full h-full; */
 }
 .goods__imgbox--only {
   @apply p-0
@@ -164,11 +164,11 @@
 
 
 .goods__info {
-  @apply relative grid grid-cols-2 mt-auto px-0 z-10 ;
+  /* @apply relative grid grid-cols-2 mt-auto px-0 z-10 ; */
 }
 
 .goods__name {
-  @apply -order-2 col-span-2 relative w-full my-2 px-2 mt-auto text-xl leading-tight text-black line-clamp-2;
+  /* @apply -order-2 col-span-2 relative w-full my-2 px-2 mt-auto text-xl leading-tight text-black line-clamp-2; */
   /* --stroke-width: 3px;
   --stroke-color: #fff;
   text-shadow:
@@ -211,14 +211,14 @@
   ; */
 }
 .goods__name > span {
-  @apply absolute bottom-0 left-0 w-full text-center;
+  /* @apply absolute bottom-0 left-0 w-full text-center; */
 }
 
 .goods__etc1 {
-  @apply flex items-center justify-center px-2 text-lg text-zinc-800 bg-rose-100;
+  /* @apply flex items-center justify-center px-2 text-lg text-zinc-800 bg-rose-100; */
 }
 .goods__delprice {
-  @apply flex items-center justify-center px-2 text-lg line-through text-zinc-800 bg-rose-100;
+  /* @apply flex items-center justify-center px-2 text-lg line-through text-zinc-800 bg-rose-100; */
 }
 
 
@@ -228,7 +228,7 @@
 
 .goods__etc1:empty + .goods__delprice:empty + .goods__price {}
 .goods__price {
-  @apply col-span-2 flex items-center justify-center py-2 pb-3 text-7xl text-white bg-rose-600 shadow-lg;
+  /* @apply col-span-2 flex items-center justify-center py-2 pb-3 text-7xl text-white bg-rose-600; */
   /* --stroke-width: 3px;
   --stroke-color: #fff;
   text-shadow:
@@ -272,31 +272,25 @@
 }
 
 .goods__price > span {
-  @apply inline-flex mt-auto text-3xl;
+  /* @apply inline-flex mt-auto text-3xl; */
 }
 .goods__badge {
-  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  /* @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10; */
 }
 .goods__badge img {
-  @apply block max-w-full w-auto max-h-full h-auto;
+  /* @apply block max-w-full w-auto max-h-full h-auto; */
 }
 .goods__pre {
-  margin: 10px;
-  /*padding: 10px; -- pre에 패딩 줄여달라는 피드백있어서 지움*/
+  /* margin: 10px;
   font-size: 14px;
   text-align: left;
   white-space: pre-wrap;
   word-break: break-all;
-  overflow: auto;
+  overflow: auto; */
 }
-.goods__list {
-  @apply flex flex-wrap p-0 divide-y divide-zinc-300;
-}
-.goods__list li {
-  @apply w-full h-auto p-0 m-0 bg-white;
-}
+
 .goods__list li:last-child {
-  @apply border-b border-zinc-300;
+  /* @apply border-b border-zinc-300; */
 }
 .goods__list li .goods__price {
 }
@@ -304,9 +298,85 @@
   /* font-size: 24px; */
 }
 
+
+/* 리스트 뷰 공통 */
+.goods__list {
+  @apply flex flex-wrap p-0 divide-y divide-zinc-300;
+}
+.goods__list li {
+  @apply relative w-full h-auto p-0 m-0 bg-white;
+}
+
+/* 품절 */
+.goods__card .soldout-div {
+  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-normal text-white z-30;
+}
+
+
+
 /* 가로형 1단 */
+.goods__list--type1 {
+  @apply border-t border-zinc-300;
+}
+.goods__list--type1 li {
+  @apply  border-b border-r border-zinc-300 w-full min-w-full;
+}
+.goods__list--type1 li {
+  @apply border-r-0;
+}
+.goods__list--type1 li:last-child {
+  @apply w-full border-b border-zinc-300;
+}
+.goods__list--type1 li:nth-last-child(odd) {
+  @apply flex-1 border-b border-zinc-300;
+}
+.goods__list--type1 li .goods__card {
+  @apply m-0 p-0;
+}
+
+/* 이미지정보 */
+.goods__list--type1 li .goods__imgbox {
+  @apply relative overflow-hidden flex items-center justify-center w-auto p-2;
+}
+.goods__list--type1 li .goods__imgbox img {
+  @apply object-contain w-auto h-full max-h-full;
+}
+
+/* 뱃지 영역 및 크기 */
+.goods__list--type1 li .goods__imgbox .goods__badge {
+  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  @apply w-12 h-12;
+}
+.goods__list--type1 li .goods__imgbox .goods__badge img {
+   @apply block max-w-full w-auto max-h-full h-auto;
+}
+
+/* 상품정보 */
+.goods__list--type1 li .goods__info {
+  @apply relative grid grid-cols-1 mt-auto px-0 bg-white;
+}
+.goods__list--type1 li .goods__info .goods__name {
+  @apply order-2 relative w-full my-2 px-2 mt-auto text-xl text-center leading-tight text-zinc-900 font-normal line-clamp-2;
+}
+.goods__list--type1 li .goods__info .goods__price {
+  @apply order-4 px-2 text-7xl text-rose-600 text-center;
+}
+.goods__list--type1 li .goods__info .goods__price > span {
+  @apply mt-auto text-2xl text-zinc-700;
+}
+.goods__list--type1 li .goods__info .goods__etc1 {
+  @apply order-1 px-2 text-base text-center text-blue-500 font-normal;
+}
+.goods__list--type1 li .goods__info .goods__delprice {
+  @apply order-3 px-2 text-base text-center line-through text-zinc-500;
+}
+
+
+
+
 
 /* 가로형 2단 */
+
 .goods__list--type2 {
   @apply border-t border-zinc-300;
 }
@@ -323,34 +393,47 @@
   @apply flex-1 border-b border-zinc-300;
 }
 .goods__list--type2 li .goods__card {
-  @apply m-0 p-0;
+  @apply flex flex-col h-full;
 }
-.goods__list--type li .goods__info {
-}
+
+/* 이미지정보 */
 .goods__list--type2 li .goods__imgbox {
-  @apply flex w-auto h-36;
+  @apply relative overflow-hidden flex items-center justify-center w-auto h-38 p-2;
 }
 .goods__list--type2 li .goods__imgbox img {
-  @apply w-auto max-h-full;
+  @apply object-contain w-auto h-full max-h-full;
 }
-.goods__list--type2 li .goods__name {
-  @apply text-lg;
+
+/* 뱃지 영역 및 크기 */
+.goods__list--type2 li .goods__imgbox .goods__badge {
+  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  @apply w-12 h-12;
 }
-.goods__list--type2 li .goods__price {
-  @apply text-4xl py-1;
+.goods__list--type2 li .goods__imgbox .goods__badge img {
+   @apply block max-w-full w-auto max-h-full h-auto;
 }
-.goods__list--type2 li .goods__price > span {
-  @apply text-lg;
+
+/* 상품정보 */
+.goods__list--type2 li .goods__info {
+  @apply relative grid grid-cols-1 mt-auto mb-2 px-0 bg-white;
 }
-.goods__list--type2 li .goods__badge {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
+.goods__list--type2 li .goods__info .goods__name {
+  @apply order-2 relative w-full px-2 mt-auto text-lg text-center leading-tight text-zinc-900 font-normal line-clamp-2;
 }
-.goods__list--type2 li .goods__etc1,
-.goods__list--type2 li .goods__delprice {
-  @apply text-xs px-0.5;
+.goods__list--type2 li .goods__info .goods__price {
+  @apply order-4 px-2 text-4xl text-rose-600 text-center;
 }
+.goods__list--type2 li .goods__info .goods__price > span {
+  @apply mt-auto text-lg text-zinc-700;
+}
+.goods__list--type2 li .goods__info .goods__etc1 {
+  @apply order-1 px-2 text-sm text-center text-blue-500 font-normal;
+}
+.goods__list--type2 li .goods__info .goods__delprice {
+  @apply order-3 px-2 text-sm text-center line-through text-zinc-500;
+}
+
+
 
 
 /* 가로형 3단 */
@@ -371,83 +454,45 @@
   @apply flex-1 border-b border-zinc-300;
 }
 .goods__list--type3 li .goods__card {
-  @apply m-0 p-0;
+  @apply flex flex-col h-full;
 }
-.goods__list--type3 li .goods__info {
-}
+
+/* 이미지정보 */
 .goods__list--type3 li .goods__imgbox {
-  @apply flex w-auto h-36;
+  @apply relative overflow-hidden flex items-center justify-center w-auto h-38 p-1;
 }
 .goods__list--type3 li .goods__imgbox img {
-  @apply w-auto max-h-full;
-}
-.goods__list--type3 li .goods__name {
-  @apply text-base;
-}
-.goods__list--type3 li .goods__price {
-  @apply text-2xl py-0.5;
-}
-.goods__list--type3 li .goods__price > span {
-  @apply text-sm;
-}
-.goods__list--type3 li .goods__badge {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-}
-.goods__list--type3 li .goods__etc1,
-.goods__list--type3 li .goods__delprice {
-  @apply text-[11px] px-0.5;
+  @apply object-contain w-auto h-full max-h-full;
 }
 
+/* 뱃지 영역 및 크기 */
+.goods__list--type3 li .goods__imgbox .goods__badge {
+  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  @apply w-12 h-12;
+}
+.goods__list--type3 li .goods__imgbox .goods__badge img {
+   @apply block max-w-full w-auto max-h-full h-auto;
+}
 
-
-/* 
-
-.goods__list--type3 {
-  @apply border-t border-zinc-300;
-}
-.goods__list--type3 li {
-  @apply  border-b border-r border-zinc-300 w-1/3;
-}
-.goods__list--type3 li:nth-child(3n) {
-  @apply border-r-0;
-}
-.goods__list--type3 li:last-child {
-  @apply w-full border-b border-zinc-300;
-}
-.goods__list--type3 li:nth-last-child(odd) {
-  @apply flex-1 border-b border-zinc-300;
-}
-.goods__list--type3 li .goods__card {
-  @apply p-0;
-}
+/* 상품정보 */
 .goods__list--type3 li .goods__info {
+  @apply relative grid grid-cols-1 mt-auto mb-2 px-0 bg-white;
 }
-.goods__list--type3 li .goods__imgbox {
-  @apply flex w-auto h-22;
+.goods__list--type3 li .goods__info .goods__name {
+  @apply order-2 relative w-full px-2 mt-auto text-base text-center leading-tight text-zinc-900 font-normal line-clamp-2;
 }
-.goods__list--type3 li .goods__imgbox img {
-  @apply w-auto max-h-full;
+.goods__list--type3 li .goods__info .goods__price {
+  @apply order-4 px-1 text-3xl text-rose-600 text-center;
 }
-.goods__list--type3 li .goods__name {
-  @apply text-sm;
+.goods__list--type3 li .goods__info .goods__price > span {
+  @apply mt-auto text-sm text-zinc-700;
 }
-.goods__list--type3 li .goods__badge {
-  @apply size-7;
+.goods__list--type3 li .goods__info .goods__etc1 {
+  @apply order-1 px-1 text-xs text-center text-blue-500 font-normal;
 }
-.goods__list--type3 li .goods__price {
-  @apply h-4 mt-6 text-2xl;
+.goods__list--type3 li .goods__info .goods__delprice {
+  @apply order-3 px-1 text-xs text-center line-through text-zinc-500;
 }
-.goods__list--type3 li .goods__price > span {
-  @apply text-sm;
-}
-.goods__list--type3 li .goods__etc1,
-.goods__list--type3 li .goods__delprice {
-  @apply text-xs px-0.5;
-} */
-
-
 
 
 
@@ -469,140 +514,142 @@
   @apply flex-1 border-b border-zinc-300;
 }
 .goods__list--type4 li .goods__card {
-  @apply m-0 p-0;
+  @apply flex flex-col h-full;
 }
-.goods__list--type4 li .goods__info {
-}
+
+/* 이미지정보 */
 .goods__list--type4 li .goods__imgbox {
-  @apply flex w-auto h-36 px-0.5;
+  @apply relative overflow-hidden flex items-center justify-center w-auto h-20 p-1;
 }
 .goods__list--type4 li .goods__imgbox img {
-  @apply w-auto max-h-full;
-}
-.goods__list--type4 li .goods__name {
-  @apply text-sm px-0.5;
-}
-.goods__list--type4 li .goods__price {
-  @apply text-lg py-0.5;
-}
-.goods__list--type4 li .goods__price > span {
-  @apply text-xs;
-}
-.goods__list--type4 li .goods__badge {
-  /* width: 48px;
-  height: 48px;
-  line-height: 48px; */
-}
-.goods__list--type4 li .goods__etc1,
-.goods__list--type4 li .goods__delprice {
-  @apply col-span-2 text-[11px] px-0.5;
+  @apply object-contain w-auto h-full max-h-full;
 }
 
-.soldout-div {
-  @apply rounded-none;
+/* 뱃지 영역 및 크기 */
+.goods__list--type4 li .goods__imgbox .goods__badge {
+  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  @apply w-12 h-12;
+}
+.goods__list--type4 li .goods__imgbox .goods__badge img {
+   @apply block max-w-full w-auto max-h-full h-auto;
+}
+
+/* 상품정보 */
+.goods__list--type4 li .goods__info {
+  @apply relative grid grid-cols-1 mt-auto mb-2 px-0 bg-white;
+}
+.goods__list--type4 li .goods__info .goods__name {
+  @apply order-2 relative w-full px-0.5 mt-auto text-[13px] text-center leading-tight text-zinc-900 font-normal line-clamp-2;
+}
+.goods__list--type4 li .goods__info .goods__price {
+  @apply order-4 px-0.5 text-xl text-rose-600 text-center tracking-tight;
+}
+.goods__list--type4 li .goods__info .goods__price > span {
+  @apply mt-auto text-xs text-zinc-700;
+}
+.goods__list--type4 li .goods__info .goods__etc1 {
+  @apply order-1 px-0.5 text-[11px] text-center text-blue-500 font-normal;
+}
+.goods__list--type4 li .goods__info .goods__delprice {
+  @apply order-3 px-0.5 text-[11px] text-center line-through text-zinc-400;
 }
 
 
 
 
-/* 세로형 style2 */
+
+
+
+
+
+
+
+
+/* 세로형 스타일2 */
+
 .goods__list--style2 {
   @apply border-t border-zinc-300;
 }
 .goods__list--style2 li {
-  @apply  border-b border-zinc-300;
-  height: 150px;
-  padding: 10px;
+  @apply  border-b border-zinc-300 w-full min-w-full;
+}
+.goods__list--style2 li:last-child {
+  @apply w-full border-b border-zinc-300;
+}
+.goods__list--style2 li .goods__card {
+  @apply flex flex-row m-0 p-0;
 }
 
-
-
-
-
-
-/* 
+/* 이미지정보 */
 .goods__list--style2 li .goods__imgbox {
-  float: left;
-  width: 42%;
-  height: 130px;
+  @apply relative overflow-hidden flex items-center justify-center size-36 min-w-36 min-h-36 p-1;
 }
+.goods__list--style2 li .goods__imgbox img {
+  @apply object-contain w-auto h-full max-h-full;
+}
+
+/* 뱃지 영역 및 크기 */
+.goods__list--style2 li .goods__imgbox .goods__badge {
+  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
+  @apply w-12 h-12;
+}
+.goods__list--style2 li .goods__imgbox .goods__badge img {
+   @apply block max-w-full w-auto max-h-full h-auto;
+}
+
+/* 상품정보 */
 .goods__list--style2 li .goods__info {
-  float: left;
-  width: 168px;
-  margin: 0 0 0 10px;
-  text-align: left;
+  @apply relative grid grid-cols-1 w-full mt-auto mb-2 px-0 bg-white;
+}
+.goods__list--style2 li .goods__info .goods__name {
+  @apply order-2 relative w-full px-0.5 mt-auto text-[13px] text-left leading-tight text-zinc-900 font-normal line-clamp-2;
+}
+.goods__list--style2 li .goods__info .goods__price {
+  @apply order-4 px-0.5 text-xl text-rose-600 text-left tracking-tight;
+}
+.goods__list--style2 li .goods__info .goods__price > span {
+  @apply mt-auto text-xs text-zinc-700;
+}
+.goods__list--style2 li .goods__info .goods__etc1 {
+  @apply order-1 px-0.5 text-[11px] text-left text-blue-500 font-normal;
+}
+.goods__list--style2 li .goods__info .goods__delprice {
+  @apply order-3 px-0.5 text-[11px] text-left line-through text-zinc-400;
+}
+
+
+
+/* 세로형 style2 */
+/* 
+.goods__list--style2 li .goods__info {
+  @apply relative grid grid-cols-1 mt-0 py-2 px-0 z-10 ;
+}
+.goods__list--style2 li .goods__imgbox {
+  @apply relative overflow-hidden flex size-36 min-w-36 min-h-36 border items-center justify-center p-2;
+}
+.goods__list--style2 li .goods__imgbox img {
+  @apply w-auto max-h-full;
 }
 .goods__list--style2 li .goods__name {
-  width: auto;
-  margin: 8px 0;
-  min-height: calc(1.2em * 2);
-  font-size: 17px;
-}
-.goods__list--style2 li .goods__etc1,
-.goods__list--style2 li .goods__delprice {
-  margin: 5px 0;
+  @apply -order-2 relative w-auto px-2 text-lg leading-tight text-black line-clamp-2;
 }
 .goods__list--style2 li .goods__price {
-  font-size: 300%;
+  @apply flex items-center justify-start mt-auto px-2 pt-0 pb-1 text-5xl text-rose-600 bg-transparent;
 }
 .goods__list--style2 li .goods__price > span {
-  font-size: 18px;
+  @apply inline-flex mt-auto text-base;
 }
 .goods__list--style2 li .goods__badge {
-  width: 43.3333333333px;
-  height: 43.3333333333px;
-}
-.goods__list--style2.even li:nth-child(even) .goods__imgbox {
-  float: right;
-}
-.goods__list--style2.even li:nth-child(even) .goods__info {
-  float: right;
-  margin: 10px 10px 0 0;
-  text-align: right;
-}
-.goods__list--style2.even li.ie8_even .goods__imgbox {
-  float: right;
-}
-.goods__list--style2.even li.ie8_even .goods__info {
-  float: right;
-  margin: 10px 10px 0 0;
-  text-align: right;
-}
-.goods__list--style3 {
-  flex-direction: column;
-}
-.goods__list--style3 li {
-  height: auto;
-  padding: 2px;
-}
-.goods__list--style3 li .goods__card {
-  display: block;
-}
-.goods__list--style3 li .goods__imgbox {
-  display: none;
-}
-.goods__list--style3 li .goods__info {
-  padding-bottom: 7px;
-  text-align: right;
-}
-.goods__list--style3 li .goods__name {
-	height: 33px;
-  font-size: 15px;
-  float: none;
-  width: auto;
-  max-width: 100%;
-  margin-top: 7px;
-  text-align: left;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
 }
 
-.goods__list--style3 li .goods__price {
-  display: inline;
-  font-size: 300%;
-  padding: 0 5px;
+.goods__list--style2 li .goods__etc1 {
+  @apply col-span-2 flex items-center justify-start text-sm text-zinc-800 bg-transparent;
 }
-.goods__list--style3 li .goods__price > span {
-  font-size: 18px;
+.goods__list--style2 li .goods__delprice {
+  @apply col-span-2 flex items-center justify-start text-sm line-through text-zinc-800 bg-transparent;
 }
-.goods__list--style3 li .goods__badge {
-  display: none;
-}
+
+ */
