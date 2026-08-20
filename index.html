@@ -372,38 +372,7 @@
   <link rel="stylesheet" href="/2ms/static/jquery-ui/jquery-ui.theme.min.css">
   <link rel="stylesheet" href="/2ms/static/css/page_weblink.css?v=20260721">
   <style>
-    .goods__pre h1 {
-      font-size: 35px;
-      line-height: 40px;
-    }
-
-    .goods__pre h2 {
-      font-size: 30px;
-      line-height: 40px;
-    }
-
-    .goods__pre h3 {
-      font-size: 25px;
-      line-height: 40px;
-    }
-
-    .goods__pre h4 {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    .goods__pre h5 {
-      font-size: 18px;
-      line-height: 30px;
-    }
-
-    .goods__pre h6 {
-      font-size: 16px;
-      line-height: 30px;
-    }
-    pre {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  
     .sample__name {
       display: flex;
       justify-content: center;
@@ -489,94 +458,6 @@
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .06);
     }
 
-    .icon__cartbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 64px;
-      height: 64px;
-      right: 5%;
-      bottom: 5%;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, .15);
-      border-radius: 50%;
-      box-shadow: 0 0 3px rgba(0, 0, 0, .2);
-    }
-
-    .icon__cartbox.active {
-      border-color: #93c5fd;
-    }
-
-    .icon__cartbox svg {
-      fill: #94a3b8;
-    }
-
-    .icon__cartbox.active svg {
-      fill: #3b82f6;
-    }
-
-    .icon__cartbox.disabled {
-      background-color: #f2f2f2;
-      border-color: #eeeeee;
-    }
-
-    .icon__cartbox.disabled svg {
-      opacity: 0.3;
-      filter: grayscale(100%);
-    }
-
-    .goods__list--type1 .icon__cartbox,
-    .goods__list--type2 .icon__cartbox {
-      width: 44px;
-      height: 44px;
-    }
-
-    .goods__list--type3 .icon__cartbox {
-      width: 34px;
-      height: 34px;
-    }
-
-    .goods__list--type4 .icon__cartbox {
-      width: 28px;
-      height: 28px;
-    }
-
-    .goods__list--style3 li .goods__card {
-      position: relative;
-    }
-
-    .goods__list--style3 .icon__cartbox {
-      left: 5px;
-    }
-
-    .goods__list--style2 .icon__cartbox,
-    .goods__list--style3 .icon__cartbox {
-      width: 34px;
-      height: 34px;
-    }
-
-    .goods__card .soldout-div,
-    .search-list .soldout-div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      font-size: 40px;
-      font-weight: bold;
-      color: #ffffff;
-      z-index: 30;
-    }
-
-    .goods__list--type4 .soldout-div {
-      font-size: 28px;
-    }
-
     .cnList .btn_comm {
       margin-right: 8px;
       margin-bottom: 4px;
@@ -603,271 +484,6 @@
 
     .thumb {
       cursor: pointer;
-    }
-
-    .product-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      inset: 0;
-      padding: 12px;
-      z-index: 1001;
-    }
-
-    .product-bg {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, .4);
-    }
-
-    .product-panel {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 100%;
-      padding: 16px;
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      z-index: 1002;
-    }
-
-    .product-tit {
-      margin-bottom: 8px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.25;
-      text-align: center;
-    }
-
-    .product-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 220px;
-      margin-inline: -16px;
-      overflow: hidden;
-    }
-
-    .product-img img {
-      width: auto;
-      height: 120%;
-    }
-
-    .product-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-info>p {
-      margin: 8px auto;
-      font-size: 14px;
-    }
-
-    .product-quantity {
-      display: flex;
-      align-items: center;
-      position: relative;
-      width: 130px;
-      height: 40px;
-      margin: 8px auto;
-      background: #fff;
-      border: 1px solid #90a1b9;
-      border-radius: 50px;
-    }
-
-    .product-quantity.disabled {
-      border: none;
-    }
-
-    .product-quantity.disabled:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.05);
-      /* 아주 연한 회색 반투명 */
-      border-radius: 50px;
-      z-index: 1;
-      cursor: not-allowed;
-    }
-
-    .product-quantity-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 100%;
-      cursor: pointer;
-    }
-
-    .product-quantity-btn.minus {
-      margin-right: auto;
-    }
-
-    .product-quantity-btn.plus {
-      margin-left: auto;
-    }
-
-    .product-quantity-value {
-      width: 50px;
-      margin: 0 auto;
-      border: none;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .product-quantity-value::-webkit-outer-spin-button,
-    .product-quantity-value::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    .product-quantity.disabled .product-quantity-btn,
-    .product-quantity.disabled .product-quantity-value {
-      opacity: 0.3;
-      /* 투명도를 낮춰서 흐릿하게 만듦 */
-      filter: grayscale(100%);
-      /* 흑백 처리 (필요시) */
-    }
-
-    .product-etc1 {
-      margin: 10px auto 0;
-      font-size: 18px;
-      font-weight: 700;
-      color: #517dfb;
-    }
-
-    .product-etc1:empty {
-      display: none;
-    }
-
-    .product-delprice {
-      margin: 10px auto 0;
-      font-size: 18px;
-      font-weight: 700;
-      color: #999999;
-      text-decoration: line-through;
-    }
-
-    .product-delprice:empty {
-      display: none;
-    }
-
-    .product-etc1:empty+.product-delprice:empty+.product-price {
-      margin-top: 10px;
-    }
-
-    .product-price {
-      margin: 0 auto;
-      font-size: 30px;
-      font-weight: 800;
-      color: #CF0000;
-      letter-spacing: -.7px;
-    }
-
-    .product-price>span {
-      font-size: 18px;
-      font-weight: 500;
-      color: black;
-    }
-
-    .product-name {
-      margin: 0 auto;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .product-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 200px;
-      height: 46px;
-      margin: 16px auto;
-      background: #f43f5e;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .product-btn.disabled {
-      background-color: #eeeeee;
-      color: #bbbbbb;
-      cursor: not-allowed;
-    }
-
-    .product-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      fill: #64748b;
-    }
-
-    .layer__wrap {
-      display: none;
-    }
-
-    .layer__bg {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url(/2ms/static/img/bg_block_50.png);
-      z-index: 1000;
-    }
-
-    .layer__box {
-      position: absolute;
-      top: 10%;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-      z-index: 1001;
-    }
-
-    @media (min-width:512px),
-    (max-width:717px) screen and (orientation:portrait) {
-      .layer .goods__list {
-        padding: 0px 190px
-      }
-
-      .layer__image {
-        max-height: 283px !important;
-      }
-    }
-
-    .layer__box .goods__card {
-      position: relative;
-    }
-
-    .layer__goods__name {
-      position: relative;
-      overflow: hidden;
-      width: 250px;
-      margin: 5px auto 0;
-      font-size: 19px;
-      font-weight: 600;
-      line-height: 1.2;
-      word-break: break-all;
-    }
-
-    .layer__image {
-      max-height: 300px !important;
-    }
-
-    .layer__close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      fill: #64748b;
     }
 
     /* 하단 sticky 버튼그룹 */
@@ -1357,6 +973,22 @@
       font-size: 16px;
       font-weight: 700;
       overflow: hidden;
+    }
+
+    .search-list .soldout-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 40px;
+      font-weight: bold;
+      color: #ffffff;
+      z-index: 30;
     }
 
     .search-close-btn {
@@ -2199,7 +1831,7 @@
 
 
       <div class="sample__banner sample__banner--type2">
-        <img src="./img/87f5a385-77d4-4001-87d3-0a57e73e69a1.gif">
+        <img src="./img/277df31b-25a1-41f2-ac0d-a2c3a31593d6.png">
       </div>
 
 
@@ -2638,7 +2270,6 @@
                 <!--찐 <img src="./img/부스트%20우연_채끝_1_1.jpg"> -->
                 <img data-src="./img/부스트%20우연_채끝_1_1.jpg"
                   onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
-
               </div>
               <div class="goods__info">
                 <div class="goods__etc1">200g 1+1 !!!!!</div>
@@ -3045,19 +2676,7 @@
     </div>
 
     <div class="corner-div " style="background:#0152a1">
-
-
-
-
-
-
-
       <div class="goods">
-
-
-
-
-
         <!--템플릿 유형 장문편집형-->
         <ul id="js_changeList4" class="goods__list">
           <li>
@@ -3068,10 +2687,6 @@
           </li>
         </ul>
         <input type="hidden" class="templateType" value="4">
-
-
-
-
       </div>
     </div>
 
@@ -3540,8 +3155,8 @@
 					<div class="layer__bg"></div>
 					<div class="goods layer__box" style="position:fixed">
 						<ul id="js_changeList" class="goods__list">
-							<li style="padding:25px">
-								<div class="goods__card popup" style="padding:6% 2%">
+							<li>
+								<div class="goods__card popup">
 									<div class="goods__imgbox" style="background:white;">
 										<img class="layer__image" style="max-width:75%" src="/2ms/static/img/no_image_color.png">
 									</div>
