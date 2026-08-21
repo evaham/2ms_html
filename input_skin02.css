@@ -363,7 +363,7 @@
   @apply order-1 relative flex flex-col min-h-82 -mt-2 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 relative ml-20 mb-20 mr-4 pt-3 px-2 text-4xl text-right leading-tight text-zinc-700 font-normal;
+  @apply order-2 relative mb-44 pt-3 px-2 text-4xl text-center leading-tight text-zinc-700 font-normal;
 }
 .goods__list--type1 li .goods__info .goods__price {
   @apply order-4 px-2 text-7xl text-rose-600 text-center;
@@ -380,9 +380,6 @@
 .goods__list--type1 li .goods__info .goods__delprice {
   @apply order-3 px-2 text-base text-center line-through text-zinc-500;
 }
-
-
-
 
 
 /* -----가로형 2단----- */
