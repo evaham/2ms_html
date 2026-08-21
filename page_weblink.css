@@ -603,6 +603,94 @@ body {
 
 /* 코너관련 CSS 분리 */
 
+.goodsbox {
+  display: block;
+  margin-top: 10px;
+}
+.goodsbox__list {
+  clear: both;
+}
+.goodsbox__list::before {
+  content: " ";
+  display: table;
+}
+.goodsbox__list::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.goodsbox__list > li {
+  position: relative;
+  width: 50%;
+  float: left;
+  margin-bottom: 55px;
+}
+.goodsbox__list--style2 > li .goodsbox__imgbox {
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+}
+.goodsbox__list--style2 > li .goodsbox__btngroup {
+  margin-left: 50px;
+}
+.goodsbox__imgbox {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 5px auto 0;
+  background: #f8f9fa;
+  line-height: 150px;
+  text-align: center;
+  vertical-align: top;
+}
+.goodsbox__imgbox img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.goodsbox__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 10;
+}
+.goodsbox__badge img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.goodsbox__info {
+  display: inline-block;
+}
+.goodsbox__btngroup {
+  width: 150px;
+  margin-top: -35px;
+  margin-left: 2px;
+  text-align: left;
+}
+.goodsbox__txt {
+  margin: 0 0 10px 0;
+  padding-left: 10px;
+}
+.goodsbox__txt .emp::before {
+  content: "*";
+  display: inline-block;
+  width: 8px;
+  margin-left: -8px;
+  color: red;
+}
 
 
 

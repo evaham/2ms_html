@@ -17,18 +17,10 @@
 
 
 
-.icon__cartbox {
-  @apply z-20;
-}
-
-.corner-div { font-family: "SchoolSafetyPoster", Arial, sans-serif; 
-  /* transform-style: preserve-3d; */
-  @apply overflow-hidden;
-}
 
 
 /* -----모바일전단 만들기 페이지에서 사용됨 추후 분리----- */
-
+/* 
 .goodsbox {
   @apply block mt-2.5;
 }
@@ -109,9 +101,15 @@
   width: 8px;
   margin-left: -8px;
   color: red;
-}
+} */
 
 /* -----모바일전단 만들기 페이지에서 사용됨 추후 분리----- */
+
+
+.corner-div { font-family: "SchoolSafetyPoster", Arial, sans-serif; 
+  /* transform-style: preserve-3d; */
+  @apply overflow-hidden;
+}
 
 .goods {
   @apply inline-block w-full;
@@ -125,26 +123,6 @@
   @apply table clear-both;
 }
 
-
-
-.goods__card {
-  /* @apply relative overflow-hidden flex-1 flex flex-col w-full h-full bg-white; */
-}
-.goods__card.popup {
-  /* background: #FFFFFF; */
-}
-.goods__imgbox {
-  /* @apply relative overflow-hidden flex items-center justify-center p-2; */
-}
-.goods__imgbox img {
-  /* @apply object-contain w-full h-full; */
-}
-
-
-
-.goods__info {
-  /* @apply relative grid grid-cols-2 mt-auto px-0 z-10 ; */
-}
 
 .goods__name {
   /* @apply -order-2 col-span-2 relative w-full my-2 px-2 mt-auto text-xl leading-tight text-black line-clamp-2; */
@@ -234,33 +212,6 @@
   ; */
 }
 
-.goods__price > span {
-  /* @apply inline-flex mt-auto text-3xl; */
-}
-.goods__badge {
-  /* @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10; */
-}
-.goods__badge img {
-  /* @apply block max-w-full w-auto max-h-full h-auto; */
-}
-.goods__pre {
-  /* margin: 10px;
-  font-size: 14px;
-  text-align: left;
-  white-space: pre-wrap;
-  word-break: break-all;
-  overflow: auto; */
-}
-
-.goods__list li:last-child {
-  /* @apply border-b border-zinc-300; */
-}
-.goods__list li .goods__price {
-}
-.goods__list li .goods__price > span {
-  /* font-size: 24px; */
-}
-
 
 /* -----뷰 공통----- */
 .goods__list {
@@ -310,8 +261,6 @@
   @apply object-contain w-auto h-[120%];
 }
 
-
-
 /* 상품 더하기 빼기 버튼 */
 .product-quantity {
   @apply relative flex items-center w-[130px] h-[40px] my-2 mx-auto bg-white border border-zinc-400 rounded-full;
@@ -347,10 +296,6 @@
   /* 흑백 처리 (필요시) */
   @apply opacity-30 filter grayscale;
 }
-
-
-
-
 
 .product-info {
   @apply flex flex-col;
@@ -481,9 +426,6 @@
 .goods__list--type1 li .icon__cartbox.disabled svg {
   @apply opacity-30 filter grayscale
 }
-
-
-
 
 
 /* 이미지정보 */
