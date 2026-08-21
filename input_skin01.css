@@ -360,7 +360,7 @@
 
 /* 상품정보 */
 .goods__list--type1 li .goods__info {
-  @apply relative grid grid-cols-1 mt-auto px-0;
+  @apply grid grid-cols-1 mt-auto px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
   @apply order-2 relative w-full my-2 px-2 mt-auto text-xl text-center leading-tight text-zinc-700 font-normal line-clamp-2;
@@ -372,7 +372,7 @@
   @apply mt-auto text-2xl text-zinc-700;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 px-2 text-base text-center text-blue-500 font-normal;
+  @apply order-1 flex px-2 text-base text-center text-blue-500 font-normal bg-blue-500;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
   @apply order-3 px-2 text-base text-center line-through text-zinc-500;
