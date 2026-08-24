@@ -145,7 +145,7 @@
   ;
 }
 .goods__delprice {
-  --stroke-width: 1px;
+  --stroke-width: .6px;
   --stroke-color: #fff;
   text-shadow:
     calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color),
@@ -290,7 +290,7 @@
   @apply hidden;
 }
 .product-info .product-delprice {
-  @apply mt-2.5 mx-auto mb-0 text-lg text-zinc-500 line-through;
+  @apply mt-2.5 mx-auto mb-0 text-lg text-zinc-600 line-through;
 }
 .product-info .product-etc1:empty+.product-info .product-delprice:empty+.product-info .product-price {
   @apply mt-2.5;
@@ -356,7 +356,7 @@
   @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-base font-normal text-blue-500;
 }
 .goods__card.popup .goods__info .goods__delprice{
-  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-base font-normal text-zinc-500 line-through;
+  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-base font-normal text-zinc-600 line-through;
 }
 .goods__card.popup .goods__info .goods__etc1:empty,.goods__card.popup .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -427,7 +427,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-82 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center leading-tight font-bold;
+  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center leading-tight text-zinc-900 font-bold;
 }
 .goods__list--type1 li .goods__info .goods__price {
   @apply order-4 px-2 text-6xl text-rose-600 text-center tracking-tight;
@@ -510,7 +510,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-44 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight font-bold;
+  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight text-zinc-900 font-bold;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 px-2 text-3xl text-rose-600 text-center tracking-tight;
@@ -525,7 +525,7 @@
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 min-h-5 px-2 text-sm text-center line-through text-zinc-500;
+  @apply order-3 min-h-5 px-2 text-sm text-center line-through text-zinc-600;
 }
 
 
@@ -621,7 +621,7 @@
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 min-h-5 px-2 text-xs text-center line-through text-zinc-500;
+  @apply order-3 min-h-5 px-2 text-xs text-center line-through text-zinc-600;
 }
 
 
@@ -792,7 +792,7 @@
   @apply relative flex flex-col my-2 mx-2;
 }
 .goods__list--style2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative w-full px-0.5 mb-auto text-xl text-left leading-tight text-shadow-none;
+  @apply order-2 flex-1 relative w-full px-0.5 mb-auto text-xl text-left leading-tight text-zinc-900 text-shadow-none;
 }
 .goods__list--style2 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-4xl text-rose-600 text-left tracking-tight text-shadow-none;
@@ -870,7 +870,7 @@
   @apply relative flex flex-wrap px-0 text-right;
 }
 .goods__list--style3 li .goods__info .goods__name {
-  @apply order-2 relative flex w-full px-0.5 mb-2 text-lg text-left leading-tight font-normal text-shadow-none;
+  @apply order-2 relative flex w-full px-0.5 mb-2 text-lg text-left leading-tight font-normal text-zinc-900 text-shadow-none;
 }
 .goods__list--style3 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-4xl text-rose-600 text-right tracking-tight text-shadow-none;
