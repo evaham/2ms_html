@@ -40,6 +40,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-normal: 400;
@@ -268,11 +270,35 @@
   font-weight: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Aggravo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+  font-weight: 300 500 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rix';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
 .corner-div {
-  font-family: "SchoolSafetyPoster", Arial, sans-serif;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  word-break: keep-all;
+  font-family: "Aggravo", Arial, sans-serif;
+}
+.goods__name {
+  font-family: "Aggravo", Arial, sans-serif;
+}
+.goods__delprice {
+  font-family: "Rix", Arial, sans-serif;
+}
+.goods__price {
+  font-family: 'Rix', Arial, sans-serif;
+}
+.goods__etc1 {
+  font-family: "Pretendard-Custom", Arial, sans-serif;
+}
+.goods__pre {
+  font-family: Arial, sans-serif;
 }
 .goods__name {
   --stroke-width: 3px;
@@ -284,8 +310,15 @@
   --stroke-color: #fff;
   text-shadow: calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(20deg)) calc(var(--stroke-width) * sin(20deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(30deg)) calc(var(--stroke-width) * sin(30deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(40deg)) calc(var(--stroke-width) * sin(40deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(50deg)) calc(var(--stroke-width) * sin(50deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(60deg)) calc(var(--stroke-width) * sin(60deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(70deg)) calc(var(--stroke-width) * sin(70deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(80deg)) calc(var(--stroke-width) * sin(80deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(90deg)) calc(var(--stroke-width) * sin(90deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(100deg)) calc(var(--stroke-width) * sin(100deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(110deg)) calc(var(--stroke-width) * sin(110deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(120deg)) calc(var(--stroke-width) * sin(120deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(130deg)) calc(var(--stroke-width) * sin(130deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(140deg)) calc(var(--stroke-width) * sin(140deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(150deg)) calc(var(--stroke-width) * sin(150deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(160deg)) calc(var(--stroke-width) * sin(160deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(170deg)) calc(var(--stroke-width) * sin(170deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(180deg)) calc(var(--stroke-width) * sin(180deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(190deg)) calc(var(--stroke-width) * sin(190deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(200deg)) calc(var(--stroke-width) * sin(200deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(210deg)) calc(var(--stroke-width) * sin(210deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(220deg)) calc(var(--stroke-width) * sin(220deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(230deg)) calc(var(--stroke-width) * sin(230deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(240deg)) calc(var(--stroke-width) * sin(240deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(250deg)) calc(var(--stroke-width) * sin(250deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(260deg)) calc(var(--stroke-width) * sin(260deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(270deg)) calc(var(--stroke-width) * sin(270deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(280deg)) calc(var(--stroke-width) * sin(280deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(290deg)) calc(var(--stroke-width) * sin(290deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(300deg)) calc(var(--stroke-width) * sin(300deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(310deg)) calc(var(--stroke-width) * sin(310deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(320deg)) calc(var(--stroke-width) * sin(320deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(330deg)) calc(var(--stroke-width) * sin(330deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(340deg)) calc(var(--stroke-width) * sin(340deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(350deg)) calc(var(--stroke-width) * sin(350deg)) 0 var(--stroke-color);
 }
-.goods__etc1 {
-  font-family: "Pretendard-Custom", Arial, sans-serif;
+.goods__delprice {
+  --stroke-width: 1px;
+  --stroke-color: #fff;
+  text-shadow: calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(20deg)) calc(var(--stroke-width) * sin(20deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(30deg)) calc(var(--stroke-width) * sin(30deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(40deg)) calc(var(--stroke-width) * sin(40deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(50deg)) calc(var(--stroke-width) * sin(50deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(60deg)) calc(var(--stroke-width) * sin(60deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(70deg)) calc(var(--stroke-width) * sin(70deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(80deg)) calc(var(--stroke-width) * sin(80deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(90deg)) calc(var(--stroke-width) * sin(90deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(100deg)) calc(var(--stroke-width) * sin(100deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(110deg)) calc(var(--stroke-width) * sin(110deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(120deg)) calc(var(--stroke-width) * sin(120deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(130deg)) calc(var(--stroke-width) * sin(130deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(140deg)) calc(var(--stroke-width) * sin(140deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(150deg)) calc(var(--stroke-width) * sin(150deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(160deg)) calc(var(--stroke-width) * sin(160deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(170deg)) calc(var(--stroke-width) * sin(170deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(180deg)) calc(var(--stroke-width) * sin(180deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(190deg)) calc(var(--stroke-width) * sin(190deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(200deg)) calc(var(--stroke-width) * sin(200deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(210deg)) calc(var(--stroke-width) * sin(210deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(220deg)) calc(var(--stroke-width) * sin(220deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(230deg)) calc(var(--stroke-width) * sin(230deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(240deg)) calc(var(--stroke-width) * sin(240deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(250deg)) calc(var(--stroke-width) * sin(250deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(260deg)) calc(var(--stroke-width) * sin(260deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(270deg)) calc(var(--stroke-width) * sin(270deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(280deg)) calc(var(--stroke-width) * sin(280deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(290deg)) calc(var(--stroke-width) * sin(290deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(300deg)) calc(var(--stroke-width) * sin(300deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(310deg)) calc(var(--stroke-width) * sin(310deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(320deg)) calc(var(--stroke-width) * sin(320deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(330deg)) calc(var(--stroke-width) * sin(330deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(340deg)) calc(var(--stroke-width) * sin(340deg)) 0 var(--stroke-color), calc(var(--stroke-width) * cos(350deg)) calc(var(--stroke-width) * sin(350deg)) 0 var(--stroke-color);
+}
+.corner-div {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 .goods__list {
   display: flex;
@@ -796,16 +829,16 @@
   line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
   color: var(--color-zinc-700);
 }
 .goods__list--type1 li .goods__info .goods__price {
   order: 4;
   padding-inline: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-7xl);
-  line-height: var(--tw-leading, var(--text-7xl--line-height));
+  font-size: var(--text-6xl);
+  line-height: var(--tw-leading, var(--text-6xl--line-height));
   color: var(--color-rose-600);
 }
 .goods__list--type1 li .goods__info .goods__price > span {
@@ -836,10 +869,29 @@
   order: 3;
   padding-inline: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-base);
-  line-height: var(--tw-leading, var(--text-base--line-height));
-  color: var(--color-zinc-500);
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  color: var(--color-zinc-700);
   text-decoration-line: line-through;
+}
+.goods__list--type2 {
+  margin: calc(var(--spacing) * 3);
+  gap: calc(var(--spacing) * 3);
+}
+.goods__list--type2 li {
+  width: calc((100% - 0.75rem) / 2);
+}
+.goods__list--type2 li:last-child {
+  width: calc((100% - 0.25rem) / 2);
+  flex-grow: 1;
+}
+.goods__list--type2 li .goods__card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
 }
 .goods__list--type2 {
   margin: calc(var(--spacing) * 3);
@@ -940,31 +992,127 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   padding-inline: 0px;
 }
+.goods__list--type2 {
+  margin: calc(var(--spacing) * 3);
+  gap: calc(var(--spacing) * 3);
+}
+.goods__list--type2 li {
+  width: calc((100% - 0.75rem) / 2);
+}
+.goods__list--type2 li .goods__card {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding-bottom: calc(var(--spacing) * 2);
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.goods__list--type2 li .icon__cartbox {
+  position: absolute;
+  bottom: calc(var(--spacing) * 30);
+  left: 0px;
+  z-index: 10;
+  display: flex;
+  width: calc(var(--spacing) * 11);
+  height: calc(var(--spacing) * 11);
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-zinc-300);
+  background-color: var(--color-white);
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.goods__list--type2 li .icon__cartbox svg {
+  fill: var(--color-zinc-400);
+}
+.goods__list--type2 li .icon__cartbox.active {
+  border-color: var(--color-blue-400);
+}
+.goods__list--type2 li .icon__cartbox.active svg {
+  fill: var(--color-blue-500);
+}
+.goods__list--type2 li .icon__cartbox.disabled {
+  border-color: var(--color-zinc-200);
+  background-color: var(--color-zinc-200);
+}
+.goods__list--type2 li .icon__cartbox.disabled svg {
+  opacity: 30%;
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+}
+.goods__list--type2 li .goods__imgbox {
+  position: absolute;
+  inset: calc(var(--spacing) * 6);
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.goods__list--type2 li .goods__imgbox img {
+  margin-top: auto;
+  height: calc(var(--spacing) * 60);
+  max-height: 100%;
+  width: auto;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  object-fit: contain;
+}
+.goods__list--type2 li .goods__imgbox .goods__badge {
+  position: absolute;
+  bottom: calc(var(--spacing) * 42);
+  left: 0px;
+  z-index: 10;
+  display: flex;
+  width: calc(var(--spacing) * 17);
+  height: calc(var(--spacing) * 17);
+  align-items: center;
+  justify-content: center;
+}
+.goods__list--type2 li .goods__imgbox .goods__badge img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.goods__list--type2 li .goods__info {
+  position: relative;
+  order: 1;
+  display: flex;
+  min-height: calc(var(--spacing) * 50);
+  flex-direction: column;
+  padding-inline: 0px;
+}
 .goods__list--type2 li .goods__info .goods__name {
   position: relative;
   order: 2;
-  margin-top: auto;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  width: 100%;
+  margin-bottom: auto;
   padding-inline: calc(var(--spacing) * 2);
+  padding-top: calc(var(--spacing) * 3);
   text-align: center;
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
   color: var(--color-zinc-700);
 }
 .goods__list--type2 li .goods__info .goods__price {
   order: 4;
   padding-inline: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-4xl);
-  line-height: var(--tw-leading, var(--text-4xl--line-height));
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
   color: var(--color-rose-600);
 }
 .goods__list--type2 li .goods__info .goods__price > span {
@@ -974,25 +1122,20 @@
   color: var(--color-zinc-700);
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  padding-inline: calc(var(--spacing) * 2);
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
-  color: var(--color-blue-500);
   order: 1;
-  margin-inline: calc(var(--spacing) * 10);
+  margin-inline: calc(var(--spacing) * 4);
   margin-top: calc(var(--spacing) * -2);
   border-radius: var(--radius-2xl);
   background-color: var(--color-blue-600);
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 0.5);
   text-align: center;
-  font-size: var(--text-base);
-  line-height: var(--tw-leading, var(--text-base--line-height));
-  --tw-font-weight: var(--font-weight-medium);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
   color: var(--color-white);
+}
+.goods__list--type2 li .goods__info .goods__etc1:empty {
+  display: none;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
   order: 3;
@@ -1606,7 +1749,6 @@
   text-decoration-line: line-through;
 }
 .goods__pre {
-  font-family: Arial, sans-serif;
   margin-inline: calc(var(--spacing) * 0.5);
   margin-block: var(--spacing);
   overflow: auto;
