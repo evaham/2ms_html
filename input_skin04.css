@@ -523,13 +523,13 @@
   @apply order-1 flex-1 relative flex flex-row flex-wrap px-2 pt-2 pb-1 gap-1.5 bg-white;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-4 flex-1 relative w-full mb-3 text-base text-left leading-tight text-zinc-900 font-bold line-clamp-2;
+  @apply order-4 flex-1 relative w-full mt-auto text-base text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__name:after {
   @apply content-[''] block w-7 border-b-3 border-amber-200;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-3 w-full py-1 text-2xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-3 w-full mb-auto py-1 text-2xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-sm;
@@ -617,16 +617,16 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-row flex-wrap justify-between px-1 pt-2 pb-1 gap-1 bg-white;
+  @apply order-1 flex-1 relative flex flex-row flex-wrap  px-1 pt-2 pb-1 gap-1 bg-white;
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-4 flex-1 relative w-full mb-1 text-sm text-left leading-tight text-zinc-900 font-bold line-clamp-2;
+  @apply order-4 flex-1 relative w-full mb-1 mt-auto text-sm text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__name:after {
   @apply content-[''] block w-7 border-b-3 border-amber-200;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-3 w-full mt-auto py-1 text-xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-3 w-full mb-auto py-1 text-xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-sm;
