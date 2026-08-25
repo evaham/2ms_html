@@ -343,22 +343,23 @@
 }
 .goods__card.popup .goods__info .layer__goods__name{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 mx-auto text-xl font-bold leading-tight line-clamp-2;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-xl font-bold leading-tight shadow-none;
 }
-.goods__card.popup .goods__info .goods__price{
+.goods__card.popup .goods__info .goods__price {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 mx-auto text-3xl font-bold text-rose-600;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-3xl font-bold text-rose-600 shadow-none;
 }
-.goods__card.popup .goods__info .goods__price > span{
+.goods__card.popup .goods__info .goods__price > span {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   @apply mt-auto ml-0.5 text-base font-normal;
 }
 .goods__card.popup .goods__info .goods__etc1{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 mx-auto text-lg font-bold text-blue-500;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-lg font-bold text-blue-500 shadow-none;
 }
 .goods__card.popup .goods__info .goods__delprice{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 mx-auto text-base font-normal text-zinc-600 line-through;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-base font-normal text-zinc-600 line-through shadow-none;
 }
 .goods__card.popup .goods__info .goods__etc1:empty,.goods__card.popup .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -366,6 +367,11 @@
 .layer__close {
   @apply absolute top-3 right-5 size-6 fill-zinc-500 cursor-pointer;
 }
+
+
+
+
+
 
 
 /* -----가로형 1단----- */
@@ -453,7 +459,7 @@
 
 /* -----가로형 2단----- */
 .goods__list--type2 {
-  @apply gap-x-2 gap-y-3 m-3 mt-4;
+  @apply gap-x-2 gap-y-4 m-3 mt-4;
 }
 .goods__list--type2 li {
   @apply w-[calc((100%-0.75rem)/2)] grow;

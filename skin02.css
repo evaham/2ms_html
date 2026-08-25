@@ -644,16 +644,16 @@
   position: relative;
   margin-inline: auto;
   margin-block: var(--spacing);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   overflow: hidden;
+  padding-inline: calc(var(--spacing) * 2);
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 .goods__card.popup .goods__info .goods__price {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -661,13 +661,17 @@
   margin-inline: auto;
   margin-block: var(--spacing);
   overflow: hidden;
+  padding-inline: calc(var(--spacing) * 2);
   font-size: var(--text-3xl);
   line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-rose-600);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 .goods__card.popup .goods__info .goods__price > span {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: auto;
   margin-left: calc(var(--spacing) * 0.5);
   font-size: var(--text-base);
@@ -681,11 +685,14 @@
   margin-inline: auto;
   margin-block: var(--spacing);
   overflow: hidden;
+  padding-inline: calc(var(--spacing) * 2);
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-blue-500);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 .goods__card.popup .goods__info .goods__delprice {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -693,12 +700,15 @@
   margin-inline: auto;
   margin-block: var(--spacing);
   overflow: hidden;
+  padding-inline: calc(var(--spacing) * 2);
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
   color: var(--color-zinc-600);
   text-decoration-line: line-through;
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 .goods__card.popup .goods__info .goods__etc1:empty,.goods__card.popup .goods__info .goods__delprice:empty {
   display: none;
@@ -873,7 +883,7 @@
   margin: calc(var(--spacing) * 3);
   margin-top: calc(var(--spacing) * 4);
   column-gap: calc(var(--spacing) * 2);
-  row-gap: calc(var(--spacing) * 3);
+  row-gap: calc(var(--spacing) * 4);
 }
 .goods__list--type2 li {
   width: calc((100% - 0.75rem) / 2);
