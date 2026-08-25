@@ -328,35 +328,37 @@
   @apply absolute top-1/10 flex flex-col w-full h-auto p-3 z-[1001];
 }
 
+
 .goods__card.popup {
   @apply overflow-hidden flex flex-col w-full h-auto bg-white rounded-2xl;
 }
-
 .goods__card.popup .goods__imgbox {
   @apply relative overflow-hidden flex items-center justify-center w-full h-[300px] p-2;
 }
 .goods__card.popup .goods__imgbox img {
   @apply object-contain w-auto h-full max-h-75;
 }
-
-
 .goods__card.popup .goods__info {
-  @apply relative grid grid-cols-1 mt-auto mb-2 px-0;
+  @apply relative flex flex-col mt-auto mb-2 px-0;
 }
 .goods__card.popup .goods__info .layer__goods__name{
-  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-xl font-semibold leading-tight line-clamp-2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @apply relative overflow-hidden my-1 mx-auto text-xl font-bold leading-tight line-clamp-2;
 }
 .goods__card.popup .goods__info .goods__price{
-  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-3xl font-bold text-rose-600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @apply relative overflow-hidden my-1 mx-auto text-3xl font-bold text-rose-600;
 }
 .goods__card.popup .goods__info .goods__price > span{
-  @apply mt-auto ml-0.5 text-base;
+  @apply mt-auto ml-0.5 text-base font-normal;
 }
 .goods__card.popup .goods__info .goods__etc1{
-  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-base font-normal text-blue-500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @apply relative overflow-hidden my-1 mx-auto text-lg font-bold text-blue-500;
 }
 .goods__card.popup .goods__info .goods__delprice{
-  @apply relative overflow-hidden flex items-center justify-center w-full my-1 mx-auto text-base font-normal text-zinc-600 line-through;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  @apply relative overflow-hidden my-1 mx-auto text-base font-normal text-zinc-600 line-through;
 }
 .goods__card.popup .goods__info .goods__etc1:empty,.goods__card.popup .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -364,7 +366,6 @@
 .layer__close {
   @apply absolute top-3 right-5 size-6 fill-zinc-500 cursor-pointer;
 }
-
 
 
 /* -----가로형 1단----- */
