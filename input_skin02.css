@@ -531,25 +531,6 @@
 
 
 
-.goods__list--type2 li .test01 {
-  @apply order-2 flex
-}
-.goods__list--type2 li .test02 {
-  @apply relative flex flex-col
-}
-.goods__list--type2 li .test01 .goods__name {
-  @apply flex-1 ml-auto text-right
-}
-.goods__list--type2 li .test02 .goods__badge {
-  @apply relative flex items-center justify-center size-12 z-10;
-}
-.goods__list--type2 li .test01 .icon__cartbox {
-  @apply relative top-auto bottom-auto flex items-center justify-center size-9 border rounded-full border-zinc-300 bg-white z-10 shadow;
-}
-
-
-
-
 
 
 
