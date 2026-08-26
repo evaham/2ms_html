@@ -717,6 +717,33 @@
   cursor: pointer;
   fill: var(--color-zinc-500);
 }
+.goods__ribbon {
+  position: absolute;
+  top: calc(var(--spacing) * 3);
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: calc(infinity * 1px);
+  border-bottom-left-radius: calc(infinity * 1px);
+  --tw-gradient-position: to right;
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    --tw-gradient-position: to right in oklab;
+  }
+  background-image: linear-gradient(var(--tw-gradient-stops));
+  --tw-gradient-from: #4F46E5;
+  --tw-gradient-to: #0EA5E9;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 1.5);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
 .goods__list--type1 {
   margin: calc(var(--spacing) * 2);
   gap: calc(var(--spacing) * 2);
@@ -840,7 +867,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   --tw-gradient-position: to right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
     --tw-gradient-position: to right in oklab;
@@ -966,7 +993,7 @@
   justify-content: center;
   overflow: hidden;
   background-color: var(--color-slate-50);
-  padding: calc(var(--spacing) * 2);
+  padding: var(--spacing);
 }
 .goods__list--type2 li .goods__imgbox img {
   max-height: 100%;
@@ -1027,7 +1054,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   --tw-gradient-position: to right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
     --tw-gradient-position: to right in oklab;
@@ -1214,7 +1241,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   --tw-gradient-position: to right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
     --tw-gradient-position: to right in oklab;
@@ -1403,7 +1430,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   --tw-gradient-position: to right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
     --tw-gradient-position: to right in oklab;
@@ -1591,7 +1618,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   border-style: var(--tw-border-style);
   border-width: 1px;
   --tw-gradient-position: to right;
@@ -1770,7 +1797,7 @@
   order: 3;
   margin-bottom: auto;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-lg);
   border-style: var(--tw-border-style);
   border-width: 1px;
   --tw-gradient-position: to right;

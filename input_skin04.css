@@ -368,7 +368,10 @@
 
 
 
-
+/* 테스트용 */
+.goods__ribbon {
+  @apply absolute right-0 top-3 flex items-center justify-center px-3 py-1.5 text-sm font-bold text-white leading-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-l-full;
+}
 
 
 
@@ -436,7 +439,7 @@
   @apply order-4 flex-1 relative w-full mt-auto text-lg text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-2 text-3xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-2 text-3xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto ml-1 text-sm;
@@ -501,7 +504,7 @@
 
 /* 이미지정보 */
 .goods__list--type2 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-43 p-2 bg-slate-50;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-43 p-1 bg-slate-50;
 }
 .goods__list--type2 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full;
@@ -523,7 +526,7 @@
   @apply order-4 flex-1 relative w-full mt-auto mb-1 text-base text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-1 text-2xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-1 text-2xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-sm;
@@ -617,7 +620,7 @@
   @apply order-4 flex-1 relative w-full mt-auto mb-0 text-sm text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-1 text-xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-1 text-xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-xs;
@@ -713,7 +716,7 @@
   @apply order-4 flex-1 relative w-full mt-auto mb-0 text-sm text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-0.5 text-base text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-0.5 text-base text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-[11px];
@@ -802,7 +805,7 @@
   @apply order-4 flex-1 relative w-full mt-auto text-lg text-left leading-tight text-zinc-900 font-bold line-clamp-2;
 }
 .goods__list--style2 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-1 text-2xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-1 text-2xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--style2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-base;
@@ -885,7 +888,7 @@
   /* @apply order-1 relative flex w-full px-0.5 mb-2 text-lg text-left leading-tight font-normal text-zinc-900 text-shadow-none; */
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-1 text-2xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded;
+  @apply order-3 w-full mb-auto py-1 text-2xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
   /* @apply order-3 px-2 pt-1 pb-0.5 rounded text-2xl text-zinc-900 bg-amber-400 text-left text-wrap tracking-tight text-shadow-none; */
 }
 .goods__list--style3 li .goods__info .goods__price > span {
