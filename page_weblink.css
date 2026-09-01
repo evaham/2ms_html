@@ -752,49 +752,6 @@ body {
 
 
 
-@media screen and (max-width: 767px) {
-  /* Mobile */
-
-
-
-  
-  /* .goods__card {
-    display: flex;
-    flex-direction: column;
-  }
-  .goods__list--type2 li .goods__card {
-    flex-direction: column;
-  }
-  .goods__list--style2 li .goods__card {
-    flex-direction: row;
-  }
-  .goods__list--style2 li .goods__imgbox {
-    float: none;
-  }
-  .goods__list--style2 li .goods__info {
-    flex: 1;
-    float: none;
-  }
-  .goods__list--style2 li .goods__name > span {
-    text-align: left;
-  }
-  .goods__list--style2.even li:nth-child(even) .goods__card {
-    flex-direction: row-reverse;
-  }
-  .goods__list--style2.even li.ie8_even .goods__card {
-    flex-direction: row-reverse;
-  }
-  .goods__imgbox {display:flex; align-items:center; justify-content:center} */
-  /*
-  .goods__list--style3 li .goods__name {
-    display: block;
-    float: none;
-    width: auto;
-    max-width: 100%;
-  }*/
-  
-}
-
 
 /** 도움말 레이어창 **/
 .help__linkimg { display: inline-block; width: 16px; height: 16px; /*background: url("../img/ico_help_blue.png") no-repeat;*/ vertical-align: top; margin-top:2.5px; }

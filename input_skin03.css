@@ -16,10 +16,6 @@
 
 /* 기본폰트 */
 
-
-
-
-
 /* 상품명 */
 @font-face {
     font-family: 'Aggravo';
@@ -221,7 +217,7 @@
 }
 
 .corner-notice > p, .sample-corner-notice > p {
-  @apply p-2 text-xl text-center text-[#fbff1a];
+  @apply max-w-full p-2 text-xl text-center text-[#fbff1a];
 }
 
 
@@ -295,13 +291,13 @@
   @apply hidden;
 }
 .product-info .product-delprice {
-  @apply mt-2.5 mx-auto mb-0 text-lg text-zinc-600 line-through;
+  @apply mt-2.5 mx-auto mb-0 text-lg text-zinc-800 line-through;
 }
 .product-info .product-etc1:empty+.product-info .product-delprice:empty+.product-info .product-price {
   @apply mt-2.5;
 }
 .product-info .product-price {
-  @apply mt-2.5 mx-auto text-4xl font-bold text-rose-600;
+  @apply mt-2.5 mx-auto text-4xl font-bold text-[#cf0000];
 }
 .product-info .product-price > span {
   @apply mt-auto ml-0.5 text-base;
@@ -350,7 +346,7 @@
 }
 .goods__card.popup .goods__info .goods__price {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 px-2 mx-auto text-3xl font-bold text-rose-600 shadow-none;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-3xl font-bold text-[#cf0000] shadow-none;
 }
 .goods__card.popup .goods__info .goods__price > span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -362,7 +358,7 @@
 }
 .goods__card.popup .goods__info .goods__delprice{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @apply relative overflow-hidden my-1 px-2 mx-auto text-base font-normal text-zinc-600 line-through shadow-none;
+  @apply relative overflow-hidden my-1 px-2 mx-auto text-base font-normal text-zinc-800 line-through shadow-none;
 }
 .goods__card.popup .goods__info .goods__etc1:empty,.goods__card.popup .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -414,7 +410,7 @@
 
 /* 이미지정보 */
 .goods__list--type1 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-72 p-2;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-72 p-2 aspect-square bg-white;
 }
 .goods__list--type1 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full;
@@ -436,19 +432,19 @@
   @apply order-2 flex-1 relative pt-3 px-2 text-3xl text-center leading-tight text-zinc-900;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-6xl text-zinc-900 text-center tracking-tight;
+  @apply order-4 px-2 text-6xl text-[#cf0000] text-center tracking-tight;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 mx-auto px-4 py-0.5 rounded text-base text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-4 py-0.5 rounded text-base text-center text-white bg-zinc-900 leading-tight;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
-  @apply order-3 min-h-8 px-2 text-2xl text-center line-through;
+  @apply order-3 min-h-8 px-2 text-2xl text-zinc-800 text-center line-through;
 }
 .goods__list--type1 li .goods__info .goods__price:empty {
   @apply hidden;
@@ -501,7 +497,7 @@
 
 /* 이미지정보 */
 .goods__list--type2 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-43 p-2;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-43 p-2 aspect-square bg-white;
 }
 .goods__list--type2 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full;
@@ -523,19 +519,19 @@
   @apply order-2 flex-1 relative px-2 text-lg text-center leading-tight text-zinc-900;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-2 text-3xl text-zinc-900 text-center tracking-tight;
+  @apply order-4 px-2 text-3xl text-[#cf0000] text-center tracking-tight;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-lg;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 mx-auto px-2 py-0.5 rounded text-sm text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-2 py-0.5 rounded text-sm text-center text-white bg-zinc-900 leading-tight;
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-sm text-center line-through text-zinc-700;
+  @apply order-3 px-2 text-sm text-center line-through text-zinc-800;
 }
 
 
@@ -592,7 +588,7 @@
 
 /* 이미지정보 */
 .goods__list--type3 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-28 p-1;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-28 p-1 aspect-square bg-white;
 }
 .goods__list--type3 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full;
@@ -614,19 +610,19 @@
   @apply order-2 flex-1 relative text-sm text-center leading-tight text-zinc-900;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 text-xl text-zinc-900 text-center tracking-tight;
+  @apply order-4 text-xl text-[#cf0000] text-center tracking-tight;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-sm;
 }
 .goods__list--type3 li .goods__info .goods__etc1 {
-  @apply order-1 mx-auto px-1 py-0.5 rounded text-xs text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-xs text-center text-white bg-zinc-900 leading-tight;
 }
 .goods__list--type3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 text-xs text-center line-through text-zinc-700;
+  @apply order-3 text-xs text-center line-through text-zinc-800;
 }
 .goods__list--type3 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -688,7 +684,7 @@
 
 /* 이미지정보 */
 .goods__list--type4 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-22 p-1;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-22 p-1 aspect-square bg-white;
 }
 .goods__list--type4 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full mt-auto;
@@ -710,19 +706,19 @@
   @apply order-2 flex-1 relative px-0.5 text-sm text-center leading-tight text-zinc-900;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 px-0.5 text-base text-zinc-900 text-center tracking-tight;
+  @apply order-4 px-0.5 text-base text-[#cf0000] text-center tracking-tight;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-xs;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 mx-auto px-1 py-0.5 rounded text-[11px] text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-[11px] text-center text-white bg-zinc-900 leading-tight;
 }
 .goods__list--type4 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 px-0.5 text-[11px] text-center line-through;
+  @apply order-3 px-0.5 text-[11px] text-center text-zinc-800 line-through;
 }
 .goods__list--type4 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -805,13 +801,13 @@
   @apply mt-auto ml-0.5 text-base;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 mr-auto px-2 py-1 rounded text-xs text-white bg-zinc-900;
+  @apply order-1 max-w-full mr-auto px-2 py-1 rounded text-xs text-white bg-zinc-900;
 }
 .goods__list--style2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply order-3 mr-auto text-sm text-left line-through text-zinc-700 text-shadow-none;
+  @apply order-3 mr-auto text-sm text-left line-through text-zinc-800 text-shadow-none;
 }
 .goods__list--style2 li .goods__info .goods__price:empty {
   @apply hidden;
@@ -876,25 +872,28 @@
 
 /* 상품정보 */
 .goods__list--style3 li .goods__info {
-  @apply relative flex-1 flex flex-wrap gap-1 px-0 text-right break-all;
+  @apply relative flex-1 flex flex-wrap gap-1 px-1 text-right break-all;
 }
 .goods__list--style3 li .goods__info .goods__name {
   @apply order-2 relative flex w-full px-0.5 mb-2 text-lg text-left leading-tight text-zinc-900 text-shadow-none;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 px-2 pt-1 pb-0.5 rounded text-2xl text-zinc-900 bg-[#fde047] text-left text-wrap tracking-tight text-shadow-none;
+  @apply order-4 pt-1 pb-0.5 rounded text-2xl text-zinc-900 bg-[#fde047] text-left text-wrap tracking-tight text-shadow-none;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
   @apply mt-auto ml-1 text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-1 mr-auto px-1.5 py-0.5 rounded text-xs text-left text-white bg-zinc-900;
+  @apply order-1 max-w-full mr-auto px-1.5 py-0.5 rounded text-xs text-left text-white bg-zinc-900;
 }
 .goods__list--style3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
   @apply order-3 mx-0.5 ml-auto text-sm text-right line-through text-zinc-700 text-shadow-none;
+}
+.goods__list--style3 li .goods__info .goods__price:empty {
+  @apply hidden;
 }
 
 
@@ -904,7 +903,7 @@
 
 
 .goods__pre {
-  @apply my-1 p-4 mx-0.5 text-sm text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl;
+  @apply m-1 p-4 text-sm text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl;
 }
 
 .goods__pre h1 {

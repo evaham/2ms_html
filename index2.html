@@ -6,20 +6,15 @@
   <title>모바일전단 - 고정URL</title>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/2ms/static/js/jquery.form.min.js"></script>
-  <script type="text/javascript" src="/2ms/static/jquery-ui/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/2ms/static/toastui/editor/latest/toastui-editor-all.min.js"></script>
-  <link type="stylesheet" href="/2ms/static/toastui/editor/latest/toastui-editor.min.css">
 
-  <link rel="stylesheet" href="/2ms/static/jquery-ui/jquery-ui.min.css">
-  <link rel="stylesheet" href="/2ms/static/jquery-ui/jquery-ui.theme.min.css">
-  <script type="text/javascript" src="/2ms/static/js/togethers.js?v=20260508"></script>
   <link rel="stylesheet" href="./common.css">
   <link rel="stylesheet" href="./additional.css">
   <link rel="stylesheet" href="./page_weblink.css">
 
-  <script type="text/javascript" src="./effect-js.min.js"></script>
-  <link rel="stylesheet" href="./effect-js.min.css">
+  <link id="skin01" rel="stylesheet" href="./skin01.css" disabled>
+  <link id="skin02" rel="stylesheet" href="./skin02.css" disabled>
+  <link id="skin03" rel="stylesheet" href="./skin03.css" disabled>
+  <link id="skin04" rel="stylesheet" href="./skin04.css" disabled>
   
   <style>
     :root {
@@ -342,10 +337,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="투게더DEV">
-  <meta property="og:description" content="투게더DEV를 찾아주셔서 감사합니다.">
-  <meta property="og:image" content="/static/img/logo_mart_20221028.png">
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -361,7 +352,6 @@
     gtag('js', new Date());
     gtag('config', 'G-FWRPRGNCY9');
   </script>
-  <script type="text/javascript">var ctx = '/2ms';</script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/2ms/static/js/jquery.form.min.js"></script>
   <script type="text/javascript" src="/2ms/static/jquery-ui/jquery-ui.min.js"></script>
@@ -1131,25 +1121,13 @@
       background: rgba(255, 255, 255, 0.9) !important;
     }
   </style>
-
-  <link id="skin01" rel="stylesheet" href="./skin01.css" disabled>
-  <link id="skin02" rel="stylesheet" href="./skin02.css" disabled>
-  <link id="skin03" rel="stylesheet" href="./skin03.css" disabled>
-  <link id="skin04" rel="stylesheet" href="./skin04.css" disabled>
 </head>
 
 <body data-effectjs-easing="ease" data-effectjs-duration="400" data-effectjs-delay="0">
-
   <link rel="stylesheet" href="/2ms/static/css/effect-js.min.css">
   <script src="/2ms/static/js/effect-js.min.js"></script>
   <div class="sample" data-code="44" style="">
-    <div style="position: fixed; z-index: 9999; top: 0; right: 0;">
-      <button id="theme-toggle" style="width:100px; height:40px; padding:2px 4px; margin:10px; border:1px; border-radius: 4px; background:#fafafa; z-index:99999; font-size:12px;">
-        테마스킨 변경<br/>
-        <span id="current-skin">스킨1,스킨2,스킨3,스킨4</span>
-      </button>
-    </div>
-    <div style="position: sticky; z-index: 999;top: 0;">
+    <div style="position: sticky;z-index: 999;top: 0;">
       <div class="sample__name clearfix" style="background-color: #3e4446;">
         <span class="js_fontsize mart-info" style="color: rgb(255, 255, 255); font-family: Cafe24Supermagic-Custom; font-weight: 600; font-size: 0.98em;">투게더마트
           본점 전단행사
@@ -1219,18 +1197,47 @@
       </div>
       <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
+    <div style="position: sticky;z-index: 999;top: 0;">
+      <button id="theme-toggle" style="position:fixed; top:60px; left:10px; padding:2px 4px; border:1px; border-radius: 4px; background:#fafafa; z-index:99999; font-size:12px;">테마 CSS 교체</button>
+    </div>
+
     <!-- 행사코너 -->
-    <div class="corner-div aurora" style="background:aurora">
+
+    <div class="corner-div">
       <div class="corner-notice">
-        <p>가로형 1단</p>
+        <p>신선과일 한정판매!</p>
+      </div>
+      <div class="goods">
+        <!--이미지 직접추가형-->
+        <ul id="js_changeList5" class="goods__list" style="padding:0;">
+          <li style="padding:0; margin-bottom:15px;">
+            <div class="goods__card" style="background:none; padding:0;">
+              <div class="goods__imgbox goods__imgbox--only">
+                <!-- <img src="./img/4a3bd4e9-c6fc-4e8d-9e5d-ed8b50bc6aa0.jpg"> -->
+                <img style="margin-top: 0;"
+                  data-src="./img/4a3bd4e9-c6fc-4e8d-9e5d-ed8b50bc6aa0.jpg"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/4a3bd4e9-c6fc-4e8d-9e5d-ed8b50bc6aa0.jpg">
+              </div>
+            </div>
+          </li>
+        </ul>
+        <input type="hidden" class="templateType" value="5">
+      </div>
+    </div>
+    <div class="corner-div aurora" style="background:aurora">
+      <div class="sample__banner sample__banner--type2">
+        <img src="./img/6d224ac6-b4ab-4e84-b6b3-ee4c487b018c.gif">
+      </div>
+      <div class="corner-notice">
+        <p>오늘만할인! 매장에서 구매하세요!</p>
       </div>
       <div class="goods">
         <!--템플릿 유형 가로형 -->
         <ul id="js_changeList" class="goods__list goods__list--type1">
-        
           <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
             <div class="goods__card" data-code="1084"
-              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;산지직송!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
              
               <div class="goods__imgbox">
                 <div class="goods__ribbon" style="display:none">오늘특가</div>
@@ -1240,7 +1247,7 @@
                 <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
                 <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
                 <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
-                  src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg">
+                  src="./img/세로가긴이미지.png">
                 <div class="icon__cartbox">
                   <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
                     <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
@@ -1248,14 +1255,148 @@
                 </div>
               </div>
               <div class="goods__info">
-                <div class="goods__etc1">산지직송!!!!!!</div>
-                <div class="goods__delprice">16,800</div>
-                <div class="goods__price">15,900<span>원</span></div>
-                <div class="goods__name">당도선별 11brix, 고창 왕수박 6kg이상 1개</div>
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
               </div>
             </div>
           </li>
-
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
+            <div class="goods__card" data-code="1084"
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+             
+              <div class="goods__imgbox">
+                <div class="goods__ribbon" style="display:none">오늘특가</div>
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/작은세로가긴이미지.png">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
+              </div>
+            </div>
+          </li>
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
+            <div class="goods__card" data-code="1084"
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+             
+              <div class="goods__imgbox">
+                <div class="goods__ribbon" style="display:none">오늘특가</div>
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/가로가긴이미지.png">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
+              </div>
+            </div>
+          </li>
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
+            <div class="goods__card" data-code="1084"
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+             
+              <div class="goods__imgbox">
+                <div class="goods__ribbon" style="display:none">오늘특가</div>
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/작은가로가긴이미지.png">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
+              </div>
+            </div>
+          </li>
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
+            <div class="goods__card" data-code="1084"
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+             
+              <div class="goods__imgbox">
+                <div class="goods__ribbon" style="display:none">오늘특가</div>
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/큰정사각이미지.png">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
+              </div>
+            </div>
+          </li>
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init effectJs-animate">
+            <div class="goods__card" data-code="1084"
+              onclick="jsLargerView(1084, &quot;d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg&quot;,&quot;%EA%B3%A0%EB%8B%B9%EB%8F%84+%EA%B3%A0%EC%B0%BD+%EC%99%95%EC%88%98%EB%B0%95&quot; ,&quot;한정수량!!!!!!&quot;, &quot;15900&quot;, &quot;9900&quot;, &quot;&quot;, 0)">
+             
+              <div class="goods__imgbox">
+                <div class="goods__ribbon" style="display:none">오늘특가</div>
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <!--찐 <img src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg"> -->
+                <img data-src="./img/d-395dfe7b-c7b4-4efe-ab05-f6873934bd1e.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class=""
+                  src="./img/작은정사각이미지.png">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">한정수량!!!!!!</div>
+                <div class="goods__delprice">15,900</div>
+                <div class="goods__price">9,900<span>원</span></div>
+                <div class="goods__name">고당도 고창 왕수박</div>
+              </div>
+            </div>
+          </li>
 
 
 
@@ -1281,9 +1422,9 @@
               </div>
               <div class="goods__info">
                 <div class="goods__etc1"></div>
-                <div class="goods__delprice">17,900</div>
-                <div class="goods__price">16,800<span>원</span></div>
-                <div class="goods__name">당도선별 멜론, 2kg, 2개</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">11,200<span>원</span></div>
+                <div class="goods__name">향기로운 멜론</div>
               </div>
             </div>
           </li>
@@ -1292,10 +1433,16 @@
         <input type="hidden" class="templateType" value="1">
       </div>
     </div>
+
+
+
     <!-- 2단 스타일 시작 -->
-    <div class="corner-div" style="background:#d9f99d">
+    <div class="corner-div" style="background:#bfdbfe">
+      <div class="sample__banner sample__banner--type2">
+        <img src="./img/7a03cd73-65a8-4920-86dd-3f935b6646b1.gif">
+      </div>
       <div class="corner-notice">
-        <p>가로형 2단</p>
+        <p>담당자가 엄선한 당도보장 과일!!</p>
       </div>
       <div class="goods">
        <!--템플릿 유형 가로형 -->
@@ -1306,6 +1453,7 @@
                 <div class="goods__badge">
                   <img src="./img/20260619_104722_1351.gif">
                 </div>
+
                 <!-- <img src="./img/fec1187d-92a6-4da8-9f9c-299580b37391.jpg"> -->
                 <!--찐 <img src="./img/fec1187d-92a6-4da8-9f9c-299580b37391.jpg"> -->
                 <img data-src="./img/fec1187d-92a6-4da8-9f9c-299580b37391.jpg" onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
@@ -1376,8 +1524,8 @@
               <div class="goods__info">
                 <div class="goods__etc1">페루산</div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">6,460<span>원</span></div>
-                <div class="goods__name">돌 아보카도 1kg 6개</div>
+                <div class="goods__price">7,800<span>원</span></div>
+                <div class="goods__name">아보카도 6개</div>
               </div>
 
             </div>
@@ -1439,14 +1587,106 @@
 
             </div>
           </li>
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1093"
+              onclick="jsLargerView(1093, &quot;f1077b3c-a066-419f-aaae-ee2b191e8f58.jpg&quot;,&quot;%EC%99%84%EC%88%99%ED%86%A0%EB%A7%88%ED%86%A0+2kg+&quot; ,&quot;&quot;, &quot;&quot;, &quot;8900&quot;, &quot;&quot;, 0)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/f1077b3c-a066-419f-aaae-ee2b191e8f58.jpg"> -->
+                <!--찐 <img src="./img/f1077b3c-a066-419f-aaae-ee2b191e8f58.jpg"> -->
+                <img
+                  data-src="./img/f1077b3c-a066-419f-aaae-ee2b191e8f58.jpg"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">8,900<span>원</span></div>
+                <div class="goods__name">완숙토마토 2kg </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1094"
+              onclick="jsLargerView(1094, &quot;&quot;,&quot;%EC%A0%9C%EC%8A%A4%ED%94%84%EB%A6%AC+%EA%B7%B8%EB%A6%B0%ED%82%A4%EC%9C%84+8%EA%B0%9C&quot; ,&quot;뉴질랜드&quot;, &quot;&quot;, &quot;7800&quot;, &quot;./img/0_그린키위국내산-0_8801448122253_1.png&quot;, 0)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/0_그린키위국내산-0_8801448122253_1.png"> -->
+                <img
+                  data-src="./img/0_그린키위국내산-0_8801448122253_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">뉴질랜드</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">7,800<span>원</span></div>
+                <div class="goods__name">제스프리 그린키위 8개</div>
+              </div>
+
+            </div>
+          </li>
+
+
+          <!-- 테스트용 화면 -->
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1095"
+              onclick="jsLargerView(1095, &quot;&quot;,&quot;%EB%8C%80%EC%B6%94%EB%B0%A9%EC%9A%B8%ED%86%A0%EB%A7%88%ED%86%A0+1%ED%8C%A9&quot; ,&quot;고당도&quot;, &quot;&quot;, &quot;4980&quot;, &quot;./img/0_대추방울토마토-2kg_8801448360129_1.png&quot;, 0)">
+              <div class="goods__imgbox">
+                <div class="goods__badge">
+                  <img src="./img/20260619_104722_1351.gif">
+                </div>
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/0_대추방울토마토-2kg_8801448360129_1.png"> -->
+                <img
+                  data-src="./img/0_대추방울토마토-2kg_8801448360129_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">고당도</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">4,980<span>원</span></div>
+                <div class="goods__name">대추방울토마토 1팩</div>
+              </div>
+
+            </div>
+          </li>
+
         </ul>
+        <input type="hidden" class="templateType" value="1">
       </div>
     </div>
     <!-- 2단 스타일 끝 -->
-    <div class="corner-div" style="background:#fef3c7">
-      <div class="corner-notice">
-        <p>가로형 3단</p>
-      </div>
+
+
+    <div class="corner-div " style="background:#0f172a">
       <div class="goods">
         <!--템플릿 유형 가로형 -->
 
@@ -1613,6 +1853,71 @@
             </div>
           </li>
 
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1121"
+              onclick="jsLargerView(1121, &quot;&quot;,&quot;%EC%83%98%ED%91%9C%EC%9C%A0%EA%B8%B0%EB%86%8D%EB%B3%B4%EB%A6%AC%EC%B0%A8+300g&quot; ,&quot;&quot;, &quot;&quot;, &quot;3200&quot;, &quot;./img/샘표_순작-유기농보리차-30T_8801005633444_1.png&quot;, 1)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/샘표_순작-유기농보리차-30T_8801005633444_1.png"> -->
+                <img
+                  data-src="./img/샘표_순작-유기농보리차-30T_8801005633444_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">3,200<span>원</span></div>
+                <div class="goods__name">샘표유기농보리차 300g</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1123"
+              onclick="jsLargerView(1123, &quot;&quot;,&quot;%EC%83%98%ED%91%9C%EC%9C%A0%EA%B8%B0%EB%86%8D%EC%95%84%EA%B8%B0%EB%B3%B4%EB%A6%AC%EC%B0%A8+160g&quot; ,&quot;&quot;, &quot;&quot;, &quot;2510&quot;, &quot;./img/샘표_순작-유기농우리아이첫보리차-20T_8801005633697_1.png&quot;, 1)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/샘표_순작-유기농우리아이첫보리차-20T_8801005633697_1.png"> -->
+                <img
+                  data-src="./img/샘표_순작-유기농우리아이첫보리차-20T_8801005633697_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">2,510<span>원</span></div>
+                <div class="goods__name">샘표유기농아기보리차 160g</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1124"
+              onclick="jsLargerView(1124, &quot;&quot;,&quot;%EB%A7%A5%EC%8B%AC%EC%98%A4%EB%A6%AC%EC%A7%80%EB%82%A0%EB%B3%91+100g%EB%B3%91&quot; ,&quot;&quot;, &quot;&quot;, &quot;7000&quot;, &quot;./img/동서식품_맥심-오리지날-100g_8801037000382_1.png&quot;, 1)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/동서식품_맥심-오리지날-100g_8801037000382_1.png"> -->
+                <img
+                  data-src="./img/동서식품_맥심-오리지날-100g_8801037000382_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">7,000<span>원</span></div>
+                <div class="goods__name">맥심오리지날병 100g병</div>
+              </div>
+
+            </div>
+          </li>
 
           <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
             <div class="goods__card" data-code="1125"
@@ -1635,18 +1940,38 @@
 
             </div>
           </li>
+
+
         </ul>
         <input type="hidden" class="templateType" value="1">
+
+
+
+
+
+
+
       </div>
     </div>
-    <div class="corner-div " style="background:#bae6fd">
-      <div class="corner-notice">
-        <p>가로형 4단</p>
+
+    <div class="corner-div " style="background:#15803d">
+
+
+      <div class="sample__banner sample__banner--type2">
+        <img src="./img/277df31b-25a1-41f2-ac0d-a2c3a31593d6.png">
       </div>
 
+
+
+
+
       <div class="goods">
+
+
         <!--템플릿 유형 가로형 -->
+
         <ul id="js_changeList" class="goods__list goods__list--type4">
+
           <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
             <div class="goods__card" data-code="1096"
               onclick="jsLargerView(1096, &quot;&quot;,&quot;%EB%A1%AF%EB%8D%B0%EC%99%80%ED%94%8C%EB%B0%94%EB%8B%90%EB%9D%BC+1500%EB%A5%98&quot; ,&quot;가가가가가가가&quot;, &quot;30000000&quot;, &quot;1500&quot;, &quot;./img/롯데_롯데-와플바닐라-0_8801062436064.png&quot;, 0)">
@@ -1795,6 +2120,7 @@
           <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
             <div class="goods__card" data-code="1101">
               <div class="goods__imgbox">
+
                 <!-- <img src="./img/"> -->
                 <!--찐 <img src="./img/롯데_롯데-찰옥수수-140ml_8801062435692.png"> -->
                 <img
@@ -1807,14 +2133,17 @@
                       d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
                     </path>
                   </svg></div>
+
               </div>
               <div class="goods__info">
-                <div class="goods__etc1">인기상품</div>
+                <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
                 <div class="goods__price">1,200<span>원</span></div>
                 <div class="goods__name">롯데)찰옥수수 1200원정가</div>
               </div>
+
               <div class="soldout-div">품절</div>
+
             </div>
           </li>
 
@@ -1872,7 +2201,7 @@
                 <div class="goods__price">1,000<span>원</span></div>
                 <div class="goods__name">주물러콜라 1000류</div>
               </div>
-              <div class="soldout-div">품절</div>
+
             </div>
           </li>
 
@@ -1934,20 +2263,128 @@
             </div>
           </li>
 
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1106"
+              onclick="jsLargerView(1106, &quot;&quot;,&quot;%EC%84%A4%EB%A0%88%EC%9E%84%EC%BB%A4%ED%94%BC+%EC%A0%95%EA%B0%801500%EB%A5%98&quot; ,&quot;&quot;, &quot;&quot;, &quot;1500&quot;, &quot;./img/롯데_설레임-커피쉐이크-160ml_8801062442911.png&quot;, 0)">
+              <div class="goods__imgbox">
 
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/롯데_설레임-커피쉐이크-160ml_8801062442911.png"> -->
+                <img
+                  data-src="./img/롯데_설레임-커피쉐이크-160ml_8801062442911.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">1,500<span>원</span></div>
+                <div class="goods__name">설레임커피 정가1500류</div>
+              </div>
+
+            </div>
+          </li>
+
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1112"
+              onclick="jsLargerView(1112, &quot;&quot;,&quot;%EC%9C%84%EC%A6%90%EC%BB%A4%ED%94%BC%EC%B4%88%EC%BD%94+%EC%A0%95%EA%B0%80%ED%8C%90%EB%A7%A44500%EB%A5%98&quot; ,&quot;4989&quot;, &quot;30000000&quot;, &quot;6500&quot;, &quot;./img/롯데_롯데-위즐-커피&amp;초코퍼지-660ml_8801062453337.png&quot;, 0)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/롯데_롯데-위즐-커피&초코퍼지-660ml_8801062453337.png"> -->
+                <img
+                  data-src="./img/롯데_롯데-위즐-커피&amp;초코퍼지-660ml_8801062453337.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">4989</div>
+                <div class="goods__delprice">40,000</div>
+                <div class="goods__price">6,500<span>원</span></div>
+                <div class="goods__name">위즐커피초코 정가판매4500류</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1113"
+              onclick="jsLargerView(1113, &quot;&quot;,&quot;%EC%A1%B0%EC%95%88%EB%82%98%EB%B0%94%EB%8B%90%EB%9D%BC+6500%EB%A5%98&quot; ,&quot;&quot;, &quot;&quot;, &quot;6500&quot;, &quot;./img/롯데_롯데-조안나-850ml_8801062453634.png&quot;, 0)">
+              <div class="goods__imgbox">
+
+                <!-- <img src="./img/"> -->
+                <!--찐 <img src="./img/롯데_롯데-조안나-850ml_8801062453634.png"> -->
+                <img
+                  data-src="./img/롯데_롯데-조안나-850ml_8801062453634.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+                <div class="icon__cartbox  "><svg xmlns="http://www.w3.org/2000/svg" height="60%"
+                    viewBox="0 -960 960 960" width="60%">
+                    <path
+                      d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
+                    </path>
+                  </svg></div>
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1"></div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">6,500<span>원</span></div>
+                <div class="goods__name">조안나바닐라 6500류</div>
+              </div>
+
+            </div>
+          </li>
 
         </ul>
         <input type="hidden" class="templateType" value="1">
+
+
+
+
+
+
+
       </div>
     </div>
-    <div class="corner-div " style="background:#ddd6fe">
+
+    <div class="corner-div " style="background:#334155">
+
+
+      <div class="sample__banner sample__banner--type2" style="min-height:auto">
+        <img src="./img/3c9f123f-6f77-4fe3-b0ca-88117063b5de.png">
+      </div>
+
+
+
+
+
       <div class="corner-notice">
-        <p>세로형</p>
+        <p>☎정육 담당자 010-1234-5678</p>
       </div>
 
       <div class="goods">
+
+
+
         <!--템플릿 유형 세로형 -->
         <ul id="js_changeList" class="goods__list goods__list--style2">
+
           <li data-effectjs="fade-right" data-effectjs-duration="NaN" class="effectJs-init">
             <div class="goods__card" data-code="1129"
               onclick="jsLargerView(1129, '','%EC%B1%84%EB%81%9D%EB%93%B1%EC%8B%AC%ED%95%9C%EC%9A%B0','200g 1+1 !!!!!', '30000000', '15900', './img/부스트%20우연_채끝_1_1.jpg', 1)">
@@ -2021,17 +2458,136 @@
             </div>
           </li>
 
+          <li data-effectjs="fade-right" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1133"
+              onclick="jsLargerView(1133, '','%EC%95%88%EC%B0%BD%EC%82%B4%ED%95%9C%EC%9A%B0%281%EB%93%B1%EA%B8%89%29','200g', '', '21000', './img/0_한우%20안창살1%2B_8807394300332_1.png', 1)">
+              <div class="goods__imgbox">
+
+                <div class="goods__badge">
+                  <img src="./img/20260618_140758_1346.gif">
+                </div>
+
+                <!--찐 <img src="./img/0_한우%20안창살1%2B_8807394300332_1.png"> -->
+                <img
+                  data-src="./img/0_한우%20안창살1%2B_8807394300332_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+                <div class="icon__cartbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="60%" viewBox="0 -960 960 960" width="60%">
+                    <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">200g</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">21,000<span>원</span></div>
+                <div class="goods__name">안창살한우(1등급)</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-left" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1134"
+              onclick="jsLargerView(1134, '','%EC%B0%A8%EB%8F%8C%EB%B0%95%ED%95%9C%EC%9A%B0%281%EB%93%B1%EA%B8%89%29','200g', '', '36000', './img/0_한우%20차돌박이1%2B_8807394800177_1.png', 1)">
+              <div class="goods__imgbox">
+
+                <div class="goods__badge">
+                  <img src="./img/20260618_140758_1346.gif">
+                </div>
+
+                <!--찐 <img src="./img/0_한우%20차돌박이1%2B_8807394800177_1.png"> -->
+                <img
+                  data-src="./img/0_한우%20차돌박이1%2B_8807394800177_1.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">200g</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">36,000<span>원</span></div>
+                <div class="goods__name">차돌박한우(1등급)</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-right" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1135"
+              onclick="jsLargerView(1135, '','%EC%82%BC%EA%B2%B9%EC%82%B4%EB%8F%88%EC%9C%A1%28%EA%B5%AD%EB%82%B4%EC%82%B0%29','100g', '', '3900', './img/0_0-수입돈육냉동삼겹살-0_204288.png', 1)">
+              <div class="goods__imgbox">
+
+                <div class="goods__badge">
+                  <img src="./img/20260618_140758_1346.gif">
+                </div>
+
+                <!--찐 <img src="./img/0_0-수입돈육냉동삼겹살-0_204288.png"> -->
+                <img data-src="./img/no_image_color.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">100g</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">3,900<span>원</span></div>
+                <div class="goods__name">삼겹살돈육(국내산)</div>
+              </div>
+
+            </div>
+          </li>
+
+          <li data-effectjs="fade-left" data-effectjs-duration="NaN" class="effectJs-init">
+            <div class="goods__card" data-code="1136"
+              onclick="jsLargerView(1136, '','%EC%96%91%EB%85%90LA%EA%B0%88%EB%B9%84','200g', '', '8500', './img/부스트_행복밥상금계리%20LA갈비%201.2kg내외_1_1.jpg', 1)">
+              <div class="goods__imgbox">
+
+                <div class="goods__badge">
+                  <img src="./img/20260618_140758_1346.gif">
+                </div>
+
+                <!--찐 <img src="./img/부스트_행복밥상금계리%20LA갈비%201.2kg내외_1_1.jpg"> -->
+                <img
+                  data-src="./img/부스트_행복밥상금계리%20LA갈비%201.2kg내외_1_1.jpg"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload">
+
+              </div>
+              <div class="goods__info">
+                <div class="goods__etc1">200g</div>
+                <div class="goods__delprice"></div>
+                <div class="goods__price">8,500<span>원</span></div>
+                <div class="goods__name">양념LA갈비</div>
+              </div>
+
+            </div>
+          </li>
+
         </ul>
+        <input type="hidden" class="templateType" value="2">
+
+
+
+
+
+
       </div>
     </div>
-    <div class="corner-div" style="background:#f9a8d4">
-      <div class="corner-notice">
-        <p>텍스트형</p>
-      </div>
+
+    <div class="corner-div " style="background:#c45151">
+
+
+
+
+
+
 
       <div class="goods">
+
+
+
+
         <!--템플릿 유형 텍스트형 -->
         <ul id="js_changeList" class="goods__list goods__list--style3">
+
           <li data-effectjs="fade-up" data-effectjs-duration="NaN" class="effectJs-init">
             <div class="goods__card" data-code="1137"
               onclick="jsLargerView(1137, '','%EC%98%A4%EB%9A%9C%EA%B8%B0%EB%B0%B1%EC%84%B8%EC%B9%B4%EB%A0%88%EC%95%BD%EA%B0%84%EB%A7%A4%EC%9A%B4%EB%A7%9B+100g','오늘만할인특가', '900000', '320000', '', 0)">
@@ -2108,12 +2664,149 @@
           </li>
 
         </ul>
+        <input type="hidden" class="templateType" value="3">
+
+
+
+
+
       </div>
     </div>
-    <div class="corner-div" style="background:#99f6e4">
-      <div class="corner-notice">
-        <p>장문 편집형</p>
+
+    <div class="corner-div " style="background:#00d1ff">
+
+
+      <div class="sample__banner sample__banner--type2">
+        <img src="./img/61c4b57a-ea00-4e7a-84d0-3050566a1381.gif">
       </div>
+
+
+
+
+
+      <div class="goods">
+
+
+
+
+
+
+        <!--이미지 직접추가형-->
+        <ul id="js_changeList5" class="goods__list" style="padding:0;">
+
+          <li style="padding:0; margin-bottom:15px;">
+            <div class="goods__card" style="background:none; padding:0;">
+              <div class="goods__imgbox goods__imgbox--only">
+                <!-- <img src="./img/thumb_d-4b928110-1c86-41b7-a536-a16f3cb431c9.png"> -->
+                <img style="margin-top: 0;"
+                  data-src="./img/thumb_d-4b928110-1c86-41b7-a536-a16f3cb431c9.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload thumb">
+              </div>
+            </div>
+          </li>
+
+          <li style="padding:0; margin-bottom:15px;">
+            <div class="goods__card" style="background:none; padding:0;">
+              <div class="goods__imgbox goods__imgbox--only">
+                <!-- <img src="./img/9fe37456-aac4-4776-9a19-df20a699b6e0.jpg"> -->
+                <img style="margin-top: 0;"
+                  data-src="./img/9fe37456-aac4-4776-9a19-df20a699b6e0.jpg"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload ">
+              </div>
+            </div>
+          </li>
+
+          <li style="padding:0; margin-bottom:15px;">
+            <div class="goods__card" style="background:none; padding:0;">
+              <div class="goods__imgbox goods__imgbox--only">
+                <!-- <img src="./img/dc58e2c8-0c30-4b65-a1dd-c5cdade20423.jpg"> -->
+                <img style="margin-top: 0;"
+                  data-src="./img/dc58e2c8-0c30-4b65-a1dd-c5cdade20423.jpg"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload ">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <input type="hidden" class="templateType" value="5">
+
+
+
+      </div>
+    </div>
+
+    <div class="corner-div " style="background:#f4502e">
+
+
+
+
+
+
+
+      <div class="goods">
+
+
+
+
+
+
+        <!--이미지 직접추가형-->
+        <ul id="js_changeList5" class="goods__list" style="padding:0;">
+
+          <li style="padding:0; margin-bottom:15px;">
+            <div class="goods__card" style="background:none; padding:0;">
+              <div class="goods__imgbox goods__imgbox--only">
+                <!-- <img src="./img/d-2267ce13-c352-44e9-8c09-997360e81e67.png"> -->
+                <img style="margin-top: 0;"
+                  data-src="./img/d-2267ce13-c352-44e9-8c09-997360e81e67.png"
+                  onerror="this.onerror=null; this.src='/2ms/static/img/no_image_color.png';" class="lazyload ">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <input type="hidden" class="templateType" value="5">
+
+
+
+      </div>
+    </div>
+
+    <div class="corner-div " style="background:#0152a1">
+
+
+      <div class="sample__banner sample__banner--type2">
+        <img src="./img/277df31b-25a1-41f2-ac0d-a2c3a31593d6.png">
+      </div>
+
+
+
+
+
+      <div class="goods">
+
+
+
+
+
+        <!--템플릿 유형 장문편집형-->
+        <ul id="js_changeList4" class="goods__list">
+          <li>
+            <div class="goods__card" style="padding:0">
+              <pre
+                class="goods__pre"><h4><span style="color: #057cb5">투게더마트 배달 주문하세요!</span></h4><p><span style="color: #6dc5f0">-----------------------------------------------------</span></p><h6>📌 무료배달 : <span style="color: #fc0000">3만원 이상 구매시</span></h6><h6>⏰ 배달시간 : 10:00 ~ 19:00</h6><h6>📞 문의전화 : 032-123-1234</h6></pre>
+            </div>
+          </li>
+        </ul>
+        <input type="hidden" class="templateType" value="4">
+
+
+
+
+      </div>
+    </div>
+
+    <div class="corner-div " style="background:#0152a1">
       <div class="goods">
         <!--템플릿 유형 장문편집형-->
         <ul id="js_changeList4" class="goods__list">
@@ -2126,6 +2819,7 @@
         <input type="hidden" class="templateType" value="4">
       </div>
     </div>
+
     <div class="wrap_stickyfooter">
       <a class="scroll_top btn_movetop">
         <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#fff">
@@ -2135,6 +2829,12 @@
       </a>
     </div>
   </div>
+
+
+
+
+
+
   <div class="notice-div">
     <div class="background"></div>
     <div class="mart-info-div">
@@ -2146,8 +2846,7 @@
           width="32px">
           <path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z">
           </path>
-        </svg>
-      </button>
+        </svg></button>
     </div>
   </div>
   <div class="search-div">
@@ -2832,10 +3531,8 @@
   </script>
 
   <script>
-    // 스킨 css 변경 이벤트
     (function(){
       var skins = ['skin01','skin02','skin03','skin04'];
-      var displayNames = ['스킨1','스킨2','스킨3','스킨4'];
       var idx = 0;
 
       function applyTheme(i){
@@ -2849,8 +3546,6 @@
           }
         });
         idx = i;
-        var el = document.getElementById('current-skin');
-        if(el) el.textContent = displayNames[i] || skins[i];
       }
 
       document.addEventListener('DOMContentLoaded', function(){
@@ -2875,36 +3570,57 @@
 
   <div class="footmenu">
     <a class="footmenu-link active" href="/2ms/s/8SrF">
+
+
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
         <path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"></path>
       </svg>
+
+
+
       <span>전단</span>
     </a>
     <button class="footmenu-link " onclick="goToPage('coupon');">
+
+
+
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
         <path
           d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480q0 17 11.5 28.5T480-440Zm0-160q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm320 440H160q-33 0-56.5-23.5T80-240v-160q33 0 56.5-23.5T160-480q0-33-23.5-56.5T80-560v-160q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v160q-33 0-56.5 23.5T800-480q0 33 23.5 56.5T880-400v160q0 33-23.5 56.5T800-160Zm0-80v-102q-37-22-58.5-58.5T720-480q0-43 21.5-79.5T800-618v-102H160v102q37 22 58.5 58.5T240-480q0 43-21.5 79.5T160-342v102h640ZM480-480Z">
         </path>
       </svg>
+
+
       <span>쿠폰</span>
     </button>
     <button class="footmenu-link cart  " onclick="goToPage('cart');">
+
+
+
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
         <path
           d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z">
         </path>
       </svg>
+
+
       <span>장바구니</span>
     </button>
     <button class="footmenu-link " onclick="goToPage('orderList');">
+
+
+
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
         <path
           d="M320-280q17 0 28.5-11.5T360-320q0-17-11.5-28.5T320-360q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160q17 0 28.5-11.5T360-480q0-17-11.5-28.5T320-520q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160q17 0 28.5-11.5T360-640q0-17-11.5-28.5T320-680q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Zm120 320h240v-80H440v80Zm0-160h240v-80H440v80Zm0-160h240v-80H440v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z">
         </path>
       </svg>
+
+
       <span>주문내역</span>
     </button>
   </div>
   <div id="toast" class="toast"></div>
 </body>
+
 </html>
