@@ -272,6 +272,9 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
+  .right-\[5\%\] {
+    right: 5%;
+  }
   .bottom-0 {
     bottom: 0px;
   }
@@ -295,6 +298,9 @@
   }
   .bottom-42 {
     bottom: calc(var(--spacing) * 42);
+  }
+  .bottom-\[5\%\] {
+    bottom: 5%;
   }
   .left-0 {
     left: 0px;
@@ -412,6 +418,9 @@
   }
   .ml-0 {
     margin-left: 0px;
+  }
+  .ml-0\.5 {
+    margin-left: calc(var(--spacing) * 0.5);
   }
   .ml-1 {
     margin-left: var(--spacing);
@@ -555,6 +564,15 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
+  .w-\[calc\(\(100\%\)\/2\)\] {
+    width: calc((100%) / 2);
+  }
+  .w-\[calc\(\(100\%\)\/3\)\] {
+    width: calc((100%) / 3);
+  }
+  .w-\[calc\(\(100\%\)\/4\)\] {
+    width: calc((100%) / 4);
+  }
   .w-\[calc\(\(100\%-0\.5rem\)\/3\)\] {
     width: calc((100% - 0.5rem) / 3);
   }
@@ -569,6 +587,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-\[90\%\] {
+    max-width: 90%;
   }
   .max-w-full {
     max-width: 100%;
@@ -630,6 +651,9 @@
   .gap-1 {
     gap: var(--spacing);
   }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -689,6 +713,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-\[\#fde047\] {
+    border-color: #fde047;
+  }
   .border-zinc-300 {
     border-color: var(--color-zinc-300);
   }
@@ -697,6 +724,9 @@
   }
   .border-zinc-800 {
     border-color: var(--color-zinc-800);
+  }
+  .bg-\[\#fde047\] {
+    background-color: #fde047;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -768,6 +798,9 @@
   .px-1 {
     padding-inline: var(--spacing);
   }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -779,6 +812,9 @@
   }
   .py-0 {
     padding-block: 0px;
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -800,6 +836,9 @@
   }
   .pb-0 {
     padding-bottom: 0px;
+  }
+  .pb-0\.5 {
+    padding-bottom: calc(var(--spacing) * 0.5);
   }
   .pb-1 {
     padding-bottom: var(--spacing);
