@@ -44,6 +44,16 @@
     font-weight: 800;
     font-display: swap;
 }
+/* 숫자폰트 */
+@font-face {
+  font-family: 'YeogiOttaeJalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+
+
 
 
 /* 폰트 지정 */
@@ -56,11 +66,11 @@
   @apply text-zinc-900 font-extrabold;
 }
 .goods__delprice {
-  font-family: "GMarketSans", Arial, sans-serif;
+  font-family: "YeogiOttaeJalnan", Arial, sans-serif;
   @apply text-zinc-800;
 }
 .goods__price {
-  font-family: 'GMarketSans', Arial, sans-serif;
+  font-family: 'YeogiOttaeJalnan', Arial, sans-serif;
   @apply text-[#cf0000] font-bold;
 }
 .goods__price > span {
