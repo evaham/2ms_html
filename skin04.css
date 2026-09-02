@@ -17,6 +17,7 @@
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-indigo-50: oklch(96.2% 0.018 272.314);
+    --color-indigo-100: oklch(93% 0.034 272.788);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
     --color-indigo-800: oklch(39.8% 0.195 277.366);
@@ -276,6 +277,12 @@
   }
 }
 @font-face {
+  font-family: 'Presentation';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
   font-family: 'YuhanKimberlyPureunsoop';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/2607101517@font-2/font-2/font-2-300.woff2') format('woff2');
   font-weight: 300;
@@ -305,7 +312,7 @@
   color: var(--color-zinc-800);
 }
 .goods__name {
-  font-family: "YuhanKimberlyPureunsoop", Arial, sans-serif;
+  font-family: "Presentation", Arial, sans-serif;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-zinc-800);
@@ -335,6 +342,7 @@
   position: relative;
   overflow: hidden;
   word-break: break-all;
+  color: var(--color-zinc-800);
 }
 .goods__list {
   display: flex;
@@ -501,8 +509,8 @@
   width: 100%;
   flex: 1;
   text-align: left;
-  font-size: var(--text-xl);
-  line-height: var(--tw-leading, var(--text-xl--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -521,8 +529,8 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-4xl);
-  line-height: var(--tw-leading, var(--text-4xl--line-height));
+  font-size: var(--text-5xl);
+  line-height: var(--tw-leading, var(--text-5xl--line-height));
   --tw-tracking: var(--tracking-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-white);
@@ -530,8 +538,8 @@
 .goods__list--type1 li .goods__info .goods__price > span {
   margin-top: auto;
   margin-left: var(--spacing);
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
   order: 1;
@@ -540,11 +548,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding: var(--spacing);
   text-align: left;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: 1;
   line-height: 1;
   color: var(--color-indigo-800);
@@ -560,8 +568,8 @@
   justify-content: center;
   border-radius: 0.25rem;
   text-align: left;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-leading: 1;
   line-height: 1;
   text-decoration-line: line-through;
@@ -685,8 +693,8 @@
   width: 100%;
   flex: 1;
   text-align: left;
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -705,8 +713,8 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: var(--spacing);
   text-align: center;
-  font-size: var(--text-3xl);
-  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
   --tw-tracking: var(--tracking-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-white);
@@ -724,7 +732,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding: var(--spacing);
   text-align: left;
   font-size: var(--text-sm);
@@ -743,8 +751,8 @@
   align-items: center;
   justify-content: center;
   text-align: left;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: 1;
   line-height: 1;
   text-decoration-line: line-through;
@@ -871,8 +879,8 @@
   width: 100%;
   flex: 1;
   text-align: left;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -891,8 +899,8 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: var(--spacing);
   text-align: center;
-  font-size: var(--text-xl);
-  line-height: var(--tw-leading, var(--text-xl--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-tracking: var(--tracking-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-white);
@@ -910,11 +918,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding: var(--spacing);
   text-align: left;
-  font-size: var(--text-xs);
-  line-height: var(--tw-leading, var(--text-xs--line-height));
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-leading: 1;
   line-height: 1;
   color: var(--color-indigo-800);
@@ -929,8 +937,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: var(--text-xs);
-  line-height: var(--tw-leading, var(--text-xs--line-height));
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-leading: 1;
   line-height: 1;
   text-decoration-line: line-through;
@@ -1049,8 +1057,8 @@
   width: 100%;
   flex: 1;
   text-align: left;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -1069,28 +1077,28 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: calc(var(--spacing) * 0.5);
   text-align: center;
-  font-size: var(--text-base);
-  line-height: var(--tw-leading, var(--text-base--line-height));
-  --tw-tracking: var(--tracking-tight);
-  letter-spacing: var(--tracking-tight);
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   color: var(--color-white);
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   margin-top: auto;
-  margin-left: calc(var(--spacing) * 0.5);
-  font-size: 11px;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
   order: 1;
+  margin-inline: auto;
   margin-bottom: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding: var(--spacing);
   text-align: left;
-  font-size: 11px;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
   --tw-leading: 1;
   line-height: 1;
   color: var(--color-indigo-800);
@@ -1105,7 +1113,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 11px;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
   --tw-leading: 1;
   line-height: 1;
   text-decoration-line: line-through;
@@ -1231,8 +1240,8 @@
   width: 100%;
   flex: 1;
   text-align: left;
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -1253,8 +1262,8 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: var(--spacing);
   text-align: center;
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-tracking: var(--tracking-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-white);
@@ -1272,7 +1281,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding-inline: var(--spacing);
   padding-block: var(--spacing);
   text-align: left;
@@ -1408,8 +1417,8 @@
   width: 100%;
   padding-right: calc(var(--spacing) * 8);
   text-align: left;
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -1430,8 +1439,8 @@
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-block: var(--spacing);
   text-align: center;
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-tracking: var(--tracking-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-white);
@@ -1449,7 +1458,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  background-color: var(--color-indigo-50);
+  background-color: var(--color-indigo-100);
   padding-inline: var(--spacing);
   padding-block: var(--spacing);
   text-align: left;
@@ -1500,48 +1509,48 @@
 .goods__pre h1 {
   font-size: var(--text-4xl);
   line-height: var(--tw-leading, var(--text-4xl--line-height));
-  --tw-leading: var(--leading-loose);
-  line-height: var(--leading-loose);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .goods__pre h2 {
   font-size: var(--text-3xl);
   line-height: var(--tw-leading, var(--text-3xl--line-height));
-  --tw-leading: var(--leading-loose);
-  line-height: var(--leading-loose);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .goods__pre h3 {
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
-  --tw-leading: var(--leading-loose);
-  line-height: var(--leading-loose);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .goods__pre h4 {
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
-  --tw-leading: var(--leading-normal);
-  line-height: var(--leading-normal);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .goods__pre h5 {
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
-  --tw-leading: var(--leading-normal);
-  line-height: var(--leading-normal);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
 .goods__pre h6 {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
-  --tw-leading: var(--leading-normal);
-  line-height: var(--leading-normal);
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
 }
