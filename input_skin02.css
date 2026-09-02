@@ -208,7 +208,7 @@
 /* -----뷰 공통----- */
 
 .corner-div, .preview {
-  @apply relative overflow-hidden wrap-break-word break-keep bg-zinc-200;
+  @apply relative overflow-hidden break-all;
 }
 
 .goods__list {
@@ -304,7 +304,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-82 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center leading-tight ;
+  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center  leading-tight line-clamp-2;;
 }
 .goods__list--type1 li .goods__info .goods__price {
   @apply order-4 px-2 text-6xl text-center tracking-tight;
@@ -384,7 +384,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-44 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight ;
+  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight line-clamp-2; ;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 px-2 text-3xl text-center tracking-tight;
@@ -475,7 +475,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-34 px-0;
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-14 pt-2 px-1 text-sm text-center leading-tight ;
+  @apply order-2 flex-1 relative mb-14 pt-2 px-1 text-sm text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
   @apply order-4 px-2 text-lg text-center tracking-tight;
@@ -571,7 +571,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-28 px-0;
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-10 pt-2 px-1 text-sm text-center leading-tight ;
+  @apply order-2 flex-1 relative mb-10 pt-2 px-1 text-sm text-center leading-tight line-clamp-3; ;
 }
 .goods__list--type4 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-base text-center tracking-tight;

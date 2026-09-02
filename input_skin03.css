@@ -1,39 +1,28 @@
 @import 'tailwindcss';
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR&display=swap'); */
 
+
+
+
+
+/* 텍스트 폰트 */
 @font-face {
-  font-family: 'Pretendard-Custom';
-  src: url('./font/PretendardGOVVariable.woff2') format('woff2');
-  font-weight: 100 400 900;
+  font-family: 'Aggravo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+  font-weight: 300 500 700;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'SchoolSafetyPoster';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/HakgyoansimPosterB.woff2') format('woff2');
-  font-weight: normal;
-  font-display: swap;
-}
 
-/* 기본폰트 */
-
-/* 상품명 */
-@font-face {
-    font-family: 'Aggravo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
-    font-weight: 300 500 700;
-    font-display: swap;
-}
 
 /* 숫자폰트 */
 @font-face {
-  font-family: 'Rix';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Anton';
+  src: url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR&display=swap') format('woff2');
+  font-weight: 900;
   font-display: swap;
   unicode-range: U+0030-0039;
 }
-
-
 
 
 /* 폰트 지정 */
@@ -42,158 +31,32 @@
 }
 .goods__name {
   font-family: "Aggravo", Arial, sans-serif;
+  @apply text-zinc-800 font-bold;
 }
 .goods__delprice {
-  font-family: "Rix", Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  @apply text-zinc-800
 }
 .goods__price {
-  font-family: 'Rix', Arial, sans-serif;
+  font-family: 'Anton', Arial, sans-serif;
+  @apply text-[#cf0000];
 }
 .goods__price > span {
   font-family: 'Aggravo', Arial, sans-serif;
 }
 .goods__etc1 {
-  font-family: "Pretendard-Custom", Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  @apply font-bold text-white bg-zinc-800
 }
 .goods__pre {
   font-family:'Aggravo', Arial, sans-serif;
 }
 
 
-/* 텍스트 아웃라인 */
-/* .goods__name {
-  --stroke-width: 3px;
-  --stroke-color: #fff;
-  text-shadow:
-    calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(20deg)) calc(var(--stroke-width) * sin(20deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(30deg)) calc(var(--stroke-width) * sin(30deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(40deg)) calc(var(--stroke-width) * sin(40deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(50deg)) calc(var(--stroke-width) * sin(50deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(60deg)) calc(var(--stroke-width) * sin(60deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(70deg)) calc(var(--stroke-width) * sin(70deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(80deg)) calc(var(--stroke-width) * sin(80deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(90deg)) calc(var(--stroke-width) * sin(90deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(100deg)) calc(var(--stroke-width) * sin(100deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(110deg)) calc(var(--stroke-width) * sin(110deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(120deg)) calc(var(--stroke-width) * sin(120deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(130deg)) calc(var(--stroke-width) * sin(130deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(140deg)) calc(var(--stroke-width) * sin(140deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(150deg)) calc(var(--stroke-width) * sin(150deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(160deg)) calc(var(--stroke-width) * sin(160deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(170deg)) calc(var(--stroke-width) * sin(170deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(180deg)) calc(var(--stroke-width) * sin(180deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(190deg)) calc(var(--stroke-width) * sin(190deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(200deg)) calc(var(--stroke-width) * sin(200deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(210deg)) calc(var(--stroke-width) * sin(210deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(220deg)) calc(var(--stroke-width) * sin(220deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(230deg)) calc(var(--stroke-width) * sin(230deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(240deg)) calc(var(--stroke-width) * sin(240deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(250deg)) calc(var(--stroke-width) * sin(250deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(260deg)) calc(var(--stroke-width) * sin(260deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(270deg)) calc(var(--stroke-width) * sin(270deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(280deg)) calc(var(--stroke-width) * sin(280deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(290deg)) calc(var(--stroke-width) * sin(290deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(300deg)) calc(var(--stroke-width) * sin(300deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(310deg)) calc(var(--stroke-width) * sin(310deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(320deg)) calc(var(--stroke-width) * sin(320deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(330deg)) calc(var(--stroke-width) * sin(330deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(340deg)) calc(var(--stroke-width) * sin(340deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(350deg)) calc(var(--stroke-width) * sin(350deg)) 0 var(--stroke-color)
-  ;
-}
-
-.goods__price {
-  --stroke-width: 3px;
-  --stroke-color: #fff;
-  text-shadow:
-    calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(20deg)) calc(var(--stroke-width) * sin(20deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(30deg)) calc(var(--stroke-width) * sin(30deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(40deg)) calc(var(--stroke-width) * sin(40deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(50deg)) calc(var(--stroke-width) * sin(50deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(60deg)) calc(var(--stroke-width) * sin(60deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(70deg)) calc(var(--stroke-width) * sin(70deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(80deg)) calc(var(--stroke-width) * sin(80deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(90deg)) calc(var(--stroke-width) * sin(90deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(100deg)) calc(var(--stroke-width) * sin(100deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(110deg)) calc(var(--stroke-width) * sin(110deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(120deg)) calc(var(--stroke-width) * sin(120deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(130deg)) calc(var(--stroke-width) * sin(130deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(140deg)) calc(var(--stroke-width) * sin(140deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(150deg)) calc(var(--stroke-width) * sin(150deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(160deg)) calc(var(--stroke-width) * sin(160deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(170deg)) calc(var(--stroke-width) * sin(170deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(180deg)) calc(var(--stroke-width) * sin(180deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(190deg)) calc(var(--stroke-width) * sin(190deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(200deg)) calc(var(--stroke-width) * sin(200deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(210deg)) calc(var(--stroke-width) * sin(210deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(220deg)) calc(var(--stroke-width) * sin(220deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(230deg)) calc(var(--stroke-width) * sin(230deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(240deg)) calc(var(--stroke-width) * sin(240deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(250deg)) calc(var(--stroke-width) * sin(250deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(260deg)) calc(var(--stroke-width) * sin(260deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(270deg)) calc(var(--stroke-width) * sin(270deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(280deg)) calc(var(--stroke-width) * sin(280deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(290deg)) calc(var(--stroke-width) * sin(290deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(300deg)) calc(var(--stroke-width) * sin(300deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(310deg)) calc(var(--stroke-width) * sin(310deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(320deg)) calc(var(--stroke-width) * sin(320deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(330deg)) calc(var(--stroke-width) * sin(330deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(340deg)) calc(var(--stroke-width) * sin(340deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(350deg)) calc(var(--stroke-width) * sin(350deg)) 0 var(--stroke-color)
-  ;
-}
-.goods__delprice {
-  --stroke-width: .6px;
-  --stroke-color: #fff;
-  text-shadow:
-    calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(20deg)) calc(var(--stroke-width) * sin(20deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(30deg)) calc(var(--stroke-width) * sin(30deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(40deg)) calc(var(--stroke-width) * sin(40deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(50deg)) calc(var(--stroke-width) * sin(50deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(60deg)) calc(var(--stroke-width) * sin(60deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(70deg)) calc(var(--stroke-width) * sin(70deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(80deg)) calc(var(--stroke-width) * sin(80deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(90deg)) calc(var(--stroke-width) * sin(90deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(100deg)) calc(var(--stroke-width) * sin(100deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(110deg)) calc(var(--stroke-width) * sin(110deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(120deg)) calc(var(--stroke-width) * sin(120deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(130deg)) calc(var(--stroke-width) * sin(130deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(140deg)) calc(var(--stroke-width) * sin(140deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(150deg)) calc(var(--stroke-width) * sin(150deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(160deg)) calc(var(--stroke-width) * sin(160deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(170deg)) calc(var(--stroke-width) * sin(170deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(180deg)) calc(var(--stroke-width) * sin(180deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(190deg)) calc(var(--stroke-width) * sin(190deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(200deg)) calc(var(--stroke-width) * sin(200deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(210deg)) calc(var(--stroke-width) * sin(210deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(220deg)) calc(var(--stroke-width) * sin(220deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(230deg)) calc(var(--stroke-width) * sin(230deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(240deg)) calc(var(--stroke-width) * sin(240deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(250deg)) calc(var(--stroke-width) * sin(250deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(260deg)) calc(var(--stroke-width) * sin(260deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(270deg)) calc(var(--stroke-width) * sin(270deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(280deg)) calc(var(--stroke-width) * sin(280deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(290deg)) calc(var(--stroke-width) * sin(290deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(300deg)) calc(var(--stroke-width) * sin(300deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(310deg)) calc(var(--stroke-width) * sin(310deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(320deg)) calc(var(--stroke-width) * sin(320deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(330deg)) calc(var(--stroke-width) * sin(330deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(340deg)) calc(var(--stroke-width) * sin(340deg)) 0 var(--stroke-color),
-    calc(var(--stroke-width) * cos(350deg)) calc(var(--stroke-width) * sin(350deg)) 0 var(--stroke-color)
-  ;
-} */
-
-
 /* -----뷰 공통----- */
 
 .corner-div, .preview {
-  @apply relative overflow-hidden wrap-break-word break-keep;
+  @apply relative overflow-hidden break-all text-zinc-800;
 }
 
 .goods__list {
@@ -218,7 +81,7 @@
 }
 
 .corner-notice > p, .sample-corner-notice > p {
-  @apply max-w-full p-2 text-xl text-center text-[#fbff1a];
+  @apply max-w-full p-2 text-2xl text-center text-[#fbff1a] font-bold;
 }
 
 
@@ -235,7 +98,7 @@
   @apply gap-0 m-0;
 }
 .goods__list--type1 li {
-  @apply w-full min-w-full border-b border-zinc-800;
+  @apply w-full min-w-full border-b;
 }
 .goods__list--type1 li:last-child {
   /* @apply w-full pb-1; */
@@ -290,22 +153,22 @@
   @apply order-1 flex-1 relative flex flex-col px-0 py-2 bg-[#fde047];
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative pt-3 px-2 text-3xl text-center leading-tight text-zinc-900;
+  @apply order-2 flex-1 relative pt-3 px-2 text-3xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-6xl text-[#cf0000] text-center tracking-tight;
+  @apply order-4 px-2 text-7xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-[90%] mx-auto px-4 py-0.5 rounded text-base text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-4 py-0.5 rounded text-base text-center leading-tight;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
-  @apply order-3 min-h-8 px-2 text-2xl text-zinc-800 text-center line-through;
+  @apply order-3 min-h-8 px-2 text-2xl text-center line-through;
 }
 .goods__list--type1 li .goods__info .goods__price:empty {
   @apply hidden;
@@ -374,25 +237,25 @@
 
 /* 상품정보 */
 .goods__list--type2 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-0 pt-2 pb-1 gap-1.5 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-1.5 bg-[#fde047];
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative px-2 text-lg text-center leading-tight text-zinc-900;
+  @apply order-2 flex-1 relative text-xl text-center leading-tight text-zinc-900 line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-2 text-3xl text-[#cf0000] text-center tracking-tight;
+  @apply order-4 text-5xl text-center;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-lg;
+  @apply mt-auto text-lg;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-[90%] mx-auto px-2 py-0.5 rounded text-sm text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-sm text-center
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-sm text-center line-through text-zinc-800;
+  @apply order-3 text-base text-center line-through;
 }
 
 
@@ -465,25 +328,25 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-1 pt-2 gap-1 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-0.5 pt-2 gap-1 bg-[#fde047];
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative text-sm text-center leading-tight text-zinc-900;
+  @apply order-2 flex-1 relative text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 text-xl text-[#cf0000] text-center tracking-tight;
+  @apply order-4 text-4xl text-center;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-sm;
+  @apply mt-auto text-sm;
 }
 .goods__list--type3 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-xs text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-sm text-center;
 }
 .goods__list--type3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 text-xs text-center line-through text-zinc-800;
+  @apply order-3 text-sm text-center line-through;
 }
 .goods__list--type3 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -561,25 +424,25 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-0 pt-1 gap-1 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-0.5 pt-1 gap-1 bg-[#fde047];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative px-0.5 text-sm text-center leading-tight text-zinc-900;
+  @apply order-2 flex-1 relative text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 px-0.5 text-base text-[#cf0000] text-center tracking-tight;
+  @apply order-4 text-2xl text-center;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-xs;
+  @apply mt-auto text-xs;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-[90%] mx-auto px-1 py-0.5 rounded text-[11px] text-center text-white bg-zinc-900 leading-tight;
+  @apply order-1 max-w-[90%] mx-auto px-0.5 py-0.5 rounded text-xs text-center;
 }
 .goods__list--type4 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 px-0.5 text-[11px] text-center text-zinc-800 line-through;
+  @apply order-3 text-sm text-center line-through;
 }
 .goods__list--type4 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -601,7 +464,7 @@
   @apply gap-0 m-0;
 }
 .goods__list--style2 li {
-  @apply w-full min-w-full border-b border-zinc-800;
+  @apply w-full min-w-full border-b;
 }
 .goods__list--style2 li:last-child {
 }
@@ -653,22 +516,22 @@
   @apply relative flex flex-col min-w-40 p-2 mr-auto gap-1.5;
 }
 .goods__list--style2 li .goods__info .goods__name {
-  @apply order-2 mb-auto text-xl text-left leading-tight text-zinc-900;
+  @apply order-2 mb-auto text-xl text-left leading-tight;
 }
 .goods__list--style2 li .goods__info .goods__price {
-  @apply order-4 px-2 pt-1 pb-0.5 mr-auto rounded text-3xl text-zinc-900 bg-[#fde047] text-left text-wrap tracking-tight text-shadow-none;
+  @apply order-4 px-2 pt-1 pb-0.5 mr-auto rounded text-3xl bg-[#fde047] text-left text-wrap;
 }
 .goods__list--style2 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-base;
+  @apply mt-auto text-base;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-full mr-auto px-2 py-1 rounded text-xs text-white bg-zinc-900;
+  @apply order-1 max-w-full mr-auto px-2 py-0.5 rounded text-sm;
 }
 .goods__list--style2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply order-3 mr-auto text-sm text-left line-through text-zinc-800 text-shadow-none;
+  @apply order-3 mr-auto text-lg text-left line-through;
 }
 .goods__list--style2 li .goods__info .goods__price:empty {
   @apply hidden;
@@ -683,7 +546,7 @@
   @apply gap-0 m-0;
 }
 .goods__list--style3 li {
-  @apply w-full border-b border-zinc-800 ;
+  @apply w-full border-b;
 }
 .goods__list--style3 li:last-child {
   /* @apply w-full border-b border-zinc-300; */
@@ -724,8 +587,7 @@
 
 /* 뱃지 영역 및 크기 */
 .goods__list--style3 li .goods__imgbox .goods__badge {
-  @apply absolute top-2 left-2 flex items-center justify-center size-[66.6666666667px] z-10;
-  @apply w-12 h-12;
+  @apply absolute top-2 left-2 flex items-center justify-center size-12 z-10;
 }
 .goods__list--style3 li .goods__imgbox .goods__badge img {
    @apply block max-w-full w-auto max-h-full h-auto;
@@ -736,22 +598,22 @@
   @apply relative flex-1 flex flex-wrap gap-1 px-1 text-right break-all;
 }
 .goods__list--style3 li .goods__info .goods__name {
-  @apply order-2 relative flex w-full px-0.5 mb-2 text-lg text-left leading-tight text-zinc-900 text-shadow-none;
+  @apply order-2 relative flex w-full px-0.5 mb-2 text-xl text-left leading-tight;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 pt-1 pb-0.5 rounded text-2xl text-zinc-900 bg-[#fde047] text-left text-wrap tracking-tight text-shadow-none;
+  @apply order-4 pt-1 pb-0.5 px-2 rounded text-3xl bg-[#fde047] text-left text-wrap;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
-  @apply mt-auto ml-1 text-base;
+  @apply mt-auto text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-1 max-w-full mr-auto px-1.5 py-0.5 rounded text-xs text-left text-white bg-zinc-900;
+  @apply order-1 flex items-center justify-center mr-auto px-1.5 py-0.5 rounded text-sm text-left;
 }
 .goods__list--style3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
-  @apply order-3 mx-0.5 ml-auto text-sm text-right line-through text-zinc-700 text-shadow-none;
+  @apply order-3 mx-0.5 ml-auto text-lg text-right line-through text-shadow-none;
 }
 .goods__list--style3 li .goods__info .goods__price:empty {
   @apply hidden;

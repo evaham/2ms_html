@@ -1,0 +1,415 @@
+@charset "utf-8"; /* @font-face {
+    font-family: 'SANJUGotgam';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/SANJUGotgam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+} */
+.new_leaflets {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.new_leaflets a {
+    font-size: 15px;
+    background-image: linear-gradient(to right, #bc67d4 0%, #2a1bad 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn_order {
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px 0;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #bc67d4 0%, #2a1bad 100%);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.smart_order .diff_psd {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 10px;
+    font-size: 16px;
+    background-color: #cf0000;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quick_cart {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10000;
+    background-image: linear-gradient(to right, #bc67d4 0%, #2a1bad 100%);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.smart_search_box button {
+    width: 11%;
+    height: 34px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: #bc67d4;
+    color: #fff;
+}
+
+.smart_search_tit span {
+    color: #bc67d4;
+}
+
+.sidenav a:hover {
+    color: #be68d5;
+}
+
+.sidenav .closebtn:hover {
+    color: #be68d5;
+}
+
+.btn_smartevent {
+    font-family: 'GmarketSansBold';
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #2a1bad;
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.btn_smarteditor {
+    font-family: 'GmarketSansBold';
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #fff;
+    color: #2a1bad;
+    border: solid 1px #2a1bad;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.btn_smartcoupon {
+    font-family: 'GmarketSansBold';
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #fff;
+    color: #2a1bad;
+    border: solid 1px #2a1bad;
+    border-radius: 30px;
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn_smartcall {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #bc67d4;
+    color: #fff;
+    border-radius: 100%;
+    padding: 10px;
+    display: inline-block;
+}
+
+.nh_btn .btn_smartevent {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #404040;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #005cab 0%, #11a74f 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.nh_btn .btn_smarteditor {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #404040;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #005cab 0%, #11a74f 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.nh_btn .btn_smartcoupon {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #404040;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #005cab 0%, #11a74f 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.mart_btn .btn_smartevent {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #fff;
+    background-color: #f50a0b;
+    border: none;
+}
+
+.mart_btn .btn_smarteditor {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #fff;
+    background-color: #f50a0b;
+    border: none;
+}
+
+.mart_btn .btn_smartcoupon {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    padding: 0;
+    color: #fff;
+    background-color: #f50a0b;
+    border: none;
+}
+
+.smart_box.shome_nh {
+    font-family: 'GmarketSansMedium';
+}
+
+.shome_nh .mart_logo {
+    font-family: 'GmarketSansBold';
+}
+
+.smart_box.shome_mart {
+    font-family: 'GmarketSansMedium';
+}
+
+.shome_mart .mart_logo {
+    font-family: 'PyeongChangPeace-Light';
+}
+
+/* shome_b_php모먼트배너 */
+.momnet_banner {
+    width: 100%;
+    height: 101px;
+    display: revert;
+    position: fixed;
+    top: 41px;
+    left: 0;
+    z-index: 9001;
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left {
+    width: 265px !important;
+    padding: 5px 0px 5px 15px;
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left .momnet_bg_bnr_left_name {
+    font-size: 21px;
+    margin-bottom: 2px !important;
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left .momnet_bg_bnr_left_badge::before {
+    font-size: 13px !important;
+    position: relative;
+    top: -1px;
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left .momnet_bg_bnr_left_badge {
+    font-size: 9px !important;
+    margin-right: 0px !important;
+    padding: 4px 10px 4px 6px !important;
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left .momnet_bg_bnr_left_subname {
+    font-size: 10.55px !important
+}
+
+.momnet_banner .momnet_type_banner .momnet_bg_bnr_left .momnet_bg_bnr_tit {
+    font-size: 10px !important
+}
+
+.momnet_banner .momnet_type_box {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #ededed;
+    overflow: hidden;
+}
+
+.momnet_banner .momnet_type_banner {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 101px;
+    position: relative;
+}
+
+.momnet_banner .momnet_type_img_box {
+    width: 187px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.momnet_banner .momnet_type_img_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.momnet_banner .momnet_type1_img {
+    width: 117px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.momnet_banner .momnet_type2_img1 {
+    width: 70px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-105%, -50%);
+}
+
+.momnet_banner .momnet_type2_img2 {
+    width: 70px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%, -50%);
+}
+
+.momnet_banner .momnet_type3_img {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    z-index: 9;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.momnet_banner .momnet_type4_img {
+    width: 117px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.momnet_bg_bnr_left {
+    padding: 5px 0px 5px 20px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 380px;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_left_name {
+    font-size: 30px;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    color: #594d4d;
+    ;text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 5px
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_left_badge {
+    font-size: 15px;
+    padding: 6px 12px 6px 8px !important;
+    margin-right: 3px;
+    border-radius: 25px;
+    background-color: #feda07;
+    font-weight: 400;
+    color: #2a1b07
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_left_subname {
+    font-size: 15px;
+    color: #817575;
+    font-weight: 100;
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_left_badge::before {
+    content: "\ebee";
+    font-family: 'xeicon';
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_left_sub {
+    width: 100% !important
+}
+
+.momnet_bg_bnr_left .momnet_bg_bnr_tit {
+    font-size: 12px !important;
+    color: #7b7b7b;
+    margin-top: 2px;
+    font-weight: 100
+}
+
+.momnet_bg_bnr_right {
+    width: 270px;
+    height: 100%;
+    position: relative;
+    float: right;
+}
+
+.shome_nh .shome_content {
+    margin-top: 88px
+}
+
+.mart_homemenu {
+    margin-top: 40px
+}

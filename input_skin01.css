@@ -68,7 +68,34 @@
     font-display: swap;
     unicode-range: U+0030-0039;
 } */
+@font-face {
+    font-family: 'YeogiOttaeJalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    unicode-range: U+0030-0039;
+}
+@font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    unicode-range: U+0030-0039;
+}
 
 /* 폰트 지정 */
 .corner-div,.preview { 
@@ -82,8 +109,7 @@
   font-family: "Suit", Arial, sans-serif;
 }
 .goods__price {
-  font-family: 'Suit', Arial, sans-serif;
-  @apply font-extrabold;
+  font-family: 'YeogiOttaeJalnanGothic', Arial, sans-serif;
 }
 .goods__price > span {
   font-family: 'Suit', Arial, sans-serif;
@@ -232,6 +258,7 @@
 .goods__list--type2 li:last-child {
 }
 .goods__list--type2 li .goods__card {
+  /* clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); */
   @apply overflow-hidden flex flex-col h-full rounded-xl bg-white shadow-xs shadow-zinc-800/20;
 }
 
@@ -366,7 +393,7 @@
   @apply relative flex-1 flex flex-col mb-2 px-0;
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-1 text-sm text-center leading-tight text-zinc-800 line-clamp-2;
+  @apply order-2 relative w-full px-1 text-sm text-center leading-tight text-zinc-800 line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
   @apply order-4 px-1 text-2xl text-[#cf0000] text-center;
@@ -451,7 +478,7 @@
   @apply relative flex-1 flex flex-col mb-2 px-0;
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-0.5 mb-auto text-[13px] text-center leading-tight text-zinc-800 line-clamp-2;
+  @apply order-2 relative w-full px-0.5 mb-auto text-[13px] text-center leading-tight text-zinc-800 line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-xl text-[#cf0000] text-center tracking-tight;
