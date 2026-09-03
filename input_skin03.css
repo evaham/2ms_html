@@ -233,7 +233,7 @@
 
 /* 상품정보 */
 .goods__list--type2 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-1.5 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-1 py-1 gap-1 bg-[#fde047];
 }
 .goods__list--type2 li .goods__info .goods__name {
   @apply order-2 flex-1 relative text-xl text-center leading-tight text-zinc-900 line-clamp-2;
@@ -324,7 +324,7 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-0.5 pt-2 gap-1 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-0.5 py-1 gap-1 bg-[#fde047];
 }
 .goods__list--type3 li .goods__info .goods__name {
   @apply order-2 flex-1 relative text-base text-center leading-tight line-clamp-3;

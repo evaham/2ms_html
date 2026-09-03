@@ -635,11 +635,10 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: calc(var(--spacing) * 1.5);
+  gap: var(--spacing);
   background-color: #fde047;
   padding-inline: var(--spacing);
-  padding-top: calc(var(--spacing) * 2);
-  padding-bottom: var(--spacing);
+  padding-block: var(--spacing);
 }
 .goods__list--type2 li .goods__info .goods__name {
   position: relative;
@@ -797,7 +796,7 @@
   gap: var(--spacing);
   background-color: #fde047;
   padding-inline: calc(var(--spacing) * 0.5);
-  padding-top: calc(var(--spacing) * 2);
+  padding-block: var(--spacing);
 }
 .goods__list--type3 li .goods__info .goods__name {
   position: relative;
