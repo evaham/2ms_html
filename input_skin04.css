@@ -94,7 +94,8 @@
 .corner-notice,.sample-corner-notice {
   @apply flex justify-center items-center min-h-11 bg-indigo-700;
 }
-.corner-notice > p, .sample-corner-notice > p {
+.corner-notice > p, 
+.sample-corner-notice > p {
   @apply max-w-full p-2 text-2xl text-center text-blue-50 font-bold;
 }
 

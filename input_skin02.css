@@ -239,12 +239,14 @@
 }
 
 /* 코너정보 */
-.corner-notice,.sample-corner-notice {
-  @apply flex justify-center items-center min-h-11 mx-2 mt-2 mb-1 rounded-xl bg-amber-400;
+.corner-notice,
+.sample-corner-notice {
+  @apply flex justify-center items-center min-h-11 mx-2 mt-2 mb-1 rounded-xl bg-blue-700;
 }
 
-.corner-notice > p,.sample-corner-notice > p {
-  @apply max-w-full p-2 text-xl text-center;
+.corner-notice > p, 
+.sample-corner-notice > p {
+  @apply max-w-full p-2 text-2xl text-center text-white;
 }
 
 

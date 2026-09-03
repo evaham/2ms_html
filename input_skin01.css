@@ -61,13 +61,7 @@
     font-display: swap;
 }
 /* 숫자만 사용 */
-/* @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
-    unicode-range: U+0030-0039;
-} */
+
 @font-face {
     font-family: 'YeogiOttaeJalnanGothic';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
@@ -155,8 +149,9 @@
   @apply flex justify-center items-center min-h-11 m-1 rounded-xl bg-indigo-600;
 }
 
-.corner-notice > p,.sample-corner-notice > p {
-  @apply max-w-full p-2 text-xl font-bold text-center text-indigo-50;
+.corner-notice > p,
+.sample-corner-notice > p {
+  @apply max-w-full p-2 text-2xl font-bold text-center text-indigo-50;
 }
 
 
@@ -231,7 +226,7 @@
   @apply order-4 px-2 text-6xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
-  @apply mt-auto text-2xl ;
+  @apply mt-auto text-2xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
   @apply order-1 flex mx-auto px-2 text-base text-center;
@@ -240,7 +235,7 @@
   @apply hidden;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-base text-center line-through ;
+  @apply order-3 px-2 text-xl text-center line-through ;
 }
 .goods__list--type1 li .goods__info .goods__delprice:empty {
   @apply hidden;

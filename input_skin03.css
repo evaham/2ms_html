@@ -22,9 +22,8 @@
 
 
 /* 폰트 지정 */
-.corner-div { 
+.corner-div {
   font-family: "Aggravo", Arial, sans-serif;
-  @apply p-1;
 }
 .goods__name {
   font-family: "Aggravo", Arial, sans-serif;
@@ -53,7 +52,7 @@
 /* -----뷰 공통----- */
 
 .corner-div, .preview {
-  @apply relative overflow-hidden break-all text-zinc-800;
+  @apply relative overflow-hidden p-1 break-all text-zinc-800;
 }
 
 .goods__list {
@@ -73,12 +72,14 @@
 }
 
 /* 코너정보 */
-.corner-notice,.sample-corner-notice {
-  @apply flex justify-center items-center min-h-11 bg-zinc-800;
+.corner-notice,
+.sample-corner-notice {
+  @apply flex justify-center items-center min-h-11 bg-olive-800;
 }
 
-.corner-notice > p, .sample-corner-notice > p {
-  @apply max-w-full p-2 text-2xl text-center text-[#fbff1a] font-bold;
+.corner-notice > p, 
+.sample-corner-notice > p {
+  @apply max-w-full p-2 pt-4 text-2xl text-center text-[#ffe300] font-medium;
 }
 
 
