@@ -341,13 +341,13 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-1 border-t border-[#eaeeff] bg-white;
+  @apply flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-1 border-t border-[#eaeeff] bg-white text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
   @apply order-2 flex-1 relative w-full mb-auto text-lg text-left leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 w-full mr-auto py-1 text-2xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-4 w-full mr-auto py-1 text-[290%] text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-xs;

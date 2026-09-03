@@ -325,13 +325,13 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-0.5 py-1 gap-1 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-0.5 py-1 gap-1 bg-[#fde047] text-[15px];
 }
 .goods__list--type3 li .goods__info .goods__name {
   @apply order-2 flex-1 relative text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 text-4xl text-center;
+  @apply order-4 text-[290%] text-center;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto text-sm;

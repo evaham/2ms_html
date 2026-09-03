@@ -59,14 +59,15 @@
 /* 폰트 지정 */
 .corner-div { 
   font-family: "NationalPension", Arial, sans-serif;
-  @apply text-zinc-900 font-extrabold;
+  @apply text-zinc-800 font-bold;
 }
 .goods__name {
   font-family: "NationalPension", Arial, sans-serif;
-  @apply text-zinc-900 font-extrabold;
+  @apply text-zinc-800;
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
+  @apply text-zinc-800;
 }
 .goods__price {
   font-family: 'YeogiOttaeJalnan', Arial, sans-serif;
@@ -397,7 +398,7 @@
   @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight line-clamp-2; ;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-2 text-3xl text-center tracking-tight;
+  @apply order-4 px-1 text-3xl text-center tracking-tight;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-lg;
@@ -409,7 +410,7 @@
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 min-h-5 px-2 text-sm text-center line-through text-zinc-800;
+  @apply order-3 min-h-5 px-2 text-lg text-center line-through text-zinc-800;
 }
 
 
@@ -482,13 +483,13 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col min-h-34 px-0;
+  @apply order-1 flex-1 relative flex flex-col min-h-34 px-1 text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
   @apply order-2 flex-1 relative mb-14 pt-2 px-1 text-sm text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 px-2 text-lg text-center tracking-tight;
+  @apply order-4 mb-1 text-[290%] text-center tracking-tight;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-sm;
@@ -500,7 +501,7 @@
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 min-h-5 px-2 text-xs text-center line-through text-zinc-800;
+  @apply order-3 min-h-5 text-base text-center line-through text-zinc-800;
 }
 
 
@@ -539,7 +540,7 @@
 
 /* 카트 아이콘 */
 .goods__list--type4 li .icon__cartbox {
-  @apply absolute right-0 bottom-6 flex items-center justify-center size-6 border rounded-full border-zinc-300 bg-white z-10 shadow;
+  @apply absolute right-0 bottom-9 flex items-center justify-center size-6 border rounded-full border-zinc-300 bg-white z-10 shadow-xs;
 }
 .goods__list--type4 li .icon__cartbox svg {
   @apply fill-zinc-400;
@@ -578,10 +579,10 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply order-1 relative flex flex-col h-36 px-0 text-[10px];
+  @apply order-1 flex-1 relative flex flex-col min-h-32 px-0 text-[10px];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 relative mb-auto pt-2 px-1 text-sm text-center leading-tight line-clamp-3;
+  @apply order-2 relative mb-5 pt-2 px-0.5 text-sm text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-[290%] text-center;
@@ -596,7 +597,7 @@
   @apply hidden;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 min-h-4 px-0.5 text-sm text-center line-through tracking-tighter;
+  @apply order-3 min-h-4 mt-auto px-0.5 text-sm text-left line-through;
 }
 
 
@@ -681,7 +682,7 @@
   @apply order-1 px-0.5 text-base text-left text-blue-500;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply order-3 flex items-end px-0.5 text-sm text-left line-through text-shadow-none;
+  @apply order-3 flex items-end px-0.5 text-base text-left line-through text-shadow-none;
 }
 
 
@@ -759,7 +760,7 @@
   @apply order-1 mx-0.5 flex w-full text-base text-left text-blue-500;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
-  @apply order-3 mx-0.5 ml-auto text-xs text-right line-through text-shadow-none;
+  @apply order-3 mx-0.5 ml-auto text-base text-right line-through text-shadow-none;
 }
 
 

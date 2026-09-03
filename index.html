@@ -1470,9 +1470,9 @@
 
               </div>
               <div class="goods__info">
-                <div class="goods__etc1">하하하하하하하</div>
+                <div class="goods__etc1">하하하하하하</div>
                 <div class="goods__delprice">33,000</div>
-                <div class="goods__price">19,800</div>
+                <div class="goods__price">9,999</div>
                 <div class="goods__name">동서)디카페인믹스 100T</div>
               </div>
 
@@ -1492,9 +1492,9 @@
 
               </div>
               <div class="goods__info">
-                <div class="goods__etc1">하하하하하하하</div>
+                <div class="goods__etc1">하하하하하</div>
                 <div class="goods__delprice">33,000</div>
-                <div class="goods__price">4,350</div>
+                <div class="goods__price">99,999</div>
                 <div class="goods__name">동서카누티라미수라떼 138g</div>
               </div>
 
@@ -1516,7 +1516,7 @@
               <div class="goods__info">
                 <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">23,000</div>
+                <div class="goods__price">999,999</div>
                 <div class="goods__name">카누아이스블렌드100T 100t</div>
               </div>
 
@@ -1545,7 +1545,7 @@
               <div class="goods__info">
                 <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">29,800</div>
+                <div class="goods__price">9,999,999</div>
                 <div class="goods__name">카누미니다크150T</div>
               </div>
 
@@ -2927,6 +2927,23 @@
             $(this).css('font-size', '');
           }
         });
+        $('.goods__list--type3 li .goods__info .goods__price').each(function(){
+          var digits = $(this).text().replace(/[^0-9]/g,'').replace(/(^0+)/, '');
+          // include any attached "원" span's text length in the digit count
+          var wonText = $(this).find('.price-won').text() || '';
+          var extraLen = wonText.length;
+          var len = digits.length + extraLen;
+          if(len >= 5){
+            var size = '230%';
+            if(len === 6) size = '200%';
+            else if(len >= 7) size = '160%';
+            $(this).css('font-size', size);
+          } else {
+            $(this).css('font-size', '');
+          }
+        });
+
+
       }
 
       $(function(){
