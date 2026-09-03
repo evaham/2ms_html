@@ -1050,7 +1050,8 @@
   padding-inline: var(--spacing);
   padding-block: calc(var(--spacing) * 0.5);
   text-align: center;
-  font-size: 11px;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
   color: var(--color-white);
