@@ -106,18 +106,19 @@
   @apply font-semibold;
 }
 .goods__delprice {
-  font-family: "Suit", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 .goods__price {
   font-family: 'YeogiOttaeJalnanGothic', Arial, sans-serif;
+  @apply text-[#cf0000] font-bold leading-none;
 }
 .goods__price > span {
-  font-family: 'Suit', Arial, sans-serif;
-  @apply font-light;
+  font-family: Arial, sans-serif;
+  @apply font-normal;
 }
 .goods__etc1 {
-  font-family: "Suit", Arial, sans-serif;
-  @apply font-bold;
+  font-family: Arial, sans-serif;
+  @apply font-medium;
 }
 .goods__pre {
   font-family:'Suit', Arial, sans-serif;
@@ -475,22 +476,22 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0;
+  @apply relative flex-1 flex flex-col mb-2 px-0 text-[10px];
 }
 .goods__list--type4 li .goods__info .goods__name {
   @apply order-2 relative w-full px-0.5 mb-auto text-[13px] text-center leading-tight text-zinc-800 line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 px-0.5 text-xl text-[#cf0000] text-center tracking-tight;
+  @apply order-4 px-0.5 text-[290%] text-[#cf0000] text-center tracking-tight;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto text-xs text-zinc-800;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 px-0.5 text-[11px] text-center text-blue-600 leading-tight;
+  @apply order-1 px-0.5 text-xs text-center text-blue-600 leading-tight;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 px-0.5 text-[11px] text-center line-through text-zinc-800;
+  @apply order-3 px-0.5 text-sm text-center line-through text-zinc-800;
 }
 
 

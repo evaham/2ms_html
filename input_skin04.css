@@ -50,20 +50,19 @@
   @apply text-zinc-800 font-bold;
 }
 .goods__delprice {
-  font-family:'YuhanKimberlyPureunsoop', Arial, sans-serif;
-  @apply text-zinc-800;
+  font-family: Arial, sans-serif;
 }
 .goods__price {
   font-family: 'YeogiOttaeJalnan', Arial, sans-serif;
-  @apply text-white;
+  @apply text-white leading-none;
 }
 .goods__price > span {
-  font-family: 'YuhanKimberlyPureunsoop', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   @apply font-normal;
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  @apply font-bold;
+  @apply font-medium;
 }
 .goods__pre {
   font-family:'YuhanKimberlyPureunsoop', Arial, sans-serif;
@@ -438,13 +437,13 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-0.5 border-t border-[#eaeeff] bg-white;
+  @apply flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-0.5 border-t border-[#eaeeff] text-[9px] bg-white;
 }
 .goods__list--type4 li .goods__info .goods__name {
   @apply order-2 flex-1 relative w-full mb-auto text-base text-left leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 w-full mb-auto py-0.5 text-lg text-white text-center bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-4 w-full mb-auto py-0.5 text-[290%] text-white text-center bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto text-xs;

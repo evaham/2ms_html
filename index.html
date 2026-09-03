@@ -1152,6 +1152,7 @@
         테마스킨 변경<br/>
         <span id="current-skin">스킨1,스킨2,스킨3,스킨4</span>
       </button>
+      <button id="won-toggle" type="button" aria-pressed="false" style="width:90px; height:40px; padding:2px 4px; margin:10px 10px 10px 6px; border:1px solid #ddd; border-radius:4px; background:#fff; font-size:12px;">원단위 표시</button>
     </div>
     <div style="position: sticky; z-index: 999;top: 0;">
       <div class="sample__name clearfix" style="background-color: #3e4446;">
@@ -1673,7 +1674,7 @@
               <div class="goods__info">
                 <div class="goods__etc1">롯데웰푸드</div>
                 <div class="goods__delprice">3,000</div>
-                <div class="goods__price">1,500</div>
+                <div class="goods__price">9,999</div>
                 <div class="goods__name">위즐 바닐라 모나카 1500류</div>
               </div>
 
@@ -1701,7 +1702,7 @@
               <div class="goods__info">
                 <div class="goods__etc1">롯데웰푸드</div>
                 <div class="goods__delprice">3,000</div>
-                <div class="goods__price">1,200</div>
+                <div class="goods__price">99,999</div>
                 <div class="goods__name">쫀득쫀득 찰덕아이스 정가판매</div>
               </div>
 
@@ -1730,7 +1731,7 @@
               <div class="goods__info">
                 <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">2,000</div>
+                <div class="goods__price">999,999</div>
                 <div class="goods__name">팥빙수 정가판매2000류</div>
               </div>
 
@@ -1759,7 +1760,7 @@
               <div class="goods__info">
                 <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">1,200</div>
+                <div class="goods__price">9,999,999</div>
                 <div class="goods__name">롯데)와플통팥 1200류정가</div>
               </div>
 
@@ -1788,10 +1789,9 @@
               <div class="goods__info">
                 <div class="goods__etc1"></div>
                 <div class="goods__delprice"></div>
-                <div class="goods__price">1,200</div>
+                <div class="goods__price">999</div>
                 <div class="goods__name">바닐라 와플 정가1200류</div>
               </div>
-
             </div>
           </li>
 
@@ -2914,11 +2914,14 @@
       function adjustPriceFontSize(){
         $('.goods__list--type4 li .goods__info .goods__price').each(function(){
           var digits = $(this).text().replace(/[^0-9]/g,'').replace(/(^0+)/, '');
-          var len = digits.length;
+          // include any attached "원" span's text length in the digit count
+          var wonText = $(this).find('.price-won').text() || '';
+          var extraLen = wonText.length;
+          var len = digits.length + extraLen;
           if(len >= 5){
-            var size = '225%';
-            if(len === 6) size = '190%';
-            else if(len >= 7) size = '156%';
+            var size = '230%';
+            if(len === 6) size = '200%';
+            else if(len >= 7) size = '160%';
             $(this).css('font-size', size);
           } else {
             $(this).css('font-size', '');
@@ -2935,6 +2938,51 @@
           adjustPriceFontSize();
         });
         observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+      });
+    })(jQuery);
+  </script>
+  <script>
+    (function($){
+      var _isApplyingWon = false;
+      function toggleWon(shouldAdd){
+        // prevent re-entrancy from observer callbacks
+        _isApplyingWon = true;
+        $('.goods__price').each(function(){
+          // remove existing span if any
+          $(this).find('.price-won').remove();
+          if(shouldAdd){
+            // append a span with a little left margin
+            $(this).append('<span class="price-won">원</span>');
+          }
+        });
+        // allow observer to react again after DOM updates settle
+        setTimeout(function(){ _isApplyingWon = false; }, 0);
+      }
+
+      $(function(){
+        var $btn = $('#won-toggle');
+        if(!$btn.length) return;
+        $btn.on('click', function(){
+          var pressed = $btn.attr('aria-pressed') === 'true';
+          pressed = !pressed;
+          $btn.attr('aria-pressed', pressed);
+          if(pressed) {
+            $btn.css('background','#e6f7ff');
+            toggleWon(true);
+          } else {
+            $btn.css('background','#fff');
+            toggleWon(false);
+          }
+        });
+
+        // Preserve state across DOM updates: reapply when mutations occur
+        var obs = new MutationObserver(function(){
+          // avoid reacting to changes we ourselves caused
+          if(_isApplyingWon) return;
+          var pressed = $btn.attr('aria-pressed') === 'true';
+          toggleWon(pressed);
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
       });
     })(jQuery);
   </script>
