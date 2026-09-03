@@ -111,7 +111,7 @@
 }
 .goods__price {
   font-family: 'YeogiOttaeJalnanGothic', Arial, sans-serif;
-  @apply text-[#cf0000] leading-none;
+  @apply text-[#cf0000] leading-none tracking-tight;
 }
 .goods__price > span {
   font-family: Arial, sans-serif;
@@ -119,7 +119,7 @@
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  @apply font-medium;
+  @apply text-blue-600 leading-tight font-medium;
 }
 .goods__pre {
   font-family:'Suit', Arial, sans-serif;
@@ -225,16 +225,16 @@
   @apply flex flex-col mb-2 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 relative w-full my-2 px-2 mb-auto text-2xl text-center leading-tight  line-clamp-2;
+  @apply order-2 relative w-full my-2 px-2 mb-auto text-2xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-6xl text-[#cf0000] text-center;
+  @apply order-4 px-2 text-6xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl ;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 flex mx-auto px-2 text-base text-center text-blue-600 leading-tight;
+  @apply order-1 flex mx-auto px-2 text-base text-center;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
@@ -309,16 +309,16 @@
   @apply relative flex-1 flex flex-col mb-2 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-2 mb-auto text-xl text-center leading-tight  line-clamp-2;
+  @apply order-2 relative w-full px-2 mb-auto text-xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-2 text-4xl text-[#cf0000] text-center;
+  @apply order-4 px-2 text-4xl text-center;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto text-lg ;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 px-2 text-sm text-center text-blue-600 leading-tight;
+  @apply order-1 px-2 text-sm text-center;
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
@@ -398,13 +398,13 @@
   @apply order-2 relative w-full mb-auto px-1 text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 text-2xl text-[#cf0000] text-center;
+  @apply order-4 text-[290%] text-center;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto text-sm ;
 }
 .goods__list--type3 li .goods__info .goods__etc1 {
-  @apply order-1 text-sm text-center text-blue-600 leading-tight;
+  @apply order-1 text-sm text-center;
 }
 .goods__list--type3 li .goods__info .goods__etc1:empty {
   @apply hidden;
@@ -482,13 +482,13 @@
   @apply order-2 relative w-full mb-auto text-base text-center leading-tight  line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 text-[290%] text-[#cf0000] text-center;
+  @apply order-4 text-[290%] text-center;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto text-xs;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 text-sm text-center text-blue-600 leading-tight;
+  @apply order-1 text-sm text-center;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
   @apply order-3 text-sm text-center line-through ;
@@ -566,13 +566,13 @@
   @apply order-2 relative w-full mb-auto text-lg text-left leading-tight  line-clamp-2;
 }
 .goods__list--style2 li .goods__info .goods__price {
-  @apply order-4 text-4xl text-[#cf0000] text-left tracking-tight;
+  @apply order-4 text-4xl text-left tracking-tight;
 }
 .goods__list--style2 li .goods__info .goods__price > span {
   @apply mt-auto text-base ;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 text-sm text-left text-blue-600 leading-tight;
+  @apply order-1 text-sm text-left;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
   @apply flex-1 order-3 flex items-end text-sm text-left line-through ;
@@ -645,13 +645,13 @@
   @apply col-span-3 order-1 relative w-full px-0.5 mb-2 text-base text-left leading-tight  line-clamp-2;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 inline ml-auto px-0.5 text-3xl text-[#cf0000] text-right tracking-tight;
+  @apply order-4 inline ml-auto px-0.5 text-3xl text-right;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
   @apply mt-auto text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-2 inline-block mx-0.5 text-sm text-right text-blue-600 leading-tight;
+  @apply order-2 inline-block mx-0.5 text-sm text-right;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
   @apply flex-1 inline-block order-3 mx-0.5 text-sm text-right line-through ;
