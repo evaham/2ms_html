@@ -225,10 +225,10 @@
   @apply flex flex-col mb-2 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 relative w-full my-2 px-2 mb-auto text-xl text-center leading-tight  line-clamp-2;
+  @apply order-2 relative w-full my-2 px-2 mb-auto text-2xl text-center leading-tight  line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-7xl text-[#cf0000] text-center;
+  @apply order-4 px-2 text-6xl text-[#cf0000] text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl ;
@@ -309,7 +309,7 @@
   @apply relative flex-1 flex flex-col mb-2 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-2 mb-auto text-lg text-center leading-tight  line-clamp-2;
+  @apply order-2 relative w-full px-2 mb-auto text-xl text-center leading-tight  line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 px-2 text-4xl text-[#cf0000] text-center;
@@ -324,7 +324,7 @@
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-sm text-center line-through ;
+  @apply order-3 px-2 text-base text-center line-through ;
 }
 .goods__list--type2 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -392,25 +392,25 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0;
+  @apply relative flex-1 flex flex-col mb-2 px-0.5 text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-1 text-sm text-center leading-tight  line-clamp-3;
+  @apply order-2 relative w-full mb-auto px-1 text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
-  @apply order-4 px-1 text-2xl text-[#cf0000] text-center;
+  @apply order-4 text-2xl text-[#cf0000] text-center;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
   @apply mt-auto text-sm ;
 }
 .goods__list--type3 li .goods__info .goods__etc1 {
-  @apply order-1 px-1 text-xs text-center text-blue-600 leading-tight;
+  @apply order-1 text-sm text-center text-blue-600 leading-tight;
 }
 .goods__list--type3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 px-1 text-xs text-center line-through ;
+  @apply order-3 text-sm text-center line-through ;
 }
 .goods__list--type3 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -450,7 +450,6 @@
 .goods__list--type4 li .icon__cartbox.active svg {
   @apply fill-blue-500;
 }
-
 .goods__list--type4 li .icon__cartbox.disabled {
   @apply bg-zinc-200 border-zinc-200;
 }
@@ -477,22 +476,22 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0 text-[10px];
+  @apply relative flex-1 flex flex-col mb-2 px-0.5 text-[10px];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-0.5 mb-auto text-[13px] text-center leading-tight  line-clamp-3;
+  @apply order-2 relative w-full mb-auto text-base text-center leading-tight  line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 px-0.5 text-[290%] text-[#cf0000] text-center;
+  @apply order-4 text-[290%] text-[#cf0000] text-center;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
-  @apply mt-auto text-xs ;
+  @apply mt-auto text-xs;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 px-0.5 text-xs text-center text-blue-600 leading-tight;
+  @apply order-1 text-sm text-center text-blue-600 leading-tight;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 px-0.5 text-sm text-center line-through ;
+  @apply order-3 text-sm text-center line-through ;
 }
 
 
@@ -621,10 +620,6 @@
 
 
 
-
-
-
-
 /* 이미지정보 */
 .goods__list--style3 li .goods__imgbox {
   @apply hidden;
@@ -650,16 +645,16 @@
   @apply col-span-3 order-1 relative w-full px-0.5 mb-2 text-base text-left leading-tight  line-clamp-2;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 inline ml-auto px-0.5 text-4xl text-[#cf0000] text-right tracking-tight;
+  @apply order-4 inline ml-auto px-0.5 text-3xl text-[#cf0000] text-right tracking-tight;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
-  @apply mt-auto text-base ;
+  @apply mt-auto text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-2 inline-block mx-0.5 text-xs text-right text-blue-600 leading-tight;
+  @apply order-2 inline-block mx-0.5 text-sm text-right text-blue-600 leading-tight;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
-  @apply flex-1 inline-block order-3 mx-0.5 text-xs text-right line-through ;
+  @apply flex-1 inline-block order-3 mx-0.5 text-sm text-right line-through ;
 }
 
 

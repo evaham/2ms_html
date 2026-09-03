@@ -395,10 +395,10 @@
   @apply order-1 flex-1 relative flex flex-col min-h-44 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight line-clamp-2; ;
+  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-1 text-3xl text-center tracking-tight;
+  @apply order-4 px-1 text-4xl text-center tracking-tight;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-lg;
