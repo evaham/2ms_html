@@ -1532,11 +1532,13 @@
         </div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
       </div>
-      <div style="position: sticky;z-index: 999;top: 0;">
-        <button id="theme-toggle"
-          style="position:fixed; top:60px; left:10px; padding:2px 4px; border:1px; border-radius: 4px; background:#fafafa; z-index:99999; font-size:12px;">테마
-          CSS 교체</button>
-      </div>
+    <div style="position: fixed; z-index: 9999; top: 0; right: 0;">
+      <button id="theme-toggle" style="width:100px; height:40px; padding:2px 4px; margin:10px; border:1px; border-radius: 4px; background:#fafafa; z-index:99999; font-size:12px;">
+        테마스킨 변경<br/>
+        <span id="current-skin">스킨1,스킨2,스킨3,스킨4</span>
+      </button>
+      <button id="won-toggle" type="button" aria-pressed="false" style="width:90px; height:40px; padding:2px 4px; margin:10px 10px 10px 6px; border:1px solid #ddd; border-radius:4px; background:#fff; font-size:12px;">원단위 표시</button>
+    </div>
 
       <!-- 행사코너 -->
       <div class="preview " id="preview_0" data-code="0">
@@ -2520,6 +2522,102 @@
       });
     })();
   </script>
+  <script>
+    (function($){
+      function adjustPriceFontSize(){
+        $('.goods__list--type4 li .goods__info .goods__price').each(function(){
+          var digits = $(this).text().replace(/[^0-9]/g,'').replace(/(^0+)/, '');
+          // include any attached "원" span's text length in the digit count
+          var wonText = $(this).find('.price-won').text() || '';
+          var extraLen = wonText.length;
+          var len = digits.length + extraLen;
+          if(len >= 5){
+            var size = '230%';
+            if(len === 6) size = '200%';
+            else if(len >= 7) size = '160%';
+            $(this).css('font-size', size);
+          } else {
+            $(this).css('font-size', '');
+          }
+        });
+        $('.goods__list--type3 li .goods__info .goods__price').each(function(){
+          var digits = $(this).text().replace(/[^0-9]/g,'').replace(/(^0+)/, '');
+          // include any attached "원" span's text length in the digit count
+          var wonText = $(this).find('.price-won').text() || '';
+          var extraLen = wonText.length;
+          var len = digits.length + extraLen;
+          if(len >= 5){
+            var size = '230%';
+            if(len === 6) size = '200%';
+            else if(len >= 7) size = '160%';
+            $(this).css('font-size', size);
+          } else {
+            $(this).css('font-size', '');
+          }
+        });
+
+
+      }
+
+      $(function(){
+        // 초기 적용 (numberFormat가 실행된 후에도 동작하도록 문서 준비 시 한 번 실행)
+        adjustPriceFontSize();
+
+        // 동적으로 내용이 바뀌는 경우를 위해 변경 감시
+        var observer = new MutationObserver(function(){
+          adjustPriceFontSize();
+        });
+        observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+      });
+    })(jQuery);
+  </script>
+  <script>
+    (function($){
+      var _isApplyingWon = false;
+      function toggleWon(shouldAdd){
+        // prevent re-entrancy from observer callbacks
+        _isApplyingWon = true;
+        $('.goods__price').each(function(){
+          // remove existing span if any
+          $(this).find('.price-won').remove();
+          if(shouldAdd){
+            // append a span with a little left margin
+            $(this).append('<span class="price-won">원</span>');
+          }
+        });
+        // allow observer to react again after DOM updates settle
+        setTimeout(function(){ _isApplyingWon = false; }, 0);
+      }
+
+      $(function(){
+        var $btn = $('#won-toggle');
+        if(!$btn.length) return;
+        $btn.on('click', function(){
+          var pressed = $btn.attr('aria-pressed') === 'true';
+          pressed = !pressed;
+          $btn.attr('aria-pressed', pressed);
+          if(pressed) {
+            $btn.css('background','#e6f7ff');
+            toggleWon(true);
+          } else {
+            $btn.css('background','#fff');
+            toggleWon(false);
+          }
+        });
+
+        // Preserve state across DOM updates: reapply when mutations occur
+        var obs = new MutationObserver(function(){
+          // avoid reacting to changes we ourselves caused
+          if(_isApplyingWon) return;
+          var pressed = $btn.attr('aria-pressed') === 'true';
+          toggleWon(pressed);
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+      });
+    })(jQuery);
+  </script>
+
+
 </body>
 
 </html>
