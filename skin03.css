@@ -268,9 +268,6 @@
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
-  .right-\[5\%\] {
-    right: 5%;
-  }
   .bottom-0 {
     bottom: 0px;
   }
@@ -297,9 +294,6 @@
   }
   .bottom-42 {
     bottom: calc(var(--spacing) * 42);
-  }
-  .bottom-\[5\%\] {
-    bottom: 5%;
   }
   .left-0 {
     left: 0px;
@@ -339,6 +333,9 @@
   }
   .mx-0 {
     margin-inline: 0px;
+  }
+  .mx-0\.5 {
+    margin-inline: calc(var(--spacing) * 0.5);
   }
   .mx-1 {
     margin-inline: var(--spacing);
@@ -408,9 +405,6 @@
   }
   .ml-0 {
     margin-left: 0px;
-  }
-  .ml-0\.5 {
-    margin-left: calc(var(--spacing) * 0.5);
   }
   .ml-1 {
     margin-left: var(--spacing);
@@ -590,11 +584,11 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-\[calc\(\(100\%-0\.5rem\)\/2\)\] {
-    width: calc((100% - 0.5rem) / 2);
-  }
   .w-\[calc\(\(100\%-0\.5rem\)\/3\)\] {
     width: calc((100% - 0.5rem) / 3);
+  }
+  .w-\[calc\(\(100\%-0\.25rem\)\/2\)\] {
+    width: calc((100% - 0.25rem) / 2);
   }
   .w-\[calc\(\(100\%-0\.75rem\)\/4\)\] {
     width: calc((100% - 0.75rem) / 4);
@@ -656,14 +650,8 @@
   .gap-0 {
     gap: 0px;
   }
-  .gap-0\.5 {
-    gap: calc(var(--spacing) * 0.5);
-  }
   .gap-1 {
     gap: var(--spacing);
-  }
-  .gap-1\.5 {
-    gap: calc(var(--spacing) * 1.5);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -718,9 +706,6 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
-  .border-\[\#eaeeff\] {
-    border-color: #eaeeff;
-  }
   .border-zinc-300 {
     border-color: var(--color-zinc-300);
   }
@@ -755,14 +740,6 @@
     }
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .from-\[\#4F46E5\] {
-    --tw-gradient-from: #4F46E5;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-\[\#0EA5E9\] {
-    --tw-gradient-to: #0EA5E9;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .fill-black {
     fill: var(--color-black);
   }
@@ -787,6 +764,9 @@
   .px-0 {
     padding-inline: 0px;
   }
+  .px-0\.5 {
+    padding-inline: calc(var(--spacing) * 0.5);
+  }
   .px-1 {
     padding-inline: var(--spacing);
   }
@@ -798,9 +778,6 @@
   }
   .py-0 {
     padding-block: 0px;
-  }
-  .py-0\.5 {
-    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -882,8 +859,8 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
-  .text-\[9px\] {
-    font-size: 9px;
+  .text-\[13px\] {
+    font-size: 13px;
   }
   .text-\[290\%\] {
     font-size: 290%;
@@ -916,6 +893,9 @@
   }
   .whitespace-pre-wrap {
     white-space: pre-wrap;
+  }
+  .text-\[\#cf0000\] {
+    color: #cf0000;
   }
   .text-blue-50 {
     color: var(--color-blue-50);
@@ -990,7 +970,7 @@
   font-family: "Aggravo", Arial, sans-serif;
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
-  color: var(--color-zinc-900);
+  color: var(--color-zinc-800);
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
@@ -1350,7 +1330,7 @@
   line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
-  color: var(--color-zinc-900);
+  color: var(--color-zinc-800);
 }
 .goods__list--type2 li .goods__info .goods__price {
   order: 4;
@@ -2099,48 +2079,6 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-gradient-position {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-via {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-to {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-gradient-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-via-stops {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-@property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-@property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -2294,15 +2232,6 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;

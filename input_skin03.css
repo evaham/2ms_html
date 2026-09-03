@@ -28,7 +28,7 @@
 }
 .goods__name {
   font-family: "Aggravo", Arial, sans-serif;
-  @apply text-zinc-900 font-medium;
+  @apply text-zinc-800 font-medium;
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
@@ -237,7 +237,7 @@
   @apply order-1 flex-1 relative flex flex-col px-1 py-1 gap-1 bg-[#fde047];
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative text-xl text-center leading-tight text-zinc-900 line-clamp-2;
+  @apply order-2 flex-1 relative text-xl text-center leading-tight text-zinc-800 line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 text-5xl text-center;

@@ -608,6 +608,9 @@
   .w-\[calc\(\(100\%-0\.5rem\)\/3\)\] {
     width: calc((100% - 0.5rem) / 3);
   }
+  .w-\[calc\(\(100\%-0\.25rem\)\/2\)\] {
+    width: calc((100% - 0.25rem) / 2);
+  }
   .w-\[calc\(\(100\%-0\.75rem\)\/4\)\] {
     width: calc((100% - 0.75rem) / 4);
   }
@@ -914,6 +917,9 @@
   }
   .text-\[9px\] {
     font-size: 9px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
   }
   .text-\[290\%\] {
     font-size: 290%;
