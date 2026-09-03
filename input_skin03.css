@@ -3,8 +3,6 @@
 
 
 
-
-
 /* 텍스트 폰트 */
 @font-face {
   font-family: 'Aggravo';
@@ -12,8 +10,6 @@
   font-weight: 300 500 700;
   font-display: swap;
 }
-
-
 
 /* 숫자폰트 */
 @font-face {
@@ -31,7 +27,7 @@
 }
 .goods__name {
   font-family: "Aggravo", Arial, sans-serif;
-  @apply text-zinc-800 font-bold;
+  @apply text-zinc-900 font-medium;
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
@@ -156,7 +152,7 @@
   @apply order-2 flex-1 relative pt-3 px-2 text-3xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-7xl text-center;
+  @apply order-4 px-2 text-6xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl;
@@ -424,13 +420,13 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply order-1 flex-1 relative flex flex-col px-0.5 pt-1 gap-1 bg-[#fde047];
+  @apply order-1 flex-1 relative flex flex-col px-0.5 py-1 gap-0.5 bg-[#fde047];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative text-base text-center leading-tight line-clamp-3;
+  @apply order-2 flex-1 relative text-lg text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 text-2xl text-center;
+  @apply order-4 text-4xl text-center;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto text-xs;
@@ -442,7 +438,7 @@
   @apply hidden;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 text-sm text-center line-through;
+  @apply order-3 text-base text-center line-through;
 }
 .goods__list--type4 li .goods__info .goods__delprice:empty {
   @apply hidden;
