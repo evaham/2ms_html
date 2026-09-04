@@ -1,49 +1,13 @@
 @import 'tailwindcss';
 
-/* 숫자폰트 */
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 500;
-    font-display: swap;
-}
-
 /* 텍스트폰트 */
 @font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-    /* unicode-range: U+0030-0039; */
-}
-
-@font-face {
-    font-family: 'NationalPension';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2') format('woff2');
+    font-family: 'OneStoreMobilePop';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
     font-weight: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'NationalPension';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NationalPension';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
-}
 /* 숫자폰트 */
 @font-face {
   font-family: 'YeogiOttaeJalnan';
@@ -58,11 +22,11 @@
 
 /* 폰트 지정 */
 .corner-div { 
-  font-family: "NationalPension", Arial, sans-serif;
+  font-family: "OneStoreMobilePop", Arial, sans-serif;
   @apply text-zinc-800 font-bold;
 }
 .goods__name {
-  font-family: "NationalPension", Arial, sans-serif;
+  font-family: "OneStoreMobilePop", Arial, sans-serif;
   @apply text-zinc-800;
 }
 .goods__delprice {
@@ -82,7 +46,7 @@
   @apply font-medium;
 }
 .goods__pre {
-  font-family:'NationalPension', Arial, sans-serif;
+  font-family:'OneStoreMobilePop', Arial, sans-serif;
 }
 
 
@@ -246,6 +210,7 @@
 
 .corner-notice > p, 
 .sample-corner-notice > p {
+  font-family: 'OneStoreMobilePop';
   @apply max-w-full p-2 text-2xl text-center text-white;
 }
 

@@ -1432,7 +1432,6 @@
                       d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z">
                     </path>
                   </svg></div>
-
               </div>
               <div class="goods__info">
                 <div class="goods__etc1"></div>
@@ -1440,7 +1439,6 @@
                 <div class="goods__price">3,980</div>
                 <div class="goods__name">바나나 1송이</div>
               </div>
-
             </div>
           </li>
         </ul>
@@ -2831,43 +2829,7 @@
 
   </script>
 
-  <script>
-    // 스킨 css 변경 이벤트
-    (function(){
-      var skins = ['skin01','skin02','skin03','skin04'];
-      var displayNames = ['스킨1','스킨2','스킨3','스킨4'];
-      var idx = 0;
 
-      function applyTheme(i){
-        skins.forEach(function(id, j){
-          var link = document.getElementById(id);
-          if(!link) return;
-          try{
-            link.disabled = (j !== i);
-          }catch(e){
-            if(j !== i) link.setAttribute('disabled',''); else link.removeAttribute('disabled');
-          }
-        });
-        idx = i;
-        var el = document.getElementById('current-skin');
-        if(el) el.textContent = displayNames[i] || skins[i];
-      }
-
-      document.addEventListener('DOMContentLoaded', function(){
-        var saved = parseInt(localStorage.getItem('selectedThemeIndex'),10);
-        if(!isNaN(saved) && saved >= 0 && saved < skins.length) idx = saved;
-        applyTheme(idx);
-        var btn = document.getElementById('theme-toggle');
-        if(btn){
-          btn.addEventListener('click', function(){
-            var next = (idx + 1) % skins.length;
-            applyTheme(next);
-            localStorage.setItem('selectedThemeIndex', next);
-          });
-        }
-      });
-    })();
-  </script>
 
 
 
@@ -2906,7 +2868,47 @@
     </button>
   </div>
   <div id="toast" class="toast"></div>
+
+
   <script>
+    // 스킨 css 변경 이벤트
+    (function(){
+      var skins = ['skin01','skin02','skin03','skin04'];
+      var displayNames = ['스킨1','스킨2','스킨3','스킨4'];
+      var idx = 0;
+
+      function applyTheme(i){
+        skins.forEach(function(id, j){
+          var link = document.getElementById(id);
+          if(!link) return;
+          try{
+            link.disabled = (j !== i);
+          }catch(e){
+            if(j !== i) link.setAttribute('disabled',''); else link.removeAttribute('disabled');
+          }
+        });
+        idx = i;
+        var el = document.getElementById('current-skin');
+        if(el) el.textContent = displayNames[i] || skins[i];
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        var saved = parseInt(localStorage.getItem('selectedThemeIndex'),10);
+        if(!isNaN(saved) && saved >= 0 && saved < skins.length) idx = saved;
+        applyTheme(idx);
+        var btn = document.getElementById('theme-toggle');
+        if(btn){
+          btn.addEventListener('click', function(){
+            var next = (idx + 1) % skins.length;
+            applyTheme(next);
+            localStorage.setItem('selectedThemeIndex', next);
+          });
+        }
+      });
+    })();
+  </script>
+  <script>
+    // 가격 길이에 따른 글자 크기 조정
     (function($){
       function adjustPriceFontSize(){
         $('.goods__list--type4 li .goods__info .goods__price').each(function(){
@@ -2956,6 +2958,7 @@
     })(jQuery);
   </script>
   <script>
+    // 원 단위 가격 표시 이벤트
     (function($){
       var _isApplyingWon = false;
       function toggleWon(shouldAdd){
