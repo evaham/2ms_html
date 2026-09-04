@@ -189,6 +189,7 @@
 .goods__list {
   @apply flex flex-wrap p-0;
 }
+
 .goods__list li {
   @apply relative w-full h-auto p-0 m-0;
 }
@@ -302,6 +303,9 @@
 
 
 
+
+
+
 /* -----가로형 2단----- */
 .goods__list--type2 {
   @apply gap-x-2 gap-y-3 mx-2 my-3.5;
@@ -362,7 +366,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-44 px-0;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-lg text-center leading-tight line-clamp-2;
+  @apply order-2 flex-1 relative mb-25 pt-3 px-2 text-2xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 px-1 text-4xl text-center tracking-tight;
@@ -453,7 +457,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-34 px-1 text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-14 pt-2 px-1 text-sm text-center leading-tight line-clamp-3;
+  @apply order-2 flex-1 relative mb-14 pt-2 px-1 text-xl text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
   @apply order-4 mb-1 text-[290%] text-center tracking-tight;
@@ -549,7 +553,7 @@
   @apply order-1 flex-1 relative flex flex-col min-h-32 px-0 text-[10px];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 relative mb-5 pt-2 px-0.5 text-sm text-center leading-tight line-clamp-3;
+  @apply order-2 relative mb-5 pt-2 px-0.5 text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-[290%] text-center;

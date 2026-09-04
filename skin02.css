@@ -676,8 +676,8 @@
   padding-inline: calc(var(--spacing) * 2);
   padding-top: calc(var(--spacing) * 3);
   text-align: center;
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -842,8 +842,8 @@
   padding-inline: var(--spacing);
   padding-top: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
@@ -997,8 +997,8 @@
   padding-inline: calc(var(--spacing) * 0.5);
   padding-top: calc(var(--spacing) * 2);
   text-align: center;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
 }
