@@ -613,37 +613,36 @@
 
 
 .goods__pre {
-  @apply m-1 p-4 text-sm text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl;
+  @apply m-1 p-4 text-[18px] text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl;
 }
 
+
 .goods__pre h1 {
-  @apply text-4xl leading-tight font-bold;
+  @apply text-[30px] leading-tight font-bold;
 }
 
 .goods__pre h2 {
-  @apply text-3xl leading-tight font-bold;
+  @apply text-[28px] leading-tight font-bold;
 }
 
 .goods__pre h3 {
-  @apply text-2xl leading-tight font-bold;
+  @apply text-[26px] leading-tight font-bold;
 }
 
 .goods__pre h4 {
-  @apply text-xl leading-tight font-bold;
+  @apply text-[24px] leading-tight font-bold;
 }
 
 .goods__pre h5 {
-  @apply text-lg leading-tight font-bold;
+  @apply text-[20px] leading-tight font-bold;
 }
 
 .goods__pre h6 {
-  @apply text-base leading-tight font-bold;
+  @apply text-[18px] leading-tight font-bold;
 }
 .goods__pre p {
-  @apply text-base;
+  @apply text-[18px];
 }
-
-
 
 
 /* -----전단지형----- */

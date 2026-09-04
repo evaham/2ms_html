@@ -741,37 +741,35 @@
 
 
 .goods__pre {
-  @apply my-1 p-4 mx-2 text-sm text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl shadow-xs shadow-zinc-800/20;
+  @apply my-1 p-4 mx-2 text-[18px] text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl shadow-xs shadow-zinc-800/20;
 }
 
 .goods__pre h1 {
-  @apply text-5xl leading-tight;
+  @apply text-[30px] leading-tight;
 }
 
 .goods__pre h2 {
-  @apply text-4xl leading-tight;
+  @apply text-[28px] leading-tight;
 }
 
 .goods__pre h3 {
-  @apply text-3xl leading-tight;
+  @apply text-[26px] leading-tight;
 }
 
 .goods__pre h4 {
-  @apply text-2xl leading-tight;
+  @apply text-[24px] leading-tight;
 }
 
 .goods__pre h5 {
-  @apply text-xl leading-tight;
+  @apply text-[20px] leading-tight;
 }
 
 .goods__pre h6 {
-  @apply text-lg leading-tight;
+  @apply text-[18px] leading-tight;
 }
-
 .goods__pre p {
-  @apply text-lg;
+  @apply text-[18px];
 }
-
 
 
 /* -----전단지형----- */

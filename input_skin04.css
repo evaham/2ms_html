@@ -3,12 +3,6 @@
 
 /* 텍스트폰트 */
 
-@font-face {
-    font-family: 'Presentation';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
-    font-weight: 900;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'YuhanKimberlyPureunsoop';
@@ -173,13 +167,13 @@
   @apply mt-auto ml-1 text-xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 flex items-center justify-center mr-auto p-1 rounded text-base text-left text-indigo-800 bg-indigo-100 leading-none;
+  @apply order-1 flex items-center justify-center mr-auto p-1 rounded text-lg text-left text-indigo-800 bg-indigo-100 leading-none;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mr-auto rounded text-lg text-left leading-none line-through;
+  @apply order-3 flex items-center justify-center mr-auto rounded text-xl text-left leading-none line-through;
 }
 .goods__list--type1 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -251,7 +245,7 @@
   @apply flex-1 relative flex flex-col p-2 gap-1 border-t border-[#eaeeff] bg-white;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative w-full mb-auto text-xl text-left leading-tight line-clamp-2;
+  @apply order-2 flex-1 relative w-full mb-auto text-2xl text-left leading-tight line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
   @apply order-4 w-full mr-auto py-1 text-4xl text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
@@ -260,13 +254,13 @@
   @apply mt-auto ml-0.5 text-base;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 flex items-center justify-center mr-auto p-1 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-tight;
+  @apply order-1 flex items-center justify-center mr-auto px-1 py-0.5 rounded text-base text-left text-indigo-800 bg-indigo-100 leading-tight;
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mr-auto text-base text-left leading-none line-through;
+  @apply order-3 flex items-center justify-center mr-auto text-base text-left line-through;
 }
 .goods__list--type2 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -345,22 +339,22 @@
   @apply flex-1 relative flex flex-col px-1 pt-2 pb-1 gap-1 border-t border-[#eaeeff] bg-white text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative w-full mb-auto text-lg text-left leading-tight line-clamp-3;
+  @apply order-2 flex-1 relative w-full mb-auto text-xl text-left leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
   @apply order-4 w-full mr-auto py-1 text-[290%] text-white text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type3 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-xs;
+  @apply mt-auto ml-0.5 text-sm;
 }
 .goods__list--type3 li .goods__info .goods__etc1 {
-  @apply order-1 flex items-center justify-center mr-auto p-1 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-none;
+  @apply order-1 flex items-center justify-center mr-auto px-1 py-0.5 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-none;
 }
 .goods__list--type3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mr-auto text-sm text-center line-through leading-none;
+  @apply order-3 flex items-center justify-center mr-auto text-base text-center line-through leading-none;
 }
 .goods__list--type3 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -450,13 +444,13 @@
   @apply mt-auto text-xs;
 }
 .goods__list--type4 li .goods__info .goods__etc1 {
-  @apply order-1 flex items-center justify-center mb-auto mx-auto p-1 rounded text-xs text-left text-indigo-800 bg-indigo-100 leading-none;
+  @apply order-1 flex items-center justify-center mb-auto mx-auto px-1 py-0.5 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-none;
 }
 .goods__list--type4 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type4 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mr-auto text-xs text-center line-through leading-none;
+  @apply order-3 flex items-center justify-center mr-auto text-sm text-center line-through leading-none;
 }
 .goods__list--type4 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -533,19 +527,19 @@
   @apply order-2 flex-1 relative w-full mb-auto text-xl text-left leading-tight line-clamp-2;
 }
 .goods__list--style2 li .goods__info .goods__price {
-  @apply order-4 w-full mb-auto py-1 text-3xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-4 w-full mb-auto py-1 text-4xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--style2 li .goods__info .goods__price > span {
   @apply mt-auto ml-0.5 text-base;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 flex items-center justify-center mr-auto px-1 py-1 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-none;
+  @apply order-1 flex items-center justify-center mr-auto px-1 py-0.5 rounded text-base text-left text-indigo-800 bg-indigo-100 leading-none;
 }
 .goods__list--style2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mr-auto py-1 text-sm line-through leading-none;
+  @apply order-3 flex items-center justify-center mr-auto py-1 text-base line-through leading-none;
 }
 .goods__list--style2 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -615,19 +609,19 @@
   @apply order-1 relative w-full mt-auto pr-8 text-xl text-left leading-tight line-clamp-2;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-3 w-full mb-auto py-1 text-3xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-3 w-full mb-auto py-1 text-4xl text-white border text-center tracking-tight bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
   @apply mt-auto ml-1 text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-2 flex items-center justify-center mb-auto px-1 py-1 rounded text-sm text-left text-indigo-800 bg-indigo-100 leading-none;
+  @apply order-2 flex items-center justify-center mb-auto px-1 py-1 rounded text-base text-left text-indigo-800 bg-indigo-100 leading-none;
 }
 .goods__list--style3 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
-  @apply order-3 flex items-center justify-center mb-auto px-1 py-1 text-sm line-through leading-none;
+  @apply order-3 flex items-center justify-center mb-auto px-1 py-1 text-base line-through leading-none;
 }
 .goods__list--style3 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -639,34 +633,36 @@
 /* -----장문 편집----- */
 
 .goods__pre {
-  @apply m-2 p-4 text-sm text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl shadow-xs shadow-zinc-800/20;
+  @apply m-2 p-4 text-[18px] text-left whitespace-pre-wrap break-all overflow-auto bg-white rounded-xl shadow-xs shadow-zinc-800/20;
 }
 
+
 .goods__pre h1 {
-  @apply text-4xl leading-tight font-bold;
+  @apply text-[30px] leading-tight font-bold;
 }
 
 .goods__pre h2 {
-  @apply text-3xl leading-tight font-bold;
+  @apply text-[28px] leading-tight font-bold;
 }
 
 .goods__pre h3 {
-  @apply text-2xl leading-tight font-bold;
+  @apply text-[26px] leading-tight font-bold;
 }
 
 .goods__pre h4 {
-  @apply text-xl leading-tight font-bold;
+  @apply text-[24px] leading-tight font-bold;
 }
 
 .goods__pre h5 {
-  @apply text-lg leading-tight font-bold;
+  @apply text-[20px] leading-tight font-bold;
 }
 
 .goods__pre h6 {
-  @apply text-base leading-tight font-bold;
+  @apply text-[18px] leading-tight font-bold;
 }
-
-
+.goods__pre p {
+  @apply text-[18px];
+}
 
 
 /* -----전단지형----- */
