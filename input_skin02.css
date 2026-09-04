@@ -21,7 +21,7 @@
 
 
 /* 폰트 지정 */
-.corner-div { 
+.corner-div,.preview { 
   font-family: "OneStoreMobilePop", Arial, sans-serif;
   @apply text-zinc-800;
 }
@@ -39,11 +39,11 @@
 }
 .goods__price > span {
   font-family: Arial, sans-serif;
-  @apply font-bold;
+  @apply font-normal;
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  @apply font-bold;
+  @apply text-blue-600 leading-tight font-bold;
 }
 .goods__pre {
   font-family:'OneStoreMobilePop', Arial, sans-serif;
@@ -200,7 +200,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply flex items-center justify-center absolute inset-0 w-full h-full rounded-xl bg-black/40 text-2xl font-normal text-white z-30;
+  @apply flex items-center justify-center absolute inset-0 w-full h-full rounded-xl bg-black/40 text-2xl text-white z-30;
 }
 
 /* 코너정보 */
@@ -283,10 +283,10 @@
   @apply order-1 flex-1 relative flex flex-col min-h-82 px-0;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center  leading-tight line-clamp-2;;
+  @apply order-2 flex-1 relative mb-44 pt-3 px-2 text-3xl text-center leading-tight line-clamp-2;;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-6xl text-center tracking-tight;
+  @apply order-4 px-2 text-6xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl;
@@ -372,7 +372,7 @@
   @apply order-4 px-1 text-4xl text-center tracking-tight;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
-  @apply mt-auto ml-0.5 text-lg;
+  @apply mt-auto ml-0.5 text-sm;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
   @apply order-1 -mt-2 mx-4 px-4 py-0.5 rounded-xl text-lg text-center text-white bg-blue-600 leading-tight;
@@ -506,7 +506,7 @@
   /* @apply flex-1 border-b border-zinc-300; */
 }
 .goods__list--type4 li .goods__card {
-  @apply overflow-visible flex flex-col m-0 pb-1 bg-white rounded shadow-xs shadow-zinc-800/20;
+  @apply overflow-visible flex flex-col m-0 pb-1 bg-white rounded-xl shadow-xs shadow-zinc-800/20;
 }
 
 /* 카트 아이콘 */

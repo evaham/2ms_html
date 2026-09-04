@@ -69,27 +69,7 @@
     font-display: swap;
     unicode-range: U+0030-0039;
 }
-@font-face {
-    font-family: 'Aggravo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Aggravo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Aggravo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-    unicode-range: U+0030-0039;
-}
 
 /* 폰트 지정 */
 .corner-div,.preview { 
@@ -98,7 +78,7 @@
 }
 .goods__name {
   font-family: "Suit", Arial, sans-serif;
-  @apply font-semibold;
+  @apply font-bold;
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
@@ -113,7 +93,7 @@
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  @apply text-blue-600 leading-tight font-medium;
+  @apply text-blue-600 leading-tight font-bold;
 }
 .goods__pre {
   font-family:'Suit', Arial, sans-serif;
@@ -141,7 +121,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-normal text-white z-30;
+  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-bold text-white z-30;
 }
 
 /* 코너정보 */
@@ -217,29 +197,36 @@
 
 /* 상품정보 */
 .goods__list--type1 li .goods__info {
-  @apply flex flex-col mb-2 px-0;
+  @apply flex flex-col mb-2 px-2;
 }
 .goods__list--type1 li .goods__info .goods__name {
-  @apply order-2 relative w-full my-2 px-2 mb-auto text-2xl text-center leading-tight line-clamp-2;
+  @apply order-2 relative w-full mb-auto text-3xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type1 li .goods__info .goods__price {
-  @apply order-4 px-2 text-6xl text-center;
+  @apply order-4 text-6xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__price > span {
   @apply mt-auto text-2xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 flex mx-auto px-2 text-base text-center;
+  @apply order-1 flex mx-auto text-xl text-center;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type1 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-xl text-center line-through ;
+  @apply order-3 text-2xl text-center line-through ;
 }
 .goods__list--type1 li .goods__info .goods__delprice:empty {
   @apply hidden;
 }
+
+
+
+
+
+
+
 
 
 /* -----가로형 2단----- */
@@ -261,7 +248,7 @@
 
 /* 카트 아이콘 */
 .goods__list--type2 li .icon__cartbox {
-  @apply absolute right-1 bottom-1 flex items-center justify-center size-11 border rounded-full border-zinc-300 bg-white z-10 shadow;
+  @apply absolute right-1 bottom-1 flex items-center justify-center size-9 border rounded-full border-zinc-300 bg-white z-10 shadow;
 }
 .goods__list--type2 li .icon__cartbox svg {
   @apply fill-zinc-400;
@@ -301,25 +288,25 @@
 
 /* 상품정보 */
 .goods__list--type2 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0;
+  @apply relative flex-1 flex flex-col mb-2 px-1 gap-0.5;
 }
 .goods__list--type2 li .goods__info .goods__name {
-  @apply order-2 relative w-full px-2 mb-auto text-xl text-center leading-tight line-clamp-2;
+  @apply order-2 relative w-full mb-auto text-2xl text-center leading-tight line-clamp-2;
 }
 .goods__list--type2 li .goods__info .goods__price {
-  @apply order-4 px-2 text-4xl text-center;
+  @apply order-4 text-4xl text-center;
 }
 .goods__list--type2 li .goods__info .goods__price > span {
-  @apply mt-auto text-lg ;
+  @apply mt-auto text-base ;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 px-2 text-sm text-center;
+  @apply order-1 text-lg text-center;
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
 }
 .goods__list--type2 li .goods__info .goods__delprice {
-  @apply order-3 px-2 text-base text-center line-through ;
+  @apply order-3 text-lg text-center line-through ;
 }
 .goods__list--type2 li .goods__info .goods__delprice:empty {
   @apply hidden;
@@ -355,11 +342,9 @@
 .goods__list--type3 li .icon__cartbox.active {
   @apply border-blue-400;
 }
-
 .goods__list--type3 li .icon__cartbox.active svg {
   @apply fill-blue-500;
 }
-
 .goods__list--type3 li .icon__cartbox.disabled {
   @apply bg-zinc-200 border-zinc-200;
 }
@@ -387,10 +372,10 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0.5 text-[12px];
+  @apply relative flex-1 flex flex-col mb-2 px-0.5 gap-0.5 text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
-  @apply order-2 relative w-full mb-auto px-1 text-base text-center leading-tight line-clamp-3;
+  @apply order-2 relative w-full mb-auto text-xl text-center leading-tight line-clamp-3;
 }
 .goods__list--type3 li .goods__info .goods__price {
   @apply order-4 text-[290%] text-center;
@@ -405,11 +390,9 @@
   @apply hidden;
 }
 .goods__list--type3 li .goods__info .goods__delprice {
-  @apply order-3 text-sm text-center line-through ;
+  @apply order-3 text-base text-center line-through ;
 }
-.goods__list--type3 li .goods__info .goods__delprice:empty {
-  @apply hidden;
-}
+
 
 
 
@@ -471,10 +454,10 @@
 
 /* 상품정보 */
 .goods__list--type4 li .goods__info {
-  @apply relative flex-1 flex flex-col mb-2 px-0.5 text-[10px];
+  @apply relative flex-1 flex flex-col mb-2 px-0.5 gap-0.5 text-[10px];
 }
 .goods__list--type4 li .goods__info .goods__name {
-  @apply order-2 relative w-full mb-auto text-base text-center leading-tight  line-clamp-3;
+  @apply order-2 relative w-full mb-auto text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
   @apply order-4 text-[290%] text-center;
@@ -558,7 +541,7 @@
   @apply relative flex-1 flex flex-col my-1 mx-2;
 }
 .goods__list--style2 li .goods__info .goods__name {
-  @apply order-2 relative w-full mb-auto text-lg text-left leading-tight  line-clamp-2;
+  @apply order-2 relative w-full mb-auto text-xl text-left leading-tight line-clamp-2;
 }
 .goods__list--style2 li .goods__info .goods__price {
   @apply order-4 text-4xl text-left tracking-tight;
@@ -567,10 +550,10 @@
   @apply mt-auto text-base ;
 }
 .goods__list--style2 li .goods__info .goods__etc1 {
-  @apply order-1 text-sm text-left;
+  @apply order-1 text-base text-left;
 }
 .goods__list--style2 li .goods__info .goods__delprice {
-  @apply flex-1 order-3 flex items-end text-sm text-left line-through ;
+  @apply flex-1 order-3 flex items-end text-base text-left line-through ;
 }
 
 
@@ -632,27 +615,27 @@
    @apply block max-w-full w-auto max-h-full h-auto;
 }
 
+
+
 /* 상품정보 */
 .goods__list--style3 li .goods__info {
-  @apply relative px-0 text-right;
+  @apply relative flex-1 flex flex-wrap gap-0.5 text-right break-all;
 }
 .goods__list--style3 li .goods__info .goods__name {
-  @apply col-span-3 order-1 relative w-full px-0.5 mb-2 text-base text-left leading-tight  line-clamp-2;
+  @apply order-2 relative flex w-full mb-2 text-xl text-left leading-tight;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 inline ml-auto px-0.5 text-3xl text-right;
+  @apply order-4 pt-1 pb-0.5 px-2 rounded text-4xl text-left text-wrap;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
   @apply mt-auto text-base;
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
-  @apply order-2 inline-block mx-0.5 text-sm text-right;
+  @apply mr-auto px-0.5 py-px rounded text-base text-center;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
-  @apply flex-1 inline-block order-3 mx-0.5 text-sm text-right line-through ;
+  @apply order-3 mx-0.5 ml-auto text-base text-right line-through text-shadow-none;
 }
-
-
 
 
 /* -----장문 편집----- */
