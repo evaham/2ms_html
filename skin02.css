@@ -309,13 +309,13 @@
 }
 .goods__price > span {
   font-family: Arial, sans-serif;
-  --tw-font-weight: var(--font-weight-normal);
-  font-weight: var(--font-weight-normal);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  --tw-font-weight: var(--font-weight-medium);
-  font-weight: var(--font-weight-medium);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 .goods__pre {
   font-family: 'OneStoreMobilePop', Arial, sans-serif;
@@ -541,8 +541,8 @@
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 0.5);
   text-align: center;
-  font-size: var(--text-base);
-  line-height: var(--tw-leading, var(--text-base--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
   color: var(--color-white);
@@ -705,8 +705,8 @@
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 0.5);
   text-align: center;
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-leading: var(--leading-tight);
   line-height: var(--leading-tight);
   color: var(--color-white);

@@ -39,11 +39,11 @@
 }
 .goods__price > span {
   font-family: Arial, sans-serif;
-  @apply font-normal;
+  @apply font-bold;
 }
 .goods__etc1 {
   font-family: Arial, sans-serif;
-  @apply font-medium;
+  @apply font-bold;
 }
 .goods__pre {
   font-family:'OneStoreMobilePop', Arial, sans-serif;
@@ -292,7 +292,7 @@
   @apply mt-auto text-2xl;
 }
 .goods__list--type1 li .goods__info .goods__etc1 {
-  @apply order-1 -mt-2 mx-10 px-4 py-0.5 rounded-xl text-base text-center text-white bg-blue-600 leading-tight;
+  @apply order-1 -mt-2 mx-10 px-4 py-0.5 rounded-xl text-xl text-center text-white bg-blue-600 leading-tight;
 }
 .goods__list--type1 li .goods__info .goods__etc1:empty {
   @apply hidden;
@@ -375,7 +375,7 @@
   @apply mt-auto ml-0.5 text-lg;
 }
 .goods__list--type2 li .goods__info .goods__etc1 {
-  @apply order-1 -mt-2 mx-4 px-4 py-0.5 rounded-xl text-sm text-center text-white bg-blue-600 leading-tight;
+  @apply order-1 -mt-2 mx-4 px-4 py-0.5 rounded-xl text-lg text-center text-white bg-blue-600 leading-tight;
 }
 .goods__list--type2 li .goods__info .goods__etc1:empty {
   @apply hidden;
