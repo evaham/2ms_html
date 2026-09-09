@@ -416,6 +416,8 @@
   justify-content: center;
   border-radius: var(--radius-xl);
   background-color: var(--color-white);
+  --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 .corner-notice > p, .sample-corner-notice > p {
   max-width: 100%;
@@ -887,9 +889,9 @@
   background-color: var(--color-white);
   --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  --tw-shadow-color: color-mix(in srgb, oklch(27.4% 0.006 286.033) 20%, transparent);
+  --tw-shadow-color: color-mix(in srgb, oklch(27.4% 0.006 286.033) 30%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
-    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-zinc-800) 20%, transparent) var(--tw-shadow-alpha), transparent);
+    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-zinc-800) 30%, transparent) var(--tw-shadow-alpha), transparent);
   }
 }
 .goods__list--type4 li .icon__cartbox {

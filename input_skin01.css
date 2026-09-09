@@ -126,7 +126,7 @@
 
 /* 코너정보 */
 .corner-notice,.sample-corner-notice {
-  @apply flex justify-center items-center min-h-11 m-1 rounded-xl bg-white;
+  @apply flex justify-center items-center min-h-11 m-1 rounded-xl bg-white shadow-xs;
 }
 
 .corner-notice > p,
@@ -411,7 +411,7 @@
   /* @apply w-full border-b border-zinc-300; */
 }
 .goods__list--type4 li .goods__card {
-  @apply overflow-hidden flex flex-col h-full bg-white rounded-xl shadow-xs shadow-zinc-800/20;
+  @apply overflow-hidden flex flex-col h-full bg-white rounded-xl shadow-xs shadow-zinc-800/30;
 }
 
 /* 카트 아이콘 */
