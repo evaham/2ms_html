@@ -126,12 +126,12 @@
 
 /* 코너정보 */
 .corner-notice,.sample-corner-notice {
-  @apply flex justify-center items-center min-h-11 m-1 rounded-xl bg-indigo-600;
+  @apply flex justify-center items-center min-h-11 m-1 rounded-xl bg-white;
 }
 
 .corner-notice > p,
 .sample-corner-notice > p {
-  @apply max-w-full p-2 text-2xl font-bold text-center text-indigo-50;
+  @apply max-w-full p-2 text-2xl font-bold text-center text-[#cf0000];
 }
 
 
