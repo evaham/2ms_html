@@ -220,7 +220,7 @@
 
 /* -----가로형 1단----- */
 .goods__list--type1 {
-  @apply gap-x-2 gap-y-3.5 my-3.5 mx-2;
+  @apply gap-1 my-3 mx-2;
 }
 .goods__list--type1 li {
   @apply w-full min-w-full;
@@ -303,7 +303,7 @@
 
 /* -----가로형 2단----- */
 .goods__list--type2 {
-  @apply gap-x-2 gap-y-3 mx-2 my-3.5;
+  @apply gap-1 mx-2 my-3;
 }
 .goods__list--type2 li {
   @apply w-[calc((100%-0.75rem)/2)] grow;
@@ -394,7 +394,7 @@
 
 /* -----가로형 3단----- */
 .goods__list--type3 {
-  @apply gap-x-2 gap-y-3 my-3.5 mx-2;
+  @apply gap-1 my-3 mx-2;
 }
 .goods__list--type3 li {
   @apply w-[calc((100%-1.5rem)/3)] grow;
@@ -486,7 +486,7 @@
 /* -----가로형 4단----- */
 
 .goods__list--type4 {
-  @apply gap-x-1 gap-y-2.5 my-2.5 mx-2;
+  @apply gap-1 my-2.5 mx-2;
 }
 .goods__list--type4 li {
   @apply w-[calc((100%-1.5rem)/4)] grow;
@@ -529,7 +529,7 @@
 
 /* 이미지정보 */
 .goods__list--type4 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto mt-0.5;
 }
 .goods__list--type4 li .goods__imgbox img {
   @apply object-contain w-auto h-22 max-h-full mt-auto mx-auto;
