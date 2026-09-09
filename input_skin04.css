@@ -297,7 +297,7 @@
 
 /* 카트 아이콘 */
 .goods__list--type3 li .icon__cartbox {
-  @apply absolute right-1 bottom-1 flex items-center justify-center size-8 border rounded-full border-zinc-300 bg-white z-10 shadow;
+  @apply absolute right-1 bottom-1 flex items-center justify-center size-8 border rounded-full border-zinc-300 bg-white z-10 shadow-xs;
 
 }
 .goods__list--type3 li .icon__cartbox svg {
@@ -393,7 +393,7 @@
 
 /* 카트 아이콘 */
 .goods__list--type4 li .icon__cartbox {
-  @apply absolute right-0 bottom-0 flex items-center justify-center size-7 border rounded-full border-zinc-300 bg-white z-10 shadow;
+  @apply absolute right-0.5 bottom-0.5 flex items-center justify-center size-7 border rounded-full border-zinc-300 bg-white z-10 shadow-xs;
 }
 .goods__list--type4 li .icon__cartbox svg {
   @apply fill-zinc-400;
