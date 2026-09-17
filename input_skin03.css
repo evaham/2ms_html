@@ -590,7 +590,7 @@
   @apply order-2 relative flex w-full mb-2 text-xl text-left leading-tight;
 }
 .goods__list--style3 li .goods__info .goods__price {
-  @apply order-4 pt-1 pb-0.5 px-2 rounded text-4xl bg-[#fde047] text-left text-wrap;
+  @apply order-4 pt-1 pb-1 px-2 rounded text-4xl bg-[#fde047] text-left text-wrap;
 }
 .goods__list--style3 li .goods__info .goods__price > span {
   @apply mt-auto text-base;

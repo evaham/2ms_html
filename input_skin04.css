@@ -33,7 +33,7 @@
 }
 .goods__price {
   font-family: 'GMarketSans', Arial, sans-serif;
-  @apply text-white leading-none;
+  @apply text-white leading-tight;
 }
 .goods__price > span {
   font-family: Arial, sans-serif;
@@ -423,7 +423,7 @@
   @apply order-2 flex-1 relative w-full mb-auto text-base text-center leading-tight line-clamp-3;
 }
 .goods__list--type4 li .goods__info .goods__price {
-  @apply order-4 w-full mb-auto py-0.5 text-[290%] text-white text-center bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
+  @apply order-4 w-full mb-auto py-px text-[290%] text-white text-center bg-linear-to-r from-[#4F46E5] to-[#0EA5E9] rounded-lg;
 }
 .goods__list--type4 li .goods__info .goods__price > span {
   @apply mt-auto text-xs;

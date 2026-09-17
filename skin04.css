@@ -299,8 +299,8 @@
 }
 .goods__price {
   font-family: 'GMarketSans', Arial, sans-serif;
-  --tw-leading: 1;
-  line-height: 1;
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
   color: var(--color-white);
 }
 .goods__price > span {
@@ -1053,7 +1053,7 @@
   --tw-gradient-from: #4F46E5;
   --tw-gradient-to: #0EA5E9;
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  padding-block: calc(var(--spacing) * 0.5);
+  padding-block: 1px;
   text-align: center;
   font-size: 290%;
   color: var(--color-white);
