@@ -2,9 +2,17 @@
 
 /* 텍스트폰트 */
 @font-face {
-    font-family: 'Cafe24Anemone';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
-    font-weight: normal;
+    font-family: 'LotteMartHappiness';
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'),
+         url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'LotteMartHappiness';
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'),
+         url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+    font-weight: 700;
     font-display: swap;
 }
 
@@ -22,11 +30,11 @@
 
 /* 폰트 지정 */
 .corner-div,.preview { 
-  font-family: "Cafe24Anemone", Arial, sans-serif;
+  font-family: "LotteMartHappiness", Arial, sans-serif;
   @apply text-zinc-800;
 }
 .goods__name {
-  font-family: "Cafe24Anemone", Arial, sans-serif;
+  font-family: "LotteMartHappiness", Arial, sans-serif;
   @apply text-zinc-800;
 }
 .goods__delprice {
@@ -46,7 +54,7 @@
   @apply text-blue-600 leading-tight font-bold;
 }
 .goods__pre {
-  font-family:'Cafe24Anemone', Arial, sans-serif;
+  font-family:'LotteMartHappiness', Arial, sans-serif;
 }
 
 
@@ -200,7 +208,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply absolute inset-0 flex items-center justify-center w-full h-full rounded-xl bg-black/40 text-2xl text-white z-30;
+  @apply absolute inset-0 flex items-center justify-center w-full h-full rounded-xl bg-black/40 text-[40px] text-white z-30;
 }
 
 /* 코너정보 */
@@ -211,7 +219,7 @@
 
 .corner-notice > p, 
 .sample-corner-notice > p {
-  @apply max-w-full p-2 text-2xl text-center text-[#77250B];
+  @apply max-w-full p-2 text-2xl text-center text-[#ff0000];
 }
 
 
@@ -529,7 +537,7 @@
 
 /* 이미지정보 */
 .goods__list--type4 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto mt-0.5;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto mt-0.5 rounded-xl;
 }
 .goods__list--type4 li .goods__imgbox img {
   @apply object-contain w-auto h-22 max-h-full mt-auto mx-auto;

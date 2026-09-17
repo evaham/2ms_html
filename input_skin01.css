@@ -121,7 +121,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-bold text-white z-30;
+  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-[40px] font-bold text-white z-30;
 }
 
 /* 코너정보 */

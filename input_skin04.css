@@ -3,51 +3,36 @@
 
 /* 텍스트폰트 */
 
-
 @font-face {
-    font-family: 'YuhanKimberlyPureunsoop';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/2607101517@font-2/font-2/font-2-300.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'YuhanKimberlyPureunsoop';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/2607101517@font-2/font-2/font-2-500.woff2') format('woff2');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'YuhanKimberlyPureunsoop';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/2607101517@font-2/font-2/font-2-700.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'Cafe24Anemone';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
     font-display: swap;
 }
 /* 숫자폰트 */
-@font-face {
-  font-family: 'YeogiOttaeJalnan';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-  font-weight: normal;
-  font-display: swap;
-  unicode-range: U+0030-0039;
-}
 
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    unicode-range: U+0030-0039;
+}
 
 /* 폰트 지정 */
 .corner-div { 
-  font-family: "YuhanKimberlyPureunsoop", Arial, sans-serif;
+  font-family: "Cafe24Anemone", Arial, sans-serif;
   @apply text-zinc-800;
 }
 .goods__name {
-  font-family: "YuhanKimberlyPureunsoop", Arial, sans-serif;
+  font-family: "Cafe24Anemone", Arial, sans-serif;
   @apply text-zinc-800 font-bold;
 }
 .goods__delprice {
   font-family: Arial, sans-serif;
 }
 .goods__price {
-  font-family: 'YeogiOttaeJalnan', Arial, sans-serif;
+  font-family: 'GMarketSans', Arial, sans-serif;
   @apply text-white leading-none;
 }
 .goods__price > span {
@@ -59,7 +44,7 @@
   @apply font-medium;
 }
 .goods__pre {
-  font-family:'YuhanKimberlyPureunsoop', Arial, sans-serif;
+  font-family:'Cafe24Anemone', Arial, sans-serif;
 }
 
 /* -----뷰 공통----- */
@@ -81,7 +66,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-normal text-white z-30;
+  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-[40px] font-normal text-white z-30;
 }
 
 /* 코너정보 */

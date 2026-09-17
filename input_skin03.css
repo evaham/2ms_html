@@ -13,11 +13,11 @@
 
 /* 숫자폰트 */
 @font-face {
-  font-family: 'Anton';
-  src: url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR&display=swap') format('woff2');
-  font-weight: 900;
-  font-display: swap;
-  unicode-range: U+0030-0039;
+    font-family: 'KohiLearn';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    unicode-range: U+0030-0039;
 }
 
 
@@ -35,7 +35,7 @@
   @apply text-zinc-800;
 }
 .goods__price {
-  font-family: 'Anton', Arial, sans-serif;
+  font-family: 'KohiLearn', Arial, sans-serif;
   @apply text-[#cf0000] leading-none;
 }
 .goods__price > span {
@@ -70,7 +70,7 @@
 
 /* 품절 표시 */
 .goods__card .soldout-div {
-  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-2xl font-normal text-white z-30;
+  @apply flex items-center justify-center absolute inset-0 w-full h-full bg-black/40 text-[40px] font-normal text-white z-30;
 }
 
 /* 코너정보 */
@@ -83,10 +83,6 @@
 .sample-corner-notice > p {
   @apply max-w-full p-2 pt-4 text-2xl text-center text-[#ffe300] font-medium;
 }
-
-
-
-
 
 
 
@@ -328,7 +324,7 @@
 
 /* 상품정보 */
 .goods__list--type3 li .goods__info {
-  @apply flex-1 relative flex flex-col px-0.5 py-1 gap-0.5 bg-[#fde047] text-[15px];
+  @apply flex-1 relative flex flex-col px-0.5 py-1 gap-0.5 bg-[#fde047] text-[12px];
 }
 .goods__list--type3 li .goods__info .goods__name {
   @apply order-2 relative w-full mb-auto text-xl text-center leading-tight line-clamp-3;
@@ -406,7 +402,7 @@
 
 /* 이미지정보 */
 .goods__list--type4 li .goods__imgbox {
-  @apply relative overflow-hidden flex flex-col justify-center w-auto h-22 p-1 aspect-square bg-white;
+  @apply relative overflow-hidden flex flex-col justify-center w-auto h-22 p-1 aspect-square bg-white rounded-xl;
 }
 .goods__list--type4 li .goods__imgbox img {
   @apply object-contain w-auto max-h-full mt-auto;
