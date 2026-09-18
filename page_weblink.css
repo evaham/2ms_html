@@ -774,9 +774,15 @@ body {
 
 .help2__cont > dl > dd { font-size: 12px; color: #777; }
 
+
+
+
+
+
 .spin {
   background: transparent !important;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  isolation: isolate;
 }
 
 .spin::before, .spin::after {

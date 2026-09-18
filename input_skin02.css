@@ -58,6 +58,17 @@
 }
 
 
+.corner-notice,
+.sample-corner-notice {
+  font-family:'LotteMartHappiness', Arial, sans-serif;
+}
+
+.corner-notice > p, 
+.sample-corner-notice > p {
+  font-family:'LotteMartHappiness', Arial, sans-serif;
+}
+
+
 
 /* 텍스트 아웃라인 */
 .goods__name {
@@ -194,6 +205,10 @@
   @apply relative overflow-hidden break-all;
 }
 
+.goods {
+  @apply relative flex flex-col;
+}
+
 .goods__list {
   @apply flex flex-wrap p-0;
 }
@@ -228,7 +243,7 @@
 
 /* -----가로형 1단----- */
 .goods__list--type1 {
-  @apply gap-1 my-3 mx-2;
+  @apply gap-1 m-2;
 }
 .goods__list--type1 li {
   @apply w-full min-w-full;
@@ -311,7 +326,7 @@
 
 /* -----가로형 2단----- */
 .goods__list--type2 {
-  @apply gap-1 mx-2 my-3;
+  @apply gap-1 m-2;
 }
 .goods__list--type2 li {
   @apply w-[calc((100%-0.75rem)/2)] grow;
@@ -402,7 +417,7 @@
 
 /* -----가로형 3단----- */
 .goods__list--type3 {
-  @apply gap-1 my-3 mx-2;
+  @apply gap-1 m-2;
 }
 .goods__list--type3 li {
   @apply w-[calc((100%-1.5rem)/3)] grow;
@@ -494,7 +509,7 @@
 /* -----가로형 4단----- */
 
 .goods__list--type4 {
-  @apply gap-1 my-2.5 mx-2;
+  @apply gap-1 m-2;
 }
 .goods__list--type4 li {
   @apply w-[calc((100%-1.5rem)/4)] grow;
@@ -644,7 +659,7 @@
   @apply relative flex-1 flex flex-col my-1 mx-2;
 }
 .goods__list--style2 li .goods__info .goods__name {
-  @apply order-2 flex-1 relative w-full px-0.5 mb-auto text-xl text-left leading-tight  text-shadow-none;
+  @apply order-2 relative w-full px-0.5 mb-auto text-xl text-left leading-tight line-clamp-2 text-shadow-none;
 }
 .goods__list--style2 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-4xl text-left tracking-tight text-shadow-none;
@@ -722,7 +737,8 @@
   @apply relative flex flex-wrap px-0 text-right break-all;
 }
 .goods__list--style3 li .goods__info .goods__name {
-  @apply order-2 relative flex w-full px-0.5 mb-2 text-xl text-left leading-tight text-shadow-none;
+  @apply order-2 relative w-full mb-2 text-xl text-left leading-tight line-clamp-2 text-shadow-none;
+
 }
 .goods__list--style3 li .goods__info .goods__price {
   @apply order-4 px-0.5 text-4xl text-right tracking-tight text-shadow-none;
