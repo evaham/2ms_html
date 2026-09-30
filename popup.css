@@ -1355,13 +1355,14 @@
   margin-top: calc(var(--spacing) * 2.5);
 }
 .product-info .product-price, .goods__card.popup .goods__info .goods__price {
-  font-family: "Suit", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-inline: auto;
-  font-size: var(--text-5xl);
-  line-height: var(--tw-leading, var(--text-5xl--line-height));
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--text-3xl);
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
   color: #cf0000;
+  text-shadow: none;
+  letter-spacing: -.7px;
 }
 .product-info .product-price > span, .goods__card.popup .goods__info .goods__price > span {
   font-family: "Suit", Arial, sans-serif;
@@ -1374,7 +1375,6 @@
 .product-info .product-name, .goods__card.popup .goods__info .layer__goods__name {
   font-family: "Suit", Arial, sans-serif;
   margin-inline: auto;
-  margin-top: calc(var(--spacing) * 2);
   margin-bottom: 0px;
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));

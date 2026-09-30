@@ -115,7 +115,7 @@
 }
 .goods__price {
   --stroke-width: 3px;
-  --stroke-color: #fff;
+  --stroke-color: #ffeb3b;
   text-shadow:
     calc(var(--stroke-width) * cos(0deg)) calc(var(--stroke-width) * sin(0deg)) 0 var(--stroke-color),
     calc(var(--stroke-width) * cos(10deg)) calc(var(--stroke-width) * sin(10deg)) 0 var(--stroke-color),
@@ -365,7 +365,7 @@
 
 /* 이미지정보 */
 .goods__list--type2 li .goods__imgbox {
-  @apply overflow-hidden relative flex flex-col justify-center w-auto mt-3;
+  @apply overflow-hidden relative flex flex-col justify-center w-auto mt-3 rounded-xl;
 }
 .goods__list--type2 li .goods__imgbox img {
   @apply object-contain w-auto h-38 max-h-full mt-auto mx-auto;
@@ -670,6 +670,9 @@
 .goods__list--style2 li .goods__info .goods__etc1 {
   @apply order-1 px-0.5 text-base text-left text-[#C2410C];
 }
+.goods__list--style2 li .goods__info .goods__etc1:empty {
+  @apply hidden;
+}
 .goods__list--style2 li .goods__info .goods__delprice {
   @apply order-3 flex items-end px-0.5 text-base text-left line-through text-shadow-none;
 }
@@ -748,6 +751,9 @@
 }
 .goods__list--style3 li .goods__info .goods__etc1 {
   @apply order-1 mx-0.5 flex w-full text-base text-left text-[#C2410C];
+}
+.goods__list--style3 li .goods__info .goods__etc1:empty {
+  @apply hidden;
 }
 .goods__list--style3 li .goods__info .goods__delprice {
   @apply order-3 mx-0.5 ml-auto text-base text-right line-through text-shadow-none;

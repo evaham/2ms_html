@@ -548,6 +548,9 @@
 .goods__list--style2 li .goods__info .goods__etc1 {
   @apply mr-auto px-0.5 py-px rounded text-base text-center text-white bg-zinc-800;
 }
+.goods__list--style2 li .goods__info .goods__etc1:empty {
+  @apply hidden;
+}
 .goods__list--style2 li .goods__info .goods__delprice {
   @apply flex-1 order-3 flex items-end text-base text-left line-through ;
 }
@@ -629,7 +632,9 @@
 .goods__list--style3 li .goods__info .goods__etc1 {
   @apply mr-auto mb-1 px-0.5 py-px rounded text-base text-center text-white bg-zinc-800;
 }
-
+.goods__list--style3 li .goods__info .goods__etc1:empty {
+  @apply hidden;
+}
 .goods__list--style3 li .goods__info .goods__delprice {
   @apply order-3 mx-0.5 ml-auto text-base text-right line-through text-shadow-none;
 }
